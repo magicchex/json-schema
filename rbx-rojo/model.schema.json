@@ -21,7 +21,7 @@
         "classes": {
             "type": "object",
             "oneOf": [
-                { "$ref": "./classes/frame.schema.json" },
+                { "$ref": "./classes/Frame.schema.json" },
                 { "$ref": "./classes/Accessory.schema.json" }
             ]
         }
