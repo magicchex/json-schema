@@ -1,0 +1,7 @@
+{
+    "$schema": "../frame.schema.json",
+    "ClassName": "Frame",
+    "Properties": {
+        "ClassName": "Frame"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Accessory",
+    "description": "Character Cosmetics",
+    "type": "object",
+    "properties": {
+        "ClassName": {"const": "Accessory"},
+        "Properties": {
+            "$ref": "../Attributes.schema.json"
+        }
+    }
+}
