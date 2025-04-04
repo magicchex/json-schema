@@ -1,9 +1,0 @@
-{
-    "$schema": "./Attributes.schema.json",
-    "AttributesSerialized": {
-        "Attributes": {
-            "A": {"Bool": false}
-        }
-    }
-
-}
