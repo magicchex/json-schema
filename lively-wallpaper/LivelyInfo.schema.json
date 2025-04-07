@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "AppVersion": {
+            "enum": [
+                "2.0.0.0",
+                "2.1.0.8"
+            ]
+        },
+        "Title": { "type": "string" },
+        "Desc": { "type": "string" },
+        "Author": { "type": "string" },
+        "License": { "type": "string" },
+        "Contact": {
+            "$ref": "#/definitions/urlString",
+            "description": "The URL source"
+        },
+        "FileName": { "$ref": "#/definitions/fileString" },
+        "Thumbnail": { "$ref": "#/definitions/fileString" },
+        "Preview": { "$ref": "#/definitions/fileString" },
+        "Type": {
+            "type": "integer",
+            "default": 1,
+            "minimum": 1,
+            "maximum": 1
+        },
+        "Tags": {
+            "type": "array",
+            "items": { "type": "string" }
+        },
+        "IsAbsolutePath": { "type": "boolean" },
+        "Arguments": { "type": "string" }
+    },
+    "definitions": {
+        "fileString": {
+            "type": "string",
+            "pattern": "[A-Za-z0-9_-]+\\.[A-Za-z0-9_-]+"
+        },
+        "urlString": {
+            "type": "string",
+            "pattern": "https?:\/{2}.+"
+        }
+    }
+}
