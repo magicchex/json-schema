@@ -1,0 +1,69 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Material",
+    "description": "Abstract Enum",
+    "definitions": {
+		"BasePartOnly": {
+			"$ref": "#/definitions/Global",
+			"enum": [
+				"Plastic",
+				"SmoothPlastic",
+				"Neon",
+				"Wood",
+				"Marble",
+				"Granite",
+				"Pebble",
+				"DiamondPlate",
+				"Foil",
+				"Metal",
+				"Fabric",
+				"Glass",
+				"Cardboard",
+				"Carpet",
+				"CeramicTiles",
+				"ClayRoofTiles",
+				"RoofShingles",
+				"Leather",
+				"Plaster",
+				"Rubber"
+			]
+		},
+		"TerrainOnly": {
+			"$ref": "#/definitions/Global",
+			"enum": [
+				"Air",
+				"Water"
+			]
+		},
+		"MeshPartOnly": {
+			"$ref": "#/definitions/BasePartOnly",
+			"enum": ["ForceField"]
+		},
+        "Global": {
+            "enum": [
+			"WoodPlanks",
+			"Slate",
+			"Concrete",
+			"Brick",
+			"Cobblestone",
+			"Rock",
+			"Sandstone",
+			"Basalt",
+			"CrackedLava",
+			"Limestone",
+			"Pavement",
+			"CorrodedMetal",
+			"Grass",
+			"LeafyGrass",
+			"Sand",
+			"Snow",
+			"Mud",
+			"Ground",
+			"Asphalt",
+			"Salt",
+			"Ice",
+			"Glacier"
+            ]
+        }
+    }
+}

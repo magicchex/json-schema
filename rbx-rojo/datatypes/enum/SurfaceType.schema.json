@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SurfaceType",
+    "description": "SurfaceType",
+    "type": "object",
+    "properties": {
+    "SurfaceType": { "$ref": "#/definitions/Enum" }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+            "Smooth",
+            "Glue",
+			"Weld",
+			"Studs",
+			"Inlet",
+			"Universal",
+			"Hinge",
+			"Motor",
+			"SteppingMotor",
+			"SmoothNoOutlines"
+            ]
+        }
+    }
+}
