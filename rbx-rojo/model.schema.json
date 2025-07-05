@@ -22,7 +22,9 @@
             "type": "object",
             "oneOf": [
                 { "$ref": "./classes/Frame.schema.json" },
-                { "$ref": "./classes/Accessory.schema.json" }
+                { "$ref": "./classes/Accessory.schema.json" },
+                { "$ref": "./classes/Part.schema.json" },
+                { "$ref": "./classes/SpawnLocation.schema.json" }
             ]
         }
     }
