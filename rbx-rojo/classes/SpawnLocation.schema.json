@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SpawnLocation",
+    "description": "Determines where a Player respawns when they die.",
+    "type": "object",
+    "properties": {
+        "ClassName": {"const": "SpawnLocation"},
+        "Properties": {
+            "type": "object",
+			"$ref": "./Part.schema.json",
+            "properties": {
+                "AllowTeamChangeOnTouch": { "$ref": "../datatypes/Bool.schema.json" },
+				"Duration": { "$ref": "../datatypes/Int32.schema.json" },
+				"Enabled": { "$ref": "../datatypes/Bool.schema.json" },
+				"Neutral": { "$ref": "../datatypes/Bool.schema.json" },
+				"TeamColor": { "$ref": "../datatypes/BrickColor.schema.json" }
+            }
+		}
+    },
+    "required": ["ClassName"]
+}
