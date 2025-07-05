@@ -3,7 +3,11 @@
     "title": "Instance",
     "description": "Base Class of Instances",
     "type": "object",
+    "$ref": "./Object.schema.json",
     "properties": {
-        "Archivable": { "$ref": "../../datatypes/Bool.schema.json" }
+        "Archivable": { "$ref": "../../datatypes/Bool.schema.json" },
+        "Attributes": { "$ref": "../../Attributes.schema.json" },
+        "Name": { "$ref": "../../datatypes/String.schema.json" },
+        "Sandboxed": { "$ref": "../../datatypes/Sandboxed.schema.json" }
     }
 }
