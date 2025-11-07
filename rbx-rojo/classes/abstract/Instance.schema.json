@@ -1,13 +1,65 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "Instance",
-    "description": "Base Class of Instances",
+    "description": "Instance",
     "type": "object",
-    "$ref": "./Object.schema.json",
     "properties": {
-        "Archivable": { "$ref": "../../datatypes/Bool.schema.json" },
-        "Attributes": { "$ref": "../../Attributes.schema.json" },
-        "Name": { "$ref": "../../datatypes/String.schema.json" },
-        "Sandboxed": { "$ref": "../../datatypes/Sandboxed.schema.json" }
+        "ClassName": {
+            "const": "Instance"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Instance properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Instance"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Instance",
+                    "description": "Instance"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
     }
 }

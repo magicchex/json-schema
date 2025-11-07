@@ -1,11 +1,59 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "PVInstance",
-    "description": "Abstract class for all objects that have a physical location in the world",
+    "description": "PVInstance",
     "type": "object",
-	"$ref": "./Instance.schema.json",
     "properties": {
-		"Origin": { "$ref": "../../datatypes/CFrame.schema.json" },
-		"Pivot Offset": { "$ref": "../../datatypes/CFrame.schema.json" }
+        "ClassName": {
+            "const": "PVInstance"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "PVInstance properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "Origin": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "Pivot Offset": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "PVInstance"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "PVInstance",
+                    "description": "PVInstance"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
     }
 }

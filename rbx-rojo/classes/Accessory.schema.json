@@ -1,12 +1,72 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "Accessory",
-    "description": "Character Cosmetics",
+    "description": "Accessory",
     "type": "object",
     "properties": {
-        "ClassName": {"const": "Accessory"},
+        "ClassName": {
+            "const": "Accessory"
+        },
         "Properties": {
-            "$ref": "../Attributes.schema.json"
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Accessory properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "AccessoryType": {
+                    "$ref": "../enum/AccessoryType.schema.json#/definitions/Enum",
+                    "description": "AccessoryType Enum"
+                },
+                "AttachmentPoint": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Accessory"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Accessory",
+                    "description": "Accessory"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
         }
     }
 }

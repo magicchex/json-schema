@@ -1,49 +1,164 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "BasePart",
-    "description": "The abstract base class for in-world objects that physically interact",
+    "description": "BasePart",
     "type": "object",
-    "$ref": "./PVInstance.schema.json",
     "properties": {
-        "Anchored": { "$ref": "../../datatypes/Bool.schema.json" },
-		"AssemblyAngularVelocity": { "$ref": "../../datatypes/Vector3.schema.json" },
-		"AssemblyCenterOfMass": { "$ref": "../../datatypes/Vector3.schema.json" },
-		"AssemblyLinearVelocity": { "$ref": "../../datatypes/Vector3.schema.json" },
-		"AssemblyMass": { "$ref": "../../datatypes/Float32.schema.json" },
-		"AudioCanCollide": { "$ref": "../../datatypes/Bool.schema.json" },
-		"BackSurface": { "$ref": "../../datatypes/enum/SurfaceType.schema.json"  },
-		"BottomSurface": { "$ref": "../../datatypes/enum/SurfaceType.schema.json" },
-		"BrickColor": { "$ref": "../../datatypes/BrickColor.schema.json" },
-		"CFrame": { "$ref": "../../datatypes/CFrame.schema.json" },
-		"CanCollide": { "$ref": "../../datatypes/Bool.schema.json" },
-		"CanQuery": { "$ref": "../../datatypes/Bool.schema.json" },
-		"CanTouch": { "$ref": "../../datatypes/Bool.schema.json" },
-		"CastShadow": { "$ref": "../../datatypes/Bool.schema.json" },
-		"CenterOfMass": { "$ref": "../../datatypes/Vector3.schema.json" },
-		"CollisionGroup": { "$ref": "../../datatypes/String.schema.json" },
-		"Color": { "$ref": "../../datatypes/Color3.schema.json" },
-		"EnableFluidForces": { "$ref": "../../datatypes/Bool.schema.json" },
-		"ExtentsCFrame": { "$ref": "../../datatypes/CFrame.schema.json" },
-		"ExtentsSize": { "$ref": "../../datatypes/Vector3.schema.json" },
-		"FrontSurface": { "$ref": "../../datatypes/enum/SurfaceType.schema.json" },
-		"LeftSurface": { "$ref": "../../datatypes/enum/SurfaceType.schema.json" },
-		"Locked": { "$ref": "../../datatypes/Bool.schema.json" },
-		"Mass": { "$ref": "../../datatypes/Float32.schema.json" },
-		"Massless": { "$ref": "../../datatypes/Bool.schema.json" },
-		"Material": { "$ref": "../../datatypes/enum/Material.schema.json#/definitions/BasePartOnly" },
-		"MaterialVariant": { "$ref": "../../datatypes/String.schema.json" },
-		"MaterialVariantSerialized": { "$ref": "../../datatypes/String.schema.json" },
-		"Orientation": { "$ref": "../../datatypes/Vector3.schema.json" },
-		"PivotOffset": { "$ref": "../../datatypes/CFrame.schema.json" },
-		"Position": { "$ref": "../../datatypes/Vector3.schema.json" },
-		"Reflectance": { "$ref": "../../datatypes/Float32.schema.json" },
-		"ResizeIncrement": { "$ref": "../../datatypes/Int32.schema.json" },
-		"ResizeableFaces": { "$ref": "../../datatypes/Faces.schema.json" },
-		"RightSurface": { "$ref": "../../datatypes/enum/SurfaceType.schema.json" },
-		"RootPriority": { "$ref": "../../datatypes/Int32.schema.json" },
-		"Rotation": { "$ref": "../../datatypes/Vector3.schema.json" },
-		"Size": { "$ref": "../../datatypes/Vector3.schema.json" },
-		"TopSurface": { "$ref": "../../datatypes/enum/SurfaceType.schema.json" },
-		"Transparency": { "$ref": "../../datatypes/Float32.schema.json" }
+        "ClassName": {
+            "const": "BasePart"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "BasePart properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "Anchored": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AssemblyAngularVelocity": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "AssemblyLinearVelocity": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "AudioCanCollide": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "BackSurface": {
+                    "$ref": "../../enum/SurfaceType.schema.json#/definitions/Enum",
+                    "description": "BackSurface Enum"
+                },
+                "BottomSurface": {
+                    "$ref": "../../enum/SurfaceType.schema.json#/definitions/Enum",
+                    "description": "BottomSurface Enum"
+                },
+                "BrickColor": {
+                    "$ref": "../../datatypes/BrickColor.schema.json"
+                },
+                "CFrame": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "CanCollide": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CanQuery": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CanTouch": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CastShadow": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CollisionGroup": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "CustomPhysicalProperties": {
+                    "$ref": "../../datatypes/PhysicalProperties.schema.json"
+                },
+                "EnableFluidForces": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "FrontSurface": {
+                    "$ref": "../../enum/SurfaceType.schema.json#/definitions/Enum",
+                    "description": "FrontSurface Enum"
+                },
+                "LeftSurface": {
+                    "$ref": "../../enum/SurfaceType.schema.json#/definitions/Enum",
+                    "description": "LeftSurface Enum"
+                },
+                "Locked": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Massless": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Material": {
+                    "$ref": "../../enum/Material.schema.json#/definitions/Enum",
+                    "description": "Material Enum"
+                },
+                "MaterialVariant": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "PivotOffset": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "Reflectance": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightSurface": {
+                    "$ref": "../../enum/SurfaceType.schema.json#/definitions/Enum",
+                    "description": "RightSurface Enum"
+                },
+                "RootPriority": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Rotation": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "Size": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "TopSurface": {
+                    "$ref": "../../enum/SurfaceType.schema.json#/definitions/Enum",
+                    "description": "TopSurface Enum"
+                },
+                "Transparency": {
+                    "type": "number",
+                    "description": "float"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "BasePart"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "BasePart",
+                    "description": "BasePart"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
     }
 }

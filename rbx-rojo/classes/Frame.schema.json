@@ -1,72 +1,164 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "Frame",
-    "description": "A 2D element that has a background color.",
+    "description": "Frame",
     "type": "object",
     "properties": {
-        "ClassName": {"const": "Frame"},
+        "ClassName": {
+            "const": "Frame"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
         "Properties": {
             "type": "object",
-            "$ref": "../Attributes.schema.json",
+            "description": "Frame properties",
             "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
                 "Style": {
-                    "oneOf": [
-                        { "$ref": "../datatypes/Enum.schema.json" },
-                        { "$ref": "../datatypes/enum/FrameStyle.schema.json#/definitions/Enum" }
-                    ]
+                    "$ref": "../enum/FrameStyle.schema.json#/definitions/Enum",
+                    "description": "Style Enum"
                 },
-                "Active": { "$ref": "../datatypes/Bool.schema.json"},
-                "AnchorPoint": { "$ref": "../datatypes/Vector2.schema.json"},
+                "Active": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AnchorPoint": {
+                    "$ref": "../datatypes/Vector2.schema.json"
+                },
                 "AutomaticSize": {
-                    "oneOf": [
-                        {"$ref": "../datatypes/Enum.schema.json" },
-                        {"$ref": "../datatypes/enum/AutomaticSize.schema.json#/definitions/Enum" }
-                    ]
+                    "$ref": "../enum/AutomaticSize.schema.json#/definitions/Enum",
+                    "description": "AutomaticSize Enum"
                 },
-                "BackgroundColor3": { "$ref": "../datatypes/Color3.schema.json"},
-                "BackgroundTransparency": { "$ref": "../datatypes/number_types/normalized.schema.json"},
-                "BorderColor3": { "$ref": "../datatypes/Color3.schema.json" },
+                "BackgroundColor3": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "BackgroundTransparency": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "BorderColor3": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
                 "BorderMode": {
-                    "oneOf": [
-                        { "$ref": "../datatypes/Enum.schema.json" },
-                        { "$ref": "../datatypes/enum/BorderMode.schema.json#/definitions/Enum" }
-                    ]
+                    "$ref": "../enum/BorderMode.schema.json#/definitions/Enum",
+                    "description": "BorderMode Enum"
                 },
                 "BorderSizePixel": {
-                    "type": "integer",
-                    "minimum": 0,
-                    "maximum": 100,
-                    "default": 1
+                    "type": "number",
+                    "description": "int"
                 },
-                "ClipsDescendants": { "$ref": "../datatypes/Bool.schema.json" },
-                "GuiState": {
-                    "oneOf": [
-                        { "$ref": "../datatypes/Enum.schema.json" },
-                        { "$ref": "../datatypes/enum/GuiState.schema.json" }
-                    ]
+                "ClipsDescendants": {
+                    "type": "boolean",
+                    "description": "boolean"
                 },
-                "Interactable": { "$ref": "../datatypes/Bool.schema.json"},
-                "LayoutOrder": { "$ref": "../datatypes/number_types/intMinMax.schema.json" },
-                "Position": { "$ref": "../datatypes/UDim2.schema.json" },
+                "Interactable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LayoutOrder": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Position": {
+                    "$ref": "../datatypes/UDim2.schema.json"
+                },
                 "Rotation": {
                     "type": "number",
-                    "minimum": -180,
-                    "maximum": 180,
-                    "default": 0
+                    "description": "float"
                 },
-                "Selectable": { "$ref": "../datatypes/Bool.schema.json" },
-                "SelectionOrder": { "$ref": "../datatypes/number_types/intMinMax.schema.json" },
-                "Size": { "$ref": "../datatypes/UDim2.schema.json"},
+                "Selectable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "SelectionOrder": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Size": {
+                    "$ref": "../datatypes/UDim2.schema.json"
+                },
                 "SizeConstraint": {
-                    "oneOf": [
-                        { "$ref": "../datatypes/Enum.schema.json" },
-                        { "$ref": "../datatypes/enum/SizeConstraint.schema.json#/definitions/Enum" }
-                    ]
+                    "$ref": "../enum/SizeConstraint.schema.json#/definitions/Enum",
+                    "description": "SizeConstraint Enum"
                 },
-                "Visible": { "$ref": "../datatypes/Bool.schema.json"},
-                "ZIndex": { "$ref": "../datatypes/number_types/intMinMax.schema.json" }
+                "Visible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ZIndex": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "AutoLocalize": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "SelectionBehaviorDown": {
+                    "$ref": "../enum/SelectionBehavior.schema.json#/definitions/Enum",
+                    "description": "SelectionBehaviorDown Enum"
+                },
+                "SelectionBehaviorLeft": {
+                    "$ref": "../enum/SelectionBehavior.schema.json#/definitions/Enum",
+                    "description": "SelectionBehaviorLeft Enum"
+                },
+                "SelectionBehaviorRight": {
+                    "$ref": "../enum/SelectionBehavior.schema.json#/definitions/Enum",
+                    "description": "SelectionBehaviorRight Enum"
+                },
+                "SelectionBehaviorUp": {
+                    "$ref": "../enum/SelectionBehavior.schema.json#/definitions/Enum",
+                    "description": "SelectionBehaviorUp Enum"
+                },
+                "SelectionGroup": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
                 }
             }
-    },
-    "required": ["ClassName"]
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Frame"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Frame",
+                    "description": "Frame"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
 }
