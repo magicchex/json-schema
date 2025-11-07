@@ -14,7 +14,7 @@
                 "$ref": "#/definitions/classes",
                 "properties": {
                     "Name": {
-                        "$ref": "#/definitions/classEnum"
+                        "type": "string"
                     },
                     "Children": {
                         "$ref": "#/definitions/recursiveChildren"
