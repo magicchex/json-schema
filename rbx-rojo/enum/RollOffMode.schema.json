@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "RollOffMode",
+    "description": "RollOffMode",
+    "type": "object",
+    "properties": {
+        "RollOffMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Inverse",
+                "Linear",
+                "LinearSquare",
+                "InverseTapered"
+            ]
+        }
+    }
+}

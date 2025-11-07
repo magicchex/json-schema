@@ -1,0 +1,85 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "FlangeSoundEffect",
+    "description": "FlangeSoundEffect",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "FlangeSoundEffect"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "FlangeSoundEffect properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Depth": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Mix": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Rate": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Priority": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "FlangeSoundEffect"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "FlangeSoundEffect",
+                    "description": "FlangeSoundEffect"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DraggerMovementMode",
+    "description": "DraggerMovementMode",
+    "type": "object",
+    "properties": {
+        "DraggerMovementMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Geometric",
+                "Physical"
+            ]
+        }
+    }
+}

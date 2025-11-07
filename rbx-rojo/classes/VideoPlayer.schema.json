@@ -1,0 +1,92 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "VideoPlayer",
+    "description": "VideoPlayer",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "VideoPlayer"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "VideoPlayer properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "AutoLoadInStudio": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AutoPlayInStudio": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Looping": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "PlaybackSpeed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "TimePosition": {
+                    "type": "number",
+                    "description": "double"
+                },
+                "VideoContent": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "Volume": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "VideoPlayer"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "VideoPlayer",
+                    "description": "VideoPlayer"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

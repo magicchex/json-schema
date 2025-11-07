@@ -1,0 +1,77 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "IntConstrainedValue",
+    "description": "IntConstrainedValue",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "IntConstrainedValue"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "IntConstrainedValue properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "MaxValue": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "MinValue": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "Value": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "IntConstrainedValue"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "IntConstrainedValue",
+                    "description": "IntConstrainedValue"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

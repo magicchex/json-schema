@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "StrokeSizingMode",
+    "description": "StrokeSizingMode",
+    "type": "object",
+    "properties": {
+        "StrokeSizingMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "FixedSize",
+                "ScaledSize"
+            ]
+        }
+    }
+}

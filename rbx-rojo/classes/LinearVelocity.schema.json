@@ -1,0 +1,125 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "LinearVelocity",
+    "description": "LinearVelocity",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "LinearVelocity"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "LinearVelocity properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "ForceLimitMode": {
+                    "$ref": "../enum/ForceLimitMode.schema.json#/definitions/Enum",
+                    "description": "ForceLimitMode Enum"
+                },
+                "ForceLimitsEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LineDirection": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "LineVelocity": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaxAxesForce": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "MaxForce": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaxPlanarAxesForce": {
+                    "$ref": "../datatypes/Vector2.schema.json"
+                },
+                "PlaneVelocity": {
+                    "$ref": "../datatypes/Vector2.schema.json"
+                },
+                "PrimaryTangentAxis": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "ReactionForceEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "RelativeTo": {
+                    "$ref": "../enum/ActuatorRelativeTo.schema.json#/definitions/Enum",
+                    "description": "RelativeTo Enum"
+                },
+                "SecondaryTangentAxis": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "VectorVelocity": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "VelocityConstraintMode": {
+                    "$ref": "../enum/VelocityConstraintMode.schema.json#/definitions/Enum",
+                    "description": "VelocityConstraintMode Enum"
+                },
+                "Color": {
+                    "$ref": "../datatypes/BrickColor.schema.json"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Visible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "LinearVelocity"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "LinearVelocity",
+                    "description": "LinearVelocity"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

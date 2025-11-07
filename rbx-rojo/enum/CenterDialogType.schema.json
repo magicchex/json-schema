@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "CenterDialogType",
+    "description": "CenterDialogType",
+    "type": "object",
+    "properties": {
+        "CenterDialogType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "UnsolicitedDialog",
+                "PlayerInitiatedDialog",
+                "ModalDialog",
+                "QuitDialog"
+            ]
+        }
+    }
+}

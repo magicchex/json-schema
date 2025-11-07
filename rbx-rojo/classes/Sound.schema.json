@@ -1,0 +1,121 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Sound",
+    "description": "Sound",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Sound"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Sound properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "AudioContent": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "IsMutedForCapture": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LoopRegion": {
+                    "$ref": "../datatypes/NumberRange.schema.json"
+                },
+                "Looped": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "PlayOnRemove": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "PlaybackRegion": {
+                    "$ref": "../datatypes/NumberRange.schema.json"
+                },
+                "PlaybackRegionsEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "PlaybackSpeed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Playing": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "RollOffMaxDistance": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RollOffMinDistance": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RollOffMode": {
+                    "$ref": "../enum/RollOffMode.schema.json#/definitions/Enum",
+                    "description": "RollOffMode Enum"
+                },
+                "SoundId": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "TimePosition": {
+                    "type": "number",
+                    "description": "double"
+                },
+                "Volume": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Sound"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Sound",
+                    "description": "Sound"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

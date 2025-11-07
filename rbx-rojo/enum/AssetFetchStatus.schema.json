@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AssetFetchStatus",
+    "description": "AssetFetchStatus",
+    "type": "object",
+    "properties": {
+        "AssetFetchStatus": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Success",
+                "Failure",
+                "None",
+                "Loading",
+                "TimedOut"
+            ]
+        }
+    }
+}

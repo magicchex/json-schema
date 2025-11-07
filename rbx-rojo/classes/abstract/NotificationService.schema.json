@@ -1,0 +1,57 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "NotificationService",
+    "description": "NotificationService",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "NotificationService"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "NotificationService properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "SelectedTheme": {
+                    "type": "string",
+                    "description": "string"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "NotificationService"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "NotificationService",
+                    "description": "NotificationService"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

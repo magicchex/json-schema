@@ -1,0 +1,94 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AccessoryDescription",
+    "description": "AccessoryDescription",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AccessoryDescription"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AccessoryDescription properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "AccessoryType": {
+                    "$ref": "../enum/AccessoryType.schema.json#/definitions/Enum",
+                    "description": "AccessoryType Enum"
+                },
+                "AssetId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "IsLayered": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Order": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Position": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "Puffiness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Rotation": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "Scale": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AccessoryDescription"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AccessoryDescription",
+                    "description": "AccessoryDescription"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

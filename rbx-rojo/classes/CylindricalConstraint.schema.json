@@ -1,0 +1,184 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "CylindricalConstraint",
+    "description": "CylindricalConstraint",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "CylindricalConstraint"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "CylindricalConstraint properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "AngularActuatorType": {
+                    "$ref": "../enum/ActuatorType.schema.json#/definitions/Enum",
+                    "description": "AngularActuatorType Enum"
+                },
+                "AngularLimitsEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AngularResponsiveness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "AngularRestitution": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "AngularSpeed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "AngularVelocity": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "InclinationAngle": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LowerAngle": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MotorMaxAngularAcceleration": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MotorMaxTorque": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RotationAxisVisible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ServoMaxTorque": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "TargetAngle": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "UpperAngle": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ActuatorType": {
+                    "$ref": "../enum/ActuatorType.schema.json#/definitions/Enum",
+                    "description": "ActuatorType Enum"
+                },
+                "LimitsEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LinearResponsiveness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LowerLimit": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MotorMaxAcceleration": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MotorMaxForce": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Restitution": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ServoMaxForce": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Size": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Speed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "TargetPosition": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "UpperLimit": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Velocity": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Color": {
+                    "$ref": "../datatypes/BrickColor.schema.json"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Visible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "CylindricalConstraint"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "CylindricalConstraint",
+                    "description": "CylindricalConstraint"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

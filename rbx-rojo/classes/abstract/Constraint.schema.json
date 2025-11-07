@@ -1,0 +1,64 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Constraint",
+    "description": "Constraint",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Constraint"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Constraint properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "Color": {
+                    "$ref": "../../datatypes/BrickColor.schema.json"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Visible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Constraint"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Constraint",
+                    "description": "Constraint"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

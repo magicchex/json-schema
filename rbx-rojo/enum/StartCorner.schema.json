@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "StartCorner",
+    "description": "StartCorner",
+    "type": "object",
+    "properties": {
+        "StartCorner": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "TopLeft",
+                "TopRight",
+                "BottomLeft",
+                "BottomRight"
+            ]
+        }
+    }
+}

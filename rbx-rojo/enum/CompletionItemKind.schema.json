@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "CompletionItemKind",
+    "description": "CompletionItemKind",
+    "type": "object",
+    "properties": {
+        "CompletionItemKind": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Text",
+                "Method",
+                "Function",
+                "Constructor",
+                "Field",
+                "Variable",
+                "Class",
+                "Interface",
+                "Module",
+                "Property",
+                "Unit",
+                "Value",
+                "Enum",
+                "Keyword",
+                "Snippet",
+                "Color",
+                "File",
+                "Reference",
+                "Folder",
+                "EnumMember",
+                "Constant",
+                "Struct",
+                "Event",
+                "Operator",
+                "TypeParameter"
+            ]
+        }
+    }
+}

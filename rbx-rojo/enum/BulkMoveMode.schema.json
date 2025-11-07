@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "BulkMoveMode",
+    "description": "BulkMoveMode",
+    "type": "object",
+    "properties": {
+        "BulkMoveMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "FireAllEvents",
+                "FireCFrameChanged"
+            ]
+        }
+    }
+}

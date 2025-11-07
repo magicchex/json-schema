@@ -1,0 +1,117 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ReflectionMetadataItem",
+    "description": "ReflectionMetadataItem",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "ReflectionMetadataItem"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "ReflectionMetadataItem properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "Browsable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ClassCategory": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "ClientOnly": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Constraint": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Deprecated": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "EditingDisabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "EditorType": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "FFlag": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "IsBackend": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "PropertyOrder": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "ScriptContext": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "ServerOnly": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "SliderScaling": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "UIMaximum": {
+                    "type": "number",
+                    "description": "double"
+                },
+                "UIMinimum": {
+                    "type": "number",
+                    "description": "double"
+                },
+                "UINumTicks": {
+                    "type": "number",
+                    "description": "double"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "ReflectionMetadataItem"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "ReflectionMetadataItem",
+                    "description": "ReflectionMetadataItem"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

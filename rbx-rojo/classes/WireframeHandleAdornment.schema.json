@@ -1,0 +1,101 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "WireframeHandleAdornment",
+    "description": "WireframeHandleAdornment",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "WireframeHandleAdornment"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "WireframeHandleAdornment properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Scale": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "Thickness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "AdornCullingMode": {
+                    "$ref": "../enum/AdornCullingMode.schema.json#/definitions/Enum",
+                    "description": "AdornCullingMode Enum"
+                },
+                "AlwaysOnTop": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CFrame": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "SizeRelativeOffset": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "ZIndex": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Color3": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "Transparency": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Visible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "WireframeHandleAdornment"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "WireframeHandleAdornment",
+                    "description": "WireframeHandleAdornment"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

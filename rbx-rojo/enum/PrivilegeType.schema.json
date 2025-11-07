@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "PrivilegeType",
+    "description": "PrivilegeType",
+    "type": "object",
+    "properties": {
+        "PrivilegeType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Banned",
+                "Owner",
+                "Admin",
+                "Member",
+                "Visitor"
+            ]
+        }
+    }
+}

@@ -1,0 +1,1712 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Used when building into a model or place"
+        },
+        "tree": {
+            "$ref": "#/definitions/recursiveTree",
+            "description": "The Instance Description of the root instance"
+        },
+        "globIgnorePaths": {
+            "type": "array",
+            "description": "list of paths to ignore",
+            "items": {
+                "type": "string"
+            },
+            "default": []
+        },
+        "servePort": {
+            "type": "number",
+            "description": "Port where rojo serve should listen to",
+            "default": 34872
+        },
+        "servePlaceIds": {
+            "type": "array",
+            "description": "Place IDs to sync to. This helps to prevent overwriting to incorrect places with the current project.json's source",
+            "items": {
+                "type": "number"
+            }
+        },
+        "placeId": {
+            "type": "number",
+            "description": "Sets the current place ID when connecting to Rojo on Roblox Studio"
+        },
+        "gameId": {
+            "type": "number",
+            "description": "Sets the current game ID when connecting to Rojo on Roblox Studio"
+        },
+        "serveAddress": {
+            "type": "string",
+            "description": "The web address to serve to. Ex: 127.0.0.1"
+        },
+        "emitLegacyScripts": {
+            "type": "boolean",
+            "description": "true = Use Scripts and LocalScripts; false = Use Scripts with RunContext",
+            "default": true
+        }
+    },
+    "required": [
+        "name",
+        "tree"
+    ],
+    "definitions": {
+        "recursiveTree": {
+            "type": "object",
+            "$ref": "#/definitions/classes",
+            "properties": {
+                "$className": {
+                    "$ref": "#/definitions/classEnum"
+                },
+                "$path": {
+                    "type": "string",
+                    "description": "The path on the filesystem to retrieve files"
+                },
+                "$ignoreUnknownInstances": {
+                    "type": "boolean",
+                    "description": "true = ignore instance unknown to Rojo; false = accept unknown instance to Rojo. If path is specified, this option is true",
+                    "default": false
+                }
+            },
+            "patternProperties": {
+                "^(?!\\$).+": {
+                    "$ref": "#/definitions/recursiveTree"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        },
+        "classes": {
+            "oneOf": [
+                {
+                    "$ref": "./classes/abstract/Instance.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AccessoryDescription.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Accoutrement.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Accessory.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AdPortal.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Animation.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/AnimationClip.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/KeyframeSequence.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AnimationNodeDefinition.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AnimationRigData.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/AnimationTrack.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Animator.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Annotation.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/WorkspaceAnnotation.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/AssetDeliveryProxy.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/AssetPatchSettings.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/AssetService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Atmosphere.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Attachment.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Bone.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioAnalyzer.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioChannelMixer.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioChannelSplitter.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioChorus.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioCompressor.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioDeviceInput.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioDeviceOutput.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioDistortion.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioEcho.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioEmitter.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioEqualizer.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioFader.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioFilter.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioFlanger.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioGate.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioLimiter.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioListener.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioPitchShifter.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioPlayer.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/AudioRecorder.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioReverb.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioSearchParams.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioSpeechToText.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioTextToSpeech.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AudioTremolo.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/AuroraScriptObject.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/AuroraService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AvatarAccessoryRules.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AvatarAnimationRules.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AvatarBodyRules.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AvatarClothingRules.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AvatarCollisionRules.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AvatarRules.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/AvatarSettings.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/BaseImportData.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/GroupImportData.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/MaterialImportData.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/MeshImportData.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/RootImportData.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/CoreGui.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/PlayerGui.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/StarterGui.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/BaseWrap.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/WrapLayer.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/WrapTarget.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Beam.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/BodyAngularVelocity.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/BodyForce.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/BodyGyro.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/BodyPosition.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/BodyThrust.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/BodyVelocity.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/RocketPropulsion.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/BodyPartDescription.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Breakpoint.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/BodyColors.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/CharacterMesh.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/Clothing.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Pants.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Shirt.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ShirtGraphic.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Skin.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/Chat.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ClickDetector.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/DragDetector.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Clouds.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/Constraint.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AlignOrientation.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AlignPosition.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AngularVelocity.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AnimationConstraint.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/BallSocketConstraint.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/HingeConstraint.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/LineForce.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/LinearVelocity.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/RodConstraint.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/RopeConstraint.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/SlidingBallConstraint.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/CylindricalConstraint.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/SpringConstraint.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Torque.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/TorsionSpringConstraint.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/UniversalConstraint.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/VectorForce.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/SkateboardController.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/ControllerBase.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AirController.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ClimbController.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/GroundController.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/SwimController.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ControllerManager.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/CustomEvent.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/CustomEventReceiver.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/DataModelMesh.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/FileMesh.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/SpecialMesh.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/DataStoreGetOptions.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/DataStoreOptions.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/DataStoreService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/DebugSettings.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/DebuggerBreakpoint.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/DebuggerWatch.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Dialog.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/DialogChoice.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/DraggerService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/EulerRotationCurve.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ExperienceInviteOptions.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Explosion.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/FaceControls.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/FaceInstance.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Decal.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Texture.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/Feature.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Fire.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/FloatCurve.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Folder.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ForceField.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/FunctionalTest.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/GameSettings.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/GamepadService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/GetTextBoundsParams.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/GuiBase2d.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/GuiObject.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/CanvasGroup.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Frame.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/GuiButton.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ImageButton.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/TextButton.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ImageLabel.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/TextLabel.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ScrollingFrame.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/TextBox.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/VideoDisplay.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/VideoFrame.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ViewportFrame.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/LayerCollector.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/BillboardGui.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/PluginGui.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ScreenGui.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/SurfaceGuiBase.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AdGui.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/SurfaceGui.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/GuiBase3d.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/FloorWire.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/InstanceAdornment.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/SelectionBox.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/PVAdornment.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/HandleAdornment.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/BoxHandleAdornment.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ConeHandleAdornment.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/CylinderHandleAdornment.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ImageHandleAdornment.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/LineHandleAdornment.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/SphereHandleAdornment.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/WireframeHandleAdornment.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ParabolaAdornment.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/SelectionSphere.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/PartAdornment.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ArcHandles.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Handles.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/SurfaceSelection.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/SelectionLasso.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/SelectionPartLasso.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/SelectionPointLasso.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Path2D.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/GuiService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/HandRigDescription.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/HapticEffect.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/HiddenSurfaceRemovalAsset.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Highlight.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/HttpService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Humanoid.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/HumanoidDescription.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/HumanoidRigDescription.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/IKControl.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/IncrementalPatchBuilder.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/InputAction.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/InputBinding.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/InputContext.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/InputObject.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/InsertService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/InternalSyncItem.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/JointInstance.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/DynamicRotate.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Glue.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Motor.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Motor6D.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/VelocityMotor.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Keyframe.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/KeyframeMarker.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/Light.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/PointLight.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/SpotLight.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/SurfaceLight.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/Lighting.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/LocalizationTable.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AuroraScript.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/BaseScript.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Script.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ModuleScript.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/MarkerCurve.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/MaterialService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/MaterialVariant.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Message.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/MicroProfilerService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/Mouse.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/NetworkSettings.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/NoCollisionConstraint.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Noise.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/NotificationService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/PVInstance.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/BasePart.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Part.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/FlagStand.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Seat.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/SkateboardPlatform.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/SpawnLocation.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/Terrain.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/TriangleMeshPart.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/MeshPart.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/PartOperation.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/NegateOperation.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/TrussPart.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/VehicleSeat.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Camera.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Model.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/BackpackItem.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/HopperBin.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Tool.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Flag.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/Workspace.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/PackageLink.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/PartOperationAsset.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ParticleEmitter.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/PatchMapping.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/PathfindingLink.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/PathfindingModifier.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/PhysicsSettings.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Player.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/PlayerDataService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/Players.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/Plugin.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/PluginAction.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/PluginCapabilities.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/PluginMenu.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/PluginToolbarButton.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/PoseBase.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/NumberPose.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Pose.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/PostEffect.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/BloomEffect.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/BlurEffect.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ColorCorrectionEffect.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ColorGradingEffect.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/DepthOfFieldEffect.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/SunRaysEffect.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ProximityPrompt.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/ProximityPromptService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/RTAnimationTracker.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/ReflectionMetadataItem.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ReflectionMetadataClass.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/RenderSettings.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/RenderingTest.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/RobloxSerializableInstance.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/RotationCurve.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/RunService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/SafetyService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/ScreenshotHud.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/SyncScriptBuilder.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/SensorBase.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/AtmosphereSensor.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/BuoyancySensor.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ControllerPartSensor.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/FluidForceSensor.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/ServerScriptService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/ServiceVisibilityService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Sky.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Smoke.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Sound.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/SoundEffect.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ChorusSoundEffect.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/CompressorSoundEffect.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/ChannelSelectorSoundEffect.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/DistortionSoundEffect.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/EchoSoundEffect.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/EqualizerSoundEffect.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/FlangeSoundEffect.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/PitchShiftSoundEffect.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ReverbSoundEffect.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/TremoloSoundEffect.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/SoundGroup.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/SoundService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Sparkles.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/StarterPlayer.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/Studio.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/StudioAttachment.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/StudioCallout.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/StudioCameraService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/StudioPublishService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/StudioService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/StyleRule.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/StyleDerive.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/StyleLink.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/StyleQuery.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/SurfaceAppearance.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/TaskScheduler.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Team.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/TeleportOptions.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/TerrainDetail.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/TerrainRegion.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/TestService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/TextChannel.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/TextChatCommand.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/BubbleChatConfiguration.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/ChannelTabsConfiguration.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/ChatInputBarConfiguration.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/ChatWindowConfiguration.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/TextChatMessage.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/TextChatMessageProperties.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/BubbleChatMessageProperties.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/ChatWindowMessageProperties.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/TextChatService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/TextGenerator.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/TextSource.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/TrackerLodController.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Trail.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Tween.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/UIAspectRatioConstraint.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/UISizeConstraint.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/UITextSizeConstraint.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/UICorner.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/UIDragDetector.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/UIFlexItem.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/UIGradient.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/UIGridStyleLayout.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/UIGridLayout.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/UIListLayout.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/UIPageLayout.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/UITableLayout.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/UIPadding.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/UIScale.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/UIStroke.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/UserGameSettings.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/UserInputService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/VRService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/BinaryStringValue.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/BoolValue.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/BrickColorValue.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/CFrameValue.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Color3Value.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/DoubleConstrainedValue.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/IntConstrainedValue.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/IntValue.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/NumberValue.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ObjectValue.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/RayValue.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/StringValue.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Vector3Value.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/ValueCurve.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/VideoDeviceInput.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/VideoPlayer.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/VisualizationMode.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/VisualizationModeCategory.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/abstract/VoiceChatService.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/WeldConstraint.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/Wire.schema.json#/definitions/Project"
+                },
+                {
+                    "$ref": "./classes/WrapTextureTransfer.schema.json#/definitions/Project"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "$className": {
+                            "const": "DataModel"
+                        }
+                    }
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "$className": {
+                            "const": "ReplicatedStorage"
+                        }
+                    }
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "$className": {
+                            "const": "ReplicatedFirst"
+                        }
+                    }
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "$className": {
+                            "const": "ServerStorage"
+                        }
+                    }
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "$className": {
+                            "const": "StarterPack"
+                        }
+                    }
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "$className": {
+                            "const": "StarterCharacterScripts"
+                        }
+                    }
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "$className": {
+                            "const": "StarterPlayerScripts"
+                        }
+                    }
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "$className": {
+                            "const": "Teams"
+                        }
+                    }
+                }
+            ]
+        },
+        "classEnum": {
+            "type": "string",
+            "enum": [
+                "Instance",
+                "AccessoryDescription",
+                "Accoutrement",
+                "Accessory",
+                "AdPortal",
+                "Animation",
+                "AnimationClip",
+                "KeyframeSequence",
+                "AnimationNodeDefinition",
+                "AnimationRigData",
+                "AnimationTrack",
+                "Animator",
+                "Annotation",
+                "WorkspaceAnnotation",
+                "AssetDeliveryProxy",
+                "AssetPatchSettings",
+                "AssetService",
+                "Atmosphere",
+                "Attachment",
+                "Bone",
+                "AudioAnalyzer",
+                "AudioChannelMixer",
+                "AudioChannelSplitter",
+                "AudioChorus",
+                "AudioCompressor",
+                "AudioDeviceInput",
+                "AudioDeviceOutput",
+                "AudioDistortion",
+                "AudioEcho",
+                "AudioEmitter",
+                "AudioEqualizer",
+                "AudioFader",
+                "AudioFilter",
+                "AudioFlanger",
+                "AudioGate",
+                "AudioLimiter",
+                "AudioListener",
+                "AudioPitchShifter",
+                "AudioPlayer",
+                "AudioRecorder",
+                "AudioReverb",
+                "AudioSearchParams",
+                "AudioSpeechToText",
+                "AudioTextToSpeech",
+                "AudioTremolo",
+                "AuroraScriptObject",
+                "AuroraService",
+                "AvatarAccessoryRules",
+                "AvatarAnimationRules",
+                "AvatarBodyRules",
+                "AvatarClothingRules",
+                "AvatarCollisionRules",
+                "AvatarRules",
+                "AvatarSettings",
+                "BaseImportData",
+                "GroupImportData",
+                "MaterialImportData",
+                "MeshImportData",
+                "RootImportData",
+                "CoreGui",
+                "PlayerGui",
+                "StarterGui",
+                "BaseWrap",
+                "WrapLayer",
+                "WrapTarget",
+                "Beam",
+                "BodyAngularVelocity",
+                "BodyForce",
+                "BodyGyro",
+                "BodyPosition",
+                "BodyThrust",
+                "BodyVelocity",
+                "RocketPropulsion",
+                "BodyPartDescription",
+                "Breakpoint",
+                "BodyColors",
+                "CharacterMesh",
+                "Clothing",
+                "Pants",
+                "Shirt",
+                "ShirtGraphic",
+                "Skin",
+                "Chat",
+                "ClickDetector",
+                "DragDetector",
+                "Clouds",
+                "Constraint",
+                "AlignOrientation",
+                "AlignPosition",
+                "AngularVelocity",
+                "AnimationConstraint",
+                "BallSocketConstraint",
+                "HingeConstraint",
+                "LineForce",
+                "LinearVelocity",
+                "RodConstraint",
+                "RopeConstraint",
+                "SlidingBallConstraint",
+                "CylindricalConstraint",
+                "SpringConstraint",
+                "Torque",
+                "TorsionSpringConstraint",
+                "UniversalConstraint",
+                "VectorForce",
+                "SkateboardController",
+                "ControllerBase",
+                "AirController",
+                "ClimbController",
+                "GroundController",
+                "SwimController",
+                "ControllerManager",
+                "CustomEvent",
+                "CustomEventReceiver",
+                "DataModelMesh",
+                "FileMesh",
+                "SpecialMesh",
+                "DataStoreGetOptions",
+                "DataStoreOptions",
+                "DataStoreService",
+                "DebugSettings",
+                "DebuggerBreakpoint",
+                "DebuggerWatch",
+                "Dialog",
+                "DialogChoice",
+                "DraggerService",
+                "EulerRotationCurve",
+                "ExperienceInviteOptions",
+                "Explosion",
+                "FaceControls",
+                "FaceInstance",
+                "Decal",
+                "Texture",
+                "Feature",
+                "Fire",
+                "FloatCurve",
+                "Folder",
+                "ForceField",
+                "FunctionalTest",
+                "GameSettings",
+                "GamepadService",
+                "GetTextBoundsParams",
+                "GuiBase2d",
+                "GuiObject",
+                "CanvasGroup",
+                "Frame",
+                "GuiButton",
+                "ImageButton",
+                "TextButton",
+                "ImageLabel",
+                "TextLabel",
+                "ScrollingFrame",
+                "TextBox",
+                "VideoDisplay",
+                "VideoFrame",
+                "ViewportFrame",
+                "LayerCollector",
+                "BillboardGui",
+                "PluginGui",
+                "ScreenGui",
+                "SurfaceGuiBase",
+                "AdGui",
+                "SurfaceGui",
+                "GuiBase3d",
+                "FloorWire",
+                "InstanceAdornment",
+                "SelectionBox",
+                "PVAdornment",
+                "HandleAdornment",
+                "BoxHandleAdornment",
+                "ConeHandleAdornment",
+                "CylinderHandleAdornment",
+                "ImageHandleAdornment",
+                "LineHandleAdornment",
+                "SphereHandleAdornment",
+                "WireframeHandleAdornment",
+                "ParabolaAdornment",
+                "SelectionSphere",
+                "PartAdornment",
+                "ArcHandles",
+                "Handles",
+                "SurfaceSelection",
+                "SelectionLasso",
+                "SelectionPartLasso",
+                "SelectionPointLasso",
+                "Path2D",
+                "GuiService",
+                "HandRigDescription",
+                "HapticEffect",
+                "HiddenSurfaceRemovalAsset",
+                "Highlight",
+                "HttpService",
+                "Humanoid",
+                "HumanoidDescription",
+                "HumanoidRigDescription",
+                "IKControl",
+                "IncrementalPatchBuilder",
+                "InputAction",
+                "InputBinding",
+                "InputContext",
+                "InputObject",
+                "InsertService",
+                "InternalSyncItem",
+                "JointInstance",
+                "DynamicRotate",
+                "Glue",
+                "Motor",
+                "Motor6D",
+                "VelocityMotor",
+                "Keyframe",
+                "KeyframeMarker",
+                "Light",
+                "PointLight",
+                "SpotLight",
+                "SurfaceLight",
+                "Lighting",
+                "LocalizationTable",
+                "AuroraScript",
+                "BaseScript",
+                "Script",
+                "ModuleScript",
+                "MarkerCurve",
+                "MaterialService",
+                "MaterialVariant",
+                "Message",
+                "MicroProfilerService",
+                "Mouse",
+                "NetworkSettings",
+                "NoCollisionConstraint",
+                "Noise",
+                "NotificationService",
+                "PVInstance",
+                "BasePart",
+                "Part",
+                "FlagStand",
+                "Seat",
+                "SkateboardPlatform",
+                "SpawnLocation",
+                "Terrain",
+                "TriangleMeshPart",
+                "MeshPart",
+                "PartOperation",
+                "NegateOperation",
+                "TrussPart",
+                "VehicleSeat",
+                "Camera",
+                "Model",
+                "BackpackItem",
+                "HopperBin",
+                "Tool",
+                "Flag",
+                "Workspace",
+                "PackageLink",
+                "PartOperationAsset",
+                "ParticleEmitter",
+                "PatchMapping",
+                "PathfindingLink",
+                "PathfindingModifier",
+                "PhysicsSettings",
+                "Player",
+                "PlayerDataService",
+                "Players",
+                "Plugin",
+                "PluginAction",
+                "PluginCapabilities",
+                "PluginMenu",
+                "PluginToolbarButton",
+                "PoseBase",
+                "NumberPose",
+                "Pose",
+                "PostEffect",
+                "BloomEffect",
+                "BlurEffect",
+                "ColorCorrectionEffect",
+                "ColorGradingEffect",
+                "DepthOfFieldEffect",
+                "SunRaysEffect",
+                "ProximityPrompt",
+                "ProximityPromptService",
+                "RTAnimationTracker",
+                "ReflectionMetadataItem",
+                "ReflectionMetadataClass",
+                "RenderSettings",
+                "RenderingTest",
+                "RobloxSerializableInstance",
+                "RotationCurve",
+                "RunService",
+                "SafetyService",
+                "ScreenshotHud",
+                "SyncScriptBuilder",
+                "SensorBase",
+                "AtmosphereSensor",
+                "BuoyancySensor",
+                "ControllerPartSensor",
+                "FluidForceSensor",
+                "ServerScriptService",
+                "ServiceVisibilityService",
+                "Sky",
+                "Smoke",
+                "Sound",
+                "SoundEffect",
+                "ChorusSoundEffect",
+                "CompressorSoundEffect",
+                "ChannelSelectorSoundEffect",
+                "DistortionSoundEffect",
+                "EchoSoundEffect",
+                "EqualizerSoundEffect",
+                "FlangeSoundEffect",
+                "PitchShiftSoundEffect",
+                "ReverbSoundEffect",
+                "TremoloSoundEffect",
+                "SoundGroup",
+                "SoundService",
+                "Sparkles",
+                "StarterPlayer",
+                "Studio",
+                "StudioAttachment",
+                "StudioCallout",
+                "StudioCameraService",
+                "StudioPublishService",
+                "StudioService",
+                "StyleRule",
+                "StyleDerive",
+                "StyleLink",
+                "StyleQuery",
+                "SurfaceAppearance",
+                "TaskScheduler",
+                "Team",
+                "TeleportOptions",
+                "TerrainDetail",
+                "TerrainRegion",
+                "TestService",
+                "TextChannel",
+                "TextChatCommand",
+                "BubbleChatConfiguration",
+                "ChannelTabsConfiguration",
+                "ChatInputBarConfiguration",
+                "ChatWindowConfiguration",
+                "TextChatMessage",
+                "TextChatMessageProperties",
+                "BubbleChatMessageProperties",
+                "ChatWindowMessageProperties",
+                "TextChatService",
+                "TextGenerator",
+                "TextSource",
+                "TrackerLodController",
+                "Trail",
+                "Tween",
+                "UIAspectRatioConstraint",
+                "UISizeConstraint",
+                "UITextSizeConstraint",
+                "UICorner",
+                "UIDragDetector",
+                "UIFlexItem",
+                "UIGradient",
+                "UIGridStyleLayout",
+                "UIGridLayout",
+                "UIListLayout",
+                "UIPageLayout",
+                "UITableLayout",
+                "UIPadding",
+                "UIScale",
+                "UIStroke",
+                "UserGameSettings",
+                "UserInputService",
+                "VRService",
+                "BinaryStringValue",
+                "BoolValue",
+                "BrickColorValue",
+                "CFrameValue",
+                "Color3Value",
+                "DoubleConstrainedValue",
+                "IntConstrainedValue",
+                "IntValue",
+                "NumberValue",
+                "ObjectValue",
+                "RayValue",
+                "StringValue",
+                "Vector3Value",
+                "ValueCurve",
+                "VideoDeviceInput",
+                "VideoPlayer",
+                "VisualizationMode",
+                "VisualizationModeCategory",
+                "VoiceChatService",
+                "WeldConstraint",
+                "Wire",
+                "WrapTextureTransfer",
+                "DataModel",
+                "ReplicatedStorage",
+                "ReplicatedFirst",
+                "ServerStorage",
+                "StarterPack",
+                "StarterCharacterScripts",
+                "StarterPlayerScripts",
+                "Teams"
+            ]
+        }
+    }
+}

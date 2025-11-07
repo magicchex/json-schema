@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "GearType",
+    "description": "GearType",
+    "type": "object",
+    "properties": {
+        "GearType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "MeleeWeapons",
+                "RangedWeapons",
+                "Explosives",
+                "PowerUps",
+                "NavigationEnhancers",
+                "MusicalInstruments",
+                "SocialItems",
+                "BuildingTools",
+                "Transport"
+            ]
+        }
+    }
+}

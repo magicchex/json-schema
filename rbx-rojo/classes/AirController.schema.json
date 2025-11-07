@@ -1,0 +1,101 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AirController",
+    "description": "AirController",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AirController"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AirController properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "BalanceMaxTorque": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "BalanceSpeed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaintainAngularMomentum": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "MaintainLinearMomentum": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "MoveMaxForce": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "TurnMaxTorque": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "TurnSpeedFactor": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "BalanceRigidityEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "MoveSpeedFactor": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AirController"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AirController",
+                    "description": "AirController"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

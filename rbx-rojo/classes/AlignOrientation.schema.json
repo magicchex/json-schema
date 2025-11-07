@@ -1,0 +1,120 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AlignOrientation",
+    "description": "AlignOrientation",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AlignOrientation"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AlignOrientation properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "AlignType": {
+                    "$ref": "../enum/AlignType.schema.json#/definitions/Enum",
+                    "description": "AlignType Enum"
+                },
+                "CFrame": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "LookAtPosition": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "MaxAngularVelocity": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaxTorque": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Mode": {
+                    "$ref": "../enum/OrientationAlignmentMode.schema.json#/definitions/Enum",
+                    "description": "Mode Enum"
+                },
+                "PrimaryAxis": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "PrimaryAxisOnly": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ReactionTorqueEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Responsiveness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RigidityEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "SecondaryAxis": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "Color": {
+                    "$ref": "../datatypes/BrickColor.schema.json"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Visible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AlignOrientation"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AlignOrientation",
+                    "description": "AlignOrientation"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

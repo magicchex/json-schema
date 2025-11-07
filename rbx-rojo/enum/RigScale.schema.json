@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "RigScale",
+    "description": "RigScale",
+    "type": "object",
+    "properties": {
+        "RigScale": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Default",
+                "Rthro",
+                "RthroNarrow"
+            ]
+        }
+    }
+}

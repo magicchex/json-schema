@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "LayerCollector",
+    "description": "LayerCollector",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "LayerCollector"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "LayerCollector properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ResetOnSpawn": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ZIndexBehavior": {
+                    "$ref": "../../enum/ZIndexBehavior.schema.json#/definitions/Enum",
+                    "description": "ZIndexBehavior Enum"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "LayerCollector"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "LayerCollector",
+                    "description": "LayerCollector"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

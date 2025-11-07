@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ScreenInsets",
+    "description": "ScreenInsets",
+    "type": "object",
+    "properties": {
+        "ScreenInsets": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "None",
+                "DeviceSafeInsets",
+                "CoreUISafeInsets",
+                "TopbarSafeInsets"
+            ]
+        }
+    }
+}

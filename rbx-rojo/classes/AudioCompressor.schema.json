@@ -1,0 +1,93 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AudioCompressor",
+    "description": "AudioCompressor",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AudioCompressor"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AudioCompressor properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Attack": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Bypass": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Editor": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "MakeupGain": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Ratio": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Release": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Threshold": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AudioCompressor"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AudioCompressor",
+                    "description": "AudioCompressor"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AudioAnalyzer",
+    "description": "AudioAnalyzer",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AudioAnalyzer"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AudioAnalyzer properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "SpectrumEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "WindowSize": {
+                    "$ref": "../enum/AudioWindowSize.schema.json#/definitions/Enum",
+                    "description": "WindowSize Enum"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AudioAnalyzer"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AudioAnalyzer",
+                    "description": "AudioAnalyzer"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

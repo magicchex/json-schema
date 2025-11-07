@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "HoverAnimateSpeed",
+    "description": "HoverAnimateSpeed",
+    "type": "object",
+    "properties": {
+        "HoverAnimateSpeed": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "VerySlow",
+                "Slow",
+                "Medium",
+                "Fast",
+                "VeryFast"
+            ]
+        }
+    }
+}

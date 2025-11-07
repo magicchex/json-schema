@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "OrientationAlignmentMode",
+    "description": "OrientationAlignmentMode",
+    "type": "object",
+    "properties": {
+        "OrientationAlignmentMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "OneAttachment",
+                "TwoAttachment"
+            ]
+        }
+    }
+}

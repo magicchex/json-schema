@@ -1,0 +1,101 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AudioTextToSpeech",
+    "description": "AudioTextToSpeech",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AudioTextToSpeech"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AudioTextToSpeech properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "IsPlaying": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Looping": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Pitch": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "PlaybackSpeed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Speed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Text": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "TimePosition": {
+                    "type": "number",
+                    "description": "double"
+                },
+                "VoiceId": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Volume": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AudioTextToSpeech"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AudioTextToSpeech",
+                    "description": "AudioTextToSpeech"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

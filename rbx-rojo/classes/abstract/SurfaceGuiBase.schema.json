@@ -1,0 +1,61 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SurfaceGuiBase",
+    "description": "SurfaceGuiBase",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "SurfaceGuiBase"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "SurfaceGuiBase properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "Active": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Face": {
+                    "$ref": "../../enum/NormalId.schema.json#/definitions/Enum",
+                    "description": "Face Enum"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "SurfaceGuiBase"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "SurfaceGuiBase",
+                    "description": "SurfaceGuiBase"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

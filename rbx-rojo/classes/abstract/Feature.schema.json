@@ -1,0 +1,69 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Feature",
+    "description": "Feature",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Feature"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Feature properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "FaceId": {
+                    "$ref": "../../enum/NormalId.schema.json#/definitions/Enum",
+                    "description": "FaceId Enum"
+                },
+                "InOut": {
+                    "$ref": "../../enum/InOut.schema.json#/definitions/Enum",
+                    "description": "InOut Enum"
+                },
+                "LeftRight": {
+                    "$ref": "../../enum/LeftRight.schema.json#/definitions/Enum",
+                    "description": "LeftRight Enum"
+                },
+                "TopBottom": {
+                    "$ref": "../../enum/TopBottom.schema.json#/definitions/Enum",
+                    "description": "TopBottom Enum"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Feature"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Feature",
+                    "description": "Feature"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

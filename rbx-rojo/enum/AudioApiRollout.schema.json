@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AudioApiRollout",
+    "description": "AudioApiRollout",
+    "type": "object",
+    "properties": {
+        "AudioApiRollout": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Disabled",
+                "Automatic",
+                "Enabled"
+            ]
+        }
+    }
+}

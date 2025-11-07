@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AssetPatchSettings",
+    "description": "AssetPatchSettings",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AssetPatchSettings"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AssetPatchSettings properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "ContentId": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "OutputPath": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "PatchId": {
+                    "type": "string",
+                    "description": "string"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AssetPatchSettings"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AssetPatchSettings",
+                    "description": "AssetPatchSettings"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

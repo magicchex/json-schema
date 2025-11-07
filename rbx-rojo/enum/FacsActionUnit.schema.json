@@ -1,0 +1,67 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "FacsActionUnit",
+    "description": "FacsActionUnit",
+    "type": "object",
+    "properties": {
+        "FacsActionUnit": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "ChinRaiserUpperLip",
+                "ChinRaiser",
+                "FlatPucker",
+                "Funneler",
+                "LowerLipSuck",
+                "LipPresser",
+                "LipsTogether",
+                "MouthLeft",
+                "MouthRight",
+                "Pucker",
+                "UpperLipSuck",
+                "LeftCheekPuff",
+                "LeftDimpler",
+                "LeftLipCornerDown",
+                "LeftLowerLipDepressor",
+                "LeftLipCornerPuller",
+                "LeftLipStretcher",
+                "LeftUpperLipRaiser",
+                "RightCheekPuff",
+                "RightDimpler",
+                "RightLipCornerDown",
+                "RightLowerLipDepressor",
+                "RightLipCornerPuller",
+                "RightLipStretcher",
+                "RightUpperLipRaiser",
+                "JawDrop",
+                "JawLeft",
+                "JawRight",
+                "Corrugator",
+                "LeftBrowLowerer",
+                "LeftOuterBrowRaiser",
+                "LeftNoseWrinkler",
+                "LeftInnerBrowRaiser",
+                "RightBrowLowerer",
+                "RightOuterBrowRaiser",
+                "RightInnerBrowRaiser",
+                "RightNoseWrinkler",
+                "EyesLookDown",
+                "EyesLookLeft",
+                "EyesLookUp",
+                "EyesLookRight",
+                "LeftCheekRaiser",
+                "LeftEyeUpperLidRaiser",
+                "LeftEyeClosed",
+                "RightCheekRaiser",
+                "RightEyeUpperLidRaiser",
+                "RightEyeClosed",
+                "TongueDown",
+                "TongueOut",
+                "TongueUp"
+            ]
+        }
+    }
+}

@@ -1,0 +1,103 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "UIStroke",
+    "description": "UIStroke",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "UIStroke"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "UIStroke properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "ApplyStrokeMode": {
+                    "$ref": "../enum/ApplyStrokeMode.schema.json#/definitions/Enum",
+                    "description": "ApplyStrokeMode Enum"
+                },
+                "BorderOffset": {
+                    "$ref": "../datatypes/UDim.schema.json"
+                },
+                "BorderStrokePosition": {
+                    "$ref": "../enum/BorderStrokePosition.schema.json#/definitions/Enum",
+                    "description": "BorderStrokePosition Enum"
+                },
+                "Color": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LineJoinMode": {
+                    "$ref": "../enum/LineJoinMode.schema.json#/definitions/Enum",
+                    "description": "LineJoinMode Enum"
+                },
+                "StrokeSizingMode": {
+                    "$ref": "../enum/StrokeSizingMode.schema.json#/definitions/Enum",
+                    "description": "StrokeSizingMode Enum"
+                },
+                "Thickness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Transparency": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ZIndex": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "UIStroke"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "UIStroke",
+                    "description": "UIStroke"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

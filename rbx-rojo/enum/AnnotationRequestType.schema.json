@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AnnotationRequestType",
+    "description": "AnnotationRequestType",
+    "type": "object",
+    "properties": {
+        "AnnotationRequestType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Unknown",
+                "Create",
+                "Resolve",
+                "Delete",
+                "Edit"
+            ]
+        }
+    }
+}

@@ -1,0 +1,82 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "StudioAttachment",
+    "description": "StudioAttachment",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "StudioAttachment"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "StudioAttachment properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "AutoHideParent": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "IsArrowVisible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Offset": {
+                    "$ref": "../datatypes/Vector2.schema.json"
+                },
+                "SourceAnchorPoint": {
+                    "$ref": "../datatypes/Vector2.schema.json"
+                },
+                "TargetAnchorPoint": {
+                    "$ref": "../datatypes/Vector2.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "StudioAttachment"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "StudioAttachment",
+                    "description": "StudioAttachment"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

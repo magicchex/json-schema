@@ -1,0 +1,75 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ClickDetector",
+    "description": "ClickDetector",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "ClickDetector"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "ClickDetector properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "CursorIcon": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "CursorIconContent": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "MaxActivationDistance": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "ClickDetector"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "ClickDetector",
+                    "description": "ClickDetector"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

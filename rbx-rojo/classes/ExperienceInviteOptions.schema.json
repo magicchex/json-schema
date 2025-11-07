@@ -1,0 +1,81 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ExperienceInviteOptions",
+    "description": "ExperienceInviteOptions",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "ExperienceInviteOptions"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "ExperienceInviteOptions properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "InviteMessageId": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "InviteUser": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "LaunchData": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "PromptMessage": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "ExperienceInviteOptions"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "ExperienceInviteOptions",
+                    "description": "ExperienceInviteOptions"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

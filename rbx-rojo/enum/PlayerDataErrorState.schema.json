@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "PlayerDataErrorState",
+    "description": "PlayerDataErrorState",
+    "type": "object",
+    "properties": {
+        "PlayerDataErrorState": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "LoadFailed",
+                "FlushFailed",
+                "ReleaseFailed",
+                "None"
+            ]
+        }
+    }
+}

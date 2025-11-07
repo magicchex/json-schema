@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "PreferredInput",
+    "description": "PreferredInput",
+    "type": "object",
+    "properties": {
+        "PreferredInput": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "KeyboardAndMouse",
+                "Gamepad",
+                "Touch"
+            ]
+        }
+    }
+}

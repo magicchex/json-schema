@@ -1,0 +1,34 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "HumanoidStateType",
+    "description": "HumanoidStateType",
+    "type": "object",
+    "properties": {
+        "HumanoidStateType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "FallingDown",
+                "Ragdoll",
+                "GettingUp",
+                "Jumping",
+                "Swimming",
+                "Freefall",
+                "Flying",
+                "Landed",
+                "Running",
+                "RunningNoPhysics",
+                "StrafingNoPhysics",
+                "Climbing",
+                "Seated",
+                "PlatformStanding",
+                "Dead",
+                "Physics",
+                "None"
+            ]
+        }
+    }
+}

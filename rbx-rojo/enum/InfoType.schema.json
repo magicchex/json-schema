@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "InfoType",
+    "description": "InfoType",
+    "type": "object",
+    "properties": {
+        "InfoType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Asset",
+                "Product",
+                "GamePass",
+                "Subscription",
+                "Bundle"
+            ]
+        }
+    }
+}

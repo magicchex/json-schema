@@ -1,0 +1,81 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AudioFlanger",
+    "description": "AudioFlanger",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AudioFlanger"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AudioFlanger properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Bypass": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Depth": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Mix": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Rate": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AudioFlanger"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AudioFlanger",
+                    "description": "AudioFlanger"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

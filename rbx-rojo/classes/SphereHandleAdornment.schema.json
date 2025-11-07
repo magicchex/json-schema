@@ -1,0 +1,102 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SphereHandleAdornment",
+    "description": "SphereHandleAdornment",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "SphereHandleAdornment"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "SphereHandleAdornment properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Radius": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Shading": {
+                    "$ref": "../enum/AdornShading.schema.json#/definitions/Enum",
+                    "description": "Shading Enum"
+                },
+                "AdornCullingMode": {
+                    "$ref": "../enum/AdornCullingMode.schema.json#/definitions/Enum",
+                    "description": "AdornCullingMode Enum"
+                },
+                "AlwaysOnTop": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CFrame": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "SizeRelativeOffset": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "ZIndex": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Color3": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "Transparency": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Visible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "SphereHandleAdornment"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "SphereHandleAdornment",
+                    "description": "SphereHandleAdornment"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

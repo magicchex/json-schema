@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "PromptPublishAssetResult",
+    "description": "PromptPublishAssetResult",
+    "type": "object",
+    "properties": {
+        "PromptPublishAssetResult": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Success",
+                "PermissionDenied",
+                "Timeout",
+                "UploadFailed",
+                "NoUserInput",
+                "UnknownFailure"
+            ]
+        }
+    }
+}

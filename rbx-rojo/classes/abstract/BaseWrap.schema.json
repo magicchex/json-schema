@@ -1,0 +1,68 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "BaseWrap",
+    "description": "BaseWrap",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "BaseWrap"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "BaseWrap properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "CageMeshContent": {
+                    "$ref": "../../datatypes/Content.schema.json"
+                },
+                "CageMeshId": {
+                    "$ref": "../../datatypes/Content.schema.json"
+                },
+                "CageOrigin": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "HSRAssetId": {
+                    "$ref": "../../datatypes/Content.schema.json"
+                },
+                "ImportOrigin": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "BaseWrap"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "BaseWrap",
+                    "description": "BaseWrap"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

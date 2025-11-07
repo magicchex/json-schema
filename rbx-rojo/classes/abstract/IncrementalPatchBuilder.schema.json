@@ -1,0 +1,77 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "IncrementalPatchBuilder",
+    "description": "IncrementalPatchBuilder",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "IncrementalPatchBuilder"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "IncrementalPatchBuilder properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "AddPathsToBundle": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "BuildDebouncePeriod": {
+                    "type": "number",
+                    "description": "double"
+                },
+                "HighCompression": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "SerializePatch": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "UseFileLevelCompressionInsteadOfChunk": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ZstdCompression": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "IncrementalPatchBuilder"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "IncrementalPatchBuilder",
+                    "description": "IncrementalPatchBuilder"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

@@ -1,0 +1,104 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Dialog",
+    "description": "Dialog",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Dialog"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Dialog properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "BehaviorType": {
+                    "$ref": "../enum/DialogBehaviorType.schema.json#/definitions/Enum",
+                    "description": "BehaviorType Enum"
+                },
+                "ConversationDistance": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "GoodbyeChoiceActive": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "GoodbyeDialog": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "InUse": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "InitialPrompt": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Purpose": {
+                    "$ref": "../enum/DialogPurpose.schema.json#/definitions/Enum",
+                    "description": "Purpose Enum"
+                },
+                "Tone": {
+                    "$ref": "../enum/DialogTone.schema.json#/definitions/Enum",
+                    "description": "Tone Enum"
+                },
+                "TriggerDistance": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "TriggerOffset": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Dialog"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Dialog",
+                    "description": "Dialog"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

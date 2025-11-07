@@ -1,0 +1,87 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Attachment",
+    "description": "Attachment",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Attachment"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Attachment properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Axis": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "CFrame": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "SecondaryAxis": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "Visible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "WorldAxis": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "WorldCFrame": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "WorldSecondaryAxis": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Attachment"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Attachment",
+                    "description": "Attachment"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

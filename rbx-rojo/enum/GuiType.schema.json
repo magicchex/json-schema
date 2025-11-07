@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "GuiType",
+    "description": "GuiType",
+    "type": "object",
+    "properties": {
+        "GuiType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Core",
+                "Custom",
+                "PlayerNameplates",
+                "CustomBillboards",
+                "CoreBillboards"
+            ]
+        }
+    }
+}

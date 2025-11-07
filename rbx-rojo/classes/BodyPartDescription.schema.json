@@ -1,0 +1,80 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "BodyPartDescription",
+    "description": "BodyPartDescription",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "BodyPartDescription"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "BodyPartDescription properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "AssetId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "BodyPart": {
+                    "$ref": "../enum/BodyPart.schema.json#/definitions/Enum",
+                    "description": "BodyPart Enum"
+                },
+                "Color": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "HeadShape": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "BodyPartDescription"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "BodyPartDescription",
+                    "description": "BodyPartDescription"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

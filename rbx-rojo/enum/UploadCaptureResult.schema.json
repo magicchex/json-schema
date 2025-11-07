@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "UploadCaptureResult",
+    "description": "UploadCaptureResult",
+    "type": "object",
+    "properties": {
+        "UploadCaptureResult": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Success",
+                "NeedPermission",
+                "CaptureModerated",
+                "CaptureNotInGallery",
+                "IneligibleCapture",
+                "UploadQuotaReached"
+            ]
+        }
+    }
+}

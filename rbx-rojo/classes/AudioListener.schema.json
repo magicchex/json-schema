@@ -1,0 +1,79 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AudioListener",
+    "description": "AudioListener",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AudioListener"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AudioListener properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "AcousticSimulationEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AngleAttenuation": {
+                    "$ref": "../datatypes/BinaryString.schema.json"
+                },
+                "AudioInteractionGroup": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "DistanceAttenuation": {
+                    "$ref": "../datatypes/BinaryString.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AudioListener"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AudioListener",
+                    "description": "AudioListener"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

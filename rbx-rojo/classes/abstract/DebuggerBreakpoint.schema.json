@@ -1,0 +1,73 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DebuggerBreakpoint",
+    "description": "DebuggerBreakpoint",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "DebuggerBreakpoint"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "DebuggerBreakpoint properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "Condition": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "ContinueExecution": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "IsEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LogExpression": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "isContextDependentBreakpoint": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "DebuggerBreakpoint"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "DebuggerBreakpoint",
+                    "description": "DebuggerBreakpoint"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "HttpRequestType",
+    "description": "HttpRequestType",
+    "type": "object",
+    "properties": {
+        "HttpRequestType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Default",
+                "MarketplaceService",
+                "Players",
+                "Chat",
+                "Avatar",
+                "Analytics",
+                "Localization"
+            ]
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AdFormat",
+    "description": "AdFormat",
+    "type": "object",
+    "properties": {
+        "AdFormat": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "RewardedVideo"
+            ]
+        }
+    }
+}

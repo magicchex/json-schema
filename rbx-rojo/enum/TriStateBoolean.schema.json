@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TriStateBoolean",
+    "description": "TriStateBoolean",
+    "type": "object",
+    "properties": {
+        "TriStateBoolean": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Unknown",
+                "False",
+                "True"
+            ]
+        }
+    }
+}

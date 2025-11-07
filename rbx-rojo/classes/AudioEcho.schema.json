@@ -1,0 +1,89 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AudioEcho",
+    "description": "AudioEcho",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AudioEcho"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AudioEcho properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Bypass": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "DelayTime": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "DryLevel": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Feedback": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RampTime": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "WetLevel": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AudioEcho"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AudioEcho",
+                    "description": "AudioEcho"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

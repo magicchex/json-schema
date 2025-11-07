@@ -1,0 +1,83 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Terrain",
+    "description": "Terrain",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Terrain"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Terrain properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "Decoration": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "GrassLength": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaterialColors": {
+                    "$ref": "../../datatypes/BinaryString.schema.json"
+                },
+                "WaterColor": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "WaterReflectance": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "WaterTransparency": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "WaterWaveSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "WaterWaveSpeed": {
+                    "type": "number",
+                    "description": "float"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Terrain"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Terrain",
+                    "description": "Terrain"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

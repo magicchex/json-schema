@@ -1,0 +1,83 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SelectionSphere",
+    "description": "SelectionSphere",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "SelectionSphere"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "SelectionSphere properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "SurfaceColor3": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "SurfaceTransparency": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Color3": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "Transparency": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Visible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "SelectionSphere"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "SelectionSphere",
+                    "description": "SelectionSphere"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

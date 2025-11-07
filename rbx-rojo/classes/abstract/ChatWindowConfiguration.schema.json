@@ -1,0 +1,97 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ChatWindowConfiguration",
+    "description": "ChatWindowConfiguration",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "ChatWindowConfiguration"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "ChatWindowConfiguration properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "BackgroundColor3": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "BackgroundTransparency": {
+                    "type": "number",
+                    "description": "double"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "FontFace": {
+                    "$ref": "../../datatypes/Font.schema.json"
+                },
+                "HeightScale": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "HorizontalAlignment": {
+                    "$ref": "../../enum/HorizontalAlignment.schema.json#/definitions/Enum",
+                    "description": "HorizontalAlignment Enum"
+                },
+                "TextColor3": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "TextSize": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "TextStrokeColor3": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "TextStrokeTransparency": {
+                    "type": "number",
+                    "description": "double"
+                },
+                "VerticalAlignment": {
+                    "$ref": "../../enum/VerticalAlignment.schema.json#/definitions/Enum",
+                    "description": "VerticalAlignment Enum"
+                },
+                "WidthScale": {
+                    "type": "number",
+                    "description": "float"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "ChatWindowConfiguration"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "ChatWindowConfiguration",
+                    "description": "ChatWindowConfiguration"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

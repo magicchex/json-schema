@@ -1,0 +1,93 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SwimController",
+    "description": "SwimController",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "SwimController"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "SwimController properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "AccelerationTime": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "PitchMaxTorque": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "PitchSpeedFactor": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RollMaxTorque": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RollSpeedFactor": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "BalanceRigidityEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "MoveSpeedFactor": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "SwimController"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "SwimController",
+                    "description": "SwimController"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

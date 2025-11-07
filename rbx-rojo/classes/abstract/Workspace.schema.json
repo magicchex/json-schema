@@ -1,0 +1,199 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Workspace",
+    "description": "Workspace",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Workspace"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Workspace properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "AirDensity": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "AirTurbulenceIntensity": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "AllowThirdPartySales": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AuthorityMode": {
+                    "$ref": "../../enum/AuthorityMode.schema.json#/definitions/Enum",
+                    "description": "AuthorityMode Enum"
+                },
+                "AvatarUnificationMode": {
+                    "$ref": "../../enum/AvatarUnificationMode.schema.json#/definitions/Enum",
+                    "description": "AvatarUnificationMode Enum"
+                },
+                "ClientAnimatorThrottling": {
+                    "$ref": "../../enum/ClientAnimatorThrottlingMode.schema.json#/definitions/Enum",
+                    "description": "ClientAnimatorThrottling Enum"
+                },
+                "DistributedGameTime": {
+                    "type": "number",
+                    "description": "double"
+                },
+                "FallHeightEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "FallenPartsDestroyHeight": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "FluidForces": {
+                    "$ref": "../../enum/FluidForces.schema.json#/definitions/Enum",
+                    "description": "FluidForces Enum"
+                },
+                "GlobalWind": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "Gravity": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "IKControlConstraintSupport": {
+                    "$ref": "../../enum/IKControlConstraintSupport.schema.json#/definitions/Enum",
+                    "description": "IKControlConstraintSupport Enum"
+                },
+                "InsertPoint": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "LuauTypeCheckMode": {
+                    "$ref": "../../enum/LuauTypeCheckMode.schema.json#/definitions/Enum",
+                    "description": "LuauTypeCheckMode Enum"
+                },
+                "MeshPartHeadsAndAccessories": {
+                    "$ref": "../../enum/MeshPartHeadsAndAccessories.schema.json#/definitions/Enum",
+                    "description": "MeshPartHeadsAndAccessories Enum"
+                },
+                "ModelStreamingBehavior": {
+                    "$ref": "../../enum/ModelStreamingBehavior.schema.json#/definitions/Enum",
+                    "description": "ModelStreamingBehavior Enum"
+                },
+                "MoverConstraintRootBehavior": {
+                    "$ref": "../../enum/MoverConstraintRootBehaviorMode.schema.json#/definitions/Enum",
+                    "description": "MoverConstraintRootBehavior Enum"
+                },
+                "PathfindingUseImprovedSearch": {
+                    "$ref": "../../enum/PathfindingUseImprovedSearch.schema.json#/definitions/Enum",
+                    "description": "PathfindingUseImprovedSearch Enum"
+                },
+                "PhysicsImprovedSleep": {
+                    "$ref": "../../enum/RolloutState.schema.json#/definitions/Enum",
+                    "description": "PhysicsImprovedSleep Enum"
+                },
+                "PhysicsSteppingMethod": {
+                    "$ref": "../../enum/PhysicsSteppingMethod.schema.json#/definitions/Enum",
+                    "description": "PhysicsSteppingMethod Enum"
+                },
+                "PlayerCharacterDestroyBehavior": {
+                    "$ref": "../../enum/PlayerCharacterDestroyBehavior.schema.json#/definitions/Enum",
+                    "description": "PlayerCharacterDestroyBehavior Enum"
+                },
+                "PrimalPhysicsSolver": {
+                    "$ref": "../../enum/PrimalPhysicsSolver.schema.json#/definitions/Enum",
+                    "description": "PrimalPhysicsSolver Enum"
+                },
+                "RejectCharacterDeletions": {
+                    "$ref": "../../enum/RejectCharacterDeletions.schema.json#/definitions/Enum",
+                    "description": "RejectCharacterDeletions Enum"
+                },
+                "RenderingCacheOptimizations": {
+                    "$ref": "../../enum/RenderingCacheOptimizationMode.schema.json#/definitions/Enum",
+                    "description": "RenderingCacheOptimizations Enum"
+                },
+                "ReplicateInstanceDestroySetting": {
+                    "$ref": "../../enum/ReplicateInstanceDestroySetting.schema.json#/definitions/Enum",
+                    "description": "ReplicateInstanceDestroySetting Enum"
+                },
+                "Retargeting": {
+                    "$ref": "../../enum/AnimatorRetargetingMode.schema.json#/definitions/Enum",
+                    "description": "Retargeting Enum"
+                },
+                "SandboxedInstanceMode": {
+                    "$ref": "../../enum/SandboxedInstanceMode.schema.json#/definitions/Enum",
+                    "description": "SandboxedInstanceMode Enum"
+                },
+                "SignalBehavior": {
+                    "$ref": "../../enum/SignalBehavior.schema.json#/definitions/Enum",
+                    "description": "SignalBehavior Enum"
+                },
+                "StreamOutBehavior": {
+                    "$ref": "../../enum/StreamOutBehavior.schema.json#/definitions/Enum",
+                    "description": "StreamOutBehavior Enum"
+                },
+                "StreamingEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "StreamingIntegrityMode": {
+                    "$ref": "../../enum/StreamingIntegrityMode.schema.json#/definitions/Enum",
+                    "description": "StreamingIntegrityMode Enum"
+                },
+                "StreamingMinRadius": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "StreamingTargetRadius": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "TouchEventsUseCollisionGroups": {
+                    "$ref": "../../enum/RolloutState.schema.json#/definitions/Enum",
+                    "description": "TouchEventsUseCollisionGroups Enum"
+                },
+                "TouchesUseCollisionGroups": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "UseNewLuauTypeSolver": {
+                    "$ref": "../../enum/RolloutState.schema.json#/definitions/Enum",
+                    "description": "UseNewLuauTypeSolver Enum"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Workspace"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Workspace",
+                    "description": "Workspace"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

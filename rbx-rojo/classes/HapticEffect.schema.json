@@ -1,0 +1,80 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "HapticEffect",
+    "description": "HapticEffect",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "HapticEffect"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "HapticEffect properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Looped": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Position": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "Radius": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Type": {
+                    "$ref": "../enum/HapticEffectType.schema.json#/definitions/Enum",
+                    "description": "Type Enum"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "HapticEffect"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "HapticEffect",
+                    "description": "HapticEffect"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

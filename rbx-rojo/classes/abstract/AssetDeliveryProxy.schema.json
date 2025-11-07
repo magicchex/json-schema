@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AssetDeliveryProxy",
+    "description": "AssetDeliveryProxy",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AssetDeliveryProxy"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AssetDeliveryProxy properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "Interface": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Port": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "StartServer": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AssetDeliveryProxy"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AssetDeliveryProxy",
+                    "description": "AssetDeliveryProxy"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

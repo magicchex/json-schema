@@ -1,0 +1,105 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SlidingBallConstraint",
+    "description": "SlidingBallConstraint",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "SlidingBallConstraint"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "SlidingBallConstraint properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "ActuatorType": {
+                    "$ref": "../../enum/ActuatorType.schema.json#/definitions/Enum",
+                    "description": "ActuatorType Enum"
+                },
+                "LimitsEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LinearResponsiveness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LowerLimit": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MotorMaxAcceleration": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MotorMaxForce": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Restitution": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ServoMaxForce": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Size": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Speed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "TargetPosition": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "UpperLimit": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Velocity": {
+                    "type": "number",
+                    "description": "float"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "SlidingBallConstraint"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "SlidingBallConstraint",
+                    "description": "SlidingBallConstraint"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

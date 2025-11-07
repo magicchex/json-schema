@@ -1,0 +1,73 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "MaterialImportData",
+    "description": "MaterialImportData",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "MaterialImportData"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "MaterialImportData properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "DiffuseFilePath": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "EmissiveFilePath": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "MetalnessFilePath": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "NormalFilePath": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "RoughnessFilePath": {
+                    "type": "string",
+                    "description": "string"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "MaterialImportData"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "MaterialImportData",
+                    "description": "MaterialImportData"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

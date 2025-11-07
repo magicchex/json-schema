@@ -1,0 +1,80 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Clouds",
+    "description": "Clouds",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Clouds"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Clouds properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Color": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "Cover": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Density": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Clouds"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Clouds",
+                    "description": "Clouds"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

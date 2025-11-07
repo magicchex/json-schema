@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "CatalogCategoryFilter",
+    "description": "CatalogCategoryFilter",
+    "type": "object",
+    "properties": {
+        "CatalogCategoryFilter": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "None",
+                "Featured",
+                "Collectibles",
+                "CommunityCreations",
+                "Premium",
+                "Recommended"
+            ]
+        }
+    }
+}

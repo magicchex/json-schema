@@ -1,0 +1,110 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Decal",
+    "description": "Decal",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Decal"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Decal properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Color3": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "ColorMap": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "ColorMapContent": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "MetalnessMapContent": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "NormalMapContent": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "RoughnessMapContent": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "Texture": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "TextureContent": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "TexturePack": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "Transparency": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "UVOffset": {
+                    "$ref": "../datatypes/Vector2.schema.json"
+                },
+                "UVScale": {
+                    "$ref": "../datatypes/Vector2.schema.json"
+                },
+                "ZIndex": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Face": {
+                    "$ref": "../enum/NormalId.schema.json#/definitions/Enum",
+                    "description": "Face Enum"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Decal"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Decal",
+                    "description": "Decal"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

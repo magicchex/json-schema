@@ -1,0 +1,61 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Plugin",
+    "description": "Plugin",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Plugin"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Plugin properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "DisableUIDragDetectorDrags": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "IsDebuggable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Plugin"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Plugin",
+                    "description": "Plugin"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

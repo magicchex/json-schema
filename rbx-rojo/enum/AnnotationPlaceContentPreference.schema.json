@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AnnotationPlaceContentPreference",
+    "description": "AnnotationPlaceContentPreference",
+    "type": "object",
+    "properties": {
+        "AnnotationPlaceContentPreference": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "None",
+                "All",
+                "MentionsAndReplies",
+                "Unknown"
+            ]
+        }
+    }
+}

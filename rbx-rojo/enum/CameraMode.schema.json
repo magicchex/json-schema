@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "CameraMode",
+    "description": "CameraMode",
+    "type": "object",
+    "properties": {
+        "CameraMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Classic",
+                "LockFirstPerson"
+            ]
+        }
+    }
+}

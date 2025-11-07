@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AnimationPriority",
+    "description": "AnimationPriority",
+    "type": "object",
+    "properties": {
+        "AnimationPriority": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Idle",
+                "Movement",
+                "Action",
+                "Action2",
+                "Action3",
+                "Action4",
+                "Core"
+            ]
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "PermissionLevelShown",
+    "description": "PermissionLevelShown",
+    "type": "object",
+    "properties": {
+        "PermissionLevelShown": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Game",
+                "RobloxGame",
+                "RobloxScript",
+                "Studio",
+                "Roblox"
+            ]
+        }
+    }
+}

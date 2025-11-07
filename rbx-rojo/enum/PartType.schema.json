@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "PartType",
+    "description": "PartType",
+    "type": "object",
+    "properties": {
+        "PartType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Ball",
+                "Block",
+                "Cylinder",
+                "Wedge",
+                "CornerWedge"
+            ]
+        }
+    }
+}

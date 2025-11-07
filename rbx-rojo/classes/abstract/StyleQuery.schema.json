@@ -1,0 +1,62 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "StyleQuery",
+    "description": "StyleQuery",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "StyleQuery"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "StyleQuery properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "AspectRatioRange": {
+                    "$ref": "../../datatypes/NumberRange.schema.json"
+                },
+                "MaxSize": {
+                    "$ref": "../../datatypes/Vector2.schema.json"
+                },
+                "MinSize": {
+                    "$ref": "../../datatypes/Vector2.schema.json"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "StyleQuery"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "StyleQuery",
+                    "description": "StyleQuery"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

@@ -1,0 +1,124 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "GuiObject",
+    "description": "GuiObject",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "GuiObject"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "GuiObject properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "Active": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AnchorPoint": {
+                    "$ref": "../../datatypes/Vector2.schema.json"
+                },
+                "AutomaticSize": {
+                    "$ref": "../../enum/AutomaticSize.schema.json#/definitions/Enum",
+                    "description": "AutomaticSize Enum"
+                },
+                "BackgroundColor3": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "BackgroundTransparency": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "BorderColor3": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "BorderMode": {
+                    "$ref": "../../enum/BorderMode.schema.json#/definitions/Enum",
+                    "description": "BorderMode Enum"
+                },
+                "BorderSizePixel": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "ClipsDescendants": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Interactable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LayoutOrder": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Position": {
+                    "$ref": "../../datatypes/UDim2.schema.json"
+                },
+                "Rotation": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Selectable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "SelectionOrder": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Size": {
+                    "$ref": "../../datatypes/UDim2.schema.json"
+                },
+                "SizeConstraint": {
+                    "$ref": "../../enum/SizeConstraint.schema.json#/definitions/Enum",
+                    "description": "SizeConstraint Enum"
+                },
+                "Visible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ZIndex": {
+                    "type": "number",
+                    "description": "int"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "GuiObject"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "GuiObject",
+                    "description": "GuiObject"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

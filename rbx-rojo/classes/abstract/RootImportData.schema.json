@@ -1,0 +1,141 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "RootImportData",
+    "description": "RootImportData",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "RootImportData"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "RootImportData properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "AddModelToInventory": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Anchored": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AnimationIdForRestPose": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ExistingPackageId": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "ImportAsModelAsset": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ImportAsPackage": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "InsertInWorkspace": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "InsertWithScenePosition": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "InvertNegativeFaces": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "KeepZeroInfluenceBones": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "MergeMeshes": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "PreferredUploadId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "RestPose": {
+                    "$ref": "../../enum/RestPose.schema.json#/definitions/Enum",
+                    "description": "RestPose Enum"
+                },
+                "RigScale": {
+                    "$ref": "../../enum/RigScale.schema.json#/definitions/Enum",
+                    "description": "RigScale Enum"
+                },
+                "RigType": {
+                    "$ref": "../../enum/RigType.schema.json#/definitions/Enum",
+                    "description": "RigType Enum"
+                },
+                "RigVisualization": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ScaleUnit": {
+                    "$ref": "../../enum/MeshScaleUnit.schema.json#/definitions/Enum",
+                    "description": "ScaleUnit Enum"
+                },
+                "UseSceneOriginAsPivot": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "UsesCages": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ValidateUgcBody": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "WorldForward": {
+                    "$ref": "../../enum/NormalId.schema.json#/definitions/Enum",
+                    "description": "WorldForward Enum"
+                },
+                "WorldUp": {
+                    "$ref": "../../enum/NormalId.schema.json#/definitions/Enum",
+                    "description": "WorldUp Enum"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "RootImportData"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "RootImportData",
+                    "description": "RootImportData"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

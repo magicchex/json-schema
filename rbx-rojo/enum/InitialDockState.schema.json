@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "InitialDockState",
+    "description": "InitialDockState",
+    "type": "object",
+    "properties": {
+        "InitialDockState": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Top",
+                "Bottom",
+                "Left",
+                "Right",
+                "Float"
+            ]
+        }
+    }
+}

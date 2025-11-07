@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "LiveEditingAtomicUpdateResponse",
+    "description": "LiveEditingAtomicUpdateResponse",
+    "type": "object",
+    "properties": {
+        "LiveEditingAtomicUpdateResponse": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Success",
+                "FailureGuidNotFound",
+                "FailureHashMismatch",
+                "FailureOperationIllegal"
+            ]
+        }
+    }
+}

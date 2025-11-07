@@ -1,0 +1,152 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AvatarAccessoryRules",
+    "description": "AvatarAccessoryRules",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AvatarAccessoryRules"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AvatarAccessoryRules properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "AccessoryMode": {
+                    "$ref": "../enum/AvatarSettingsAccessoryMode.schema.json#/definitions/Enum",
+                    "description": "AccessoryMode Enum"
+                },
+                "CustomAccessoryMode": {
+                    "$ref": "../enum/AvatarSettingsCustomAccessoryMode.schema.json#/definitions/Enum",
+                    "description": "CustomAccessoryMode Enum"
+                },
+                "CustomBackAccessoryEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomBackAccessoryId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomFaceAccessoryEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomFaceAccessoryId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomFrontAccessoryEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomFrontAccessoryId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomHairAccessoryEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomHairAccessoryId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomHeadAccessoryEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomHeadAccessoryId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomNeckAccessoryEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomNeckAccessoryId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomShoulderAccessoryEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomShoulderAccessoryId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomWaistAccessoryEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomWaistAccessoryId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "EnableSound": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "EnableVFX": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LimitBounds": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "LimitMethod": {
+                    "$ref": "../enum/AvatarSettingsAccessoryLimitMethod.schema.json#/definitions/Enum",
+                    "description": "LimitMethod Enum"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AvatarAccessoryRules"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AvatarAccessoryRules",
+                    "description": "AvatarAccessoryRules"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

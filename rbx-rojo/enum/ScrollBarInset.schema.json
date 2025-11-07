@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ScrollBarInset",
+    "description": "ScrollBarInset",
+    "type": "object",
+    "properties": {
+        "ScrollBarInset": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "None",
+                "ScrollBar",
+                "Always"
+            ]
+        }
+    }
+}

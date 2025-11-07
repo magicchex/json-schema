@@ -1,0 +1,116 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "UIPageLayout",
+    "description": "UIPageLayout",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "UIPageLayout"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "UIPageLayout properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Animated": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Circular": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "EasingDirection": {
+                    "$ref": "../enum/EasingDirection.schema.json#/definitions/Enum",
+                    "description": "EasingDirection Enum"
+                },
+                "EasingStyle": {
+                    "$ref": "../enum/EasingStyle.schema.json#/definitions/Enum",
+                    "description": "EasingStyle Enum"
+                },
+                "GamepadInputEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Padding": {
+                    "$ref": "../datatypes/UDim.schema.json"
+                },
+                "ScrollWheelInputEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "TouchInputEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "TweenTime": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "FillDirection": {
+                    "$ref": "../enum/FillDirection.schema.json#/definitions/Enum",
+                    "description": "FillDirection Enum"
+                },
+                "HorizontalAlignment": {
+                    "$ref": "../enum/HorizontalAlignment.schema.json#/definitions/Enum",
+                    "description": "HorizontalAlignment Enum"
+                },
+                "SortOrder": {
+                    "$ref": "../enum/SortOrder.schema.json#/definitions/Enum",
+                    "description": "SortOrder Enum"
+                },
+                "VerticalAlignment": {
+                    "$ref": "../enum/VerticalAlignment.schema.json#/definitions/Enum",
+                    "description": "VerticalAlignment Enum"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "UIPageLayout"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "UIPageLayout",
+                    "description": "UIPageLayout"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

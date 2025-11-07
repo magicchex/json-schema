@@ -1,0 +1,77 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "UIPadding",
+    "description": "UIPadding",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "UIPadding"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "UIPadding properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "PaddingBottom": {
+                    "$ref": "../datatypes/UDim.schema.json"
+                },
+                "PaddingLeft": {
+                    "$ref": "../datatypes/UDim.schema.json"
+                },
+                "PaddingRight": {
+                    "$ref": "../datatypes/UDim.schema.json"
+                },
+                "PaddingTop": {
+                    "$ref": "../datatypes/UDim.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "UIPadding"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "UIPadding",
+                    "description": "UIPadding"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

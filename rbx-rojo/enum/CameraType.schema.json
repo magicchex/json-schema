@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "CameraType",
+    "description": "CameraType",
+    "type": "object",
+    "properties": {
+        "CameraType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Fixed",
+                "Attach",
+                "Watch",
+                "Track",
+                "Follow",
+                "Custom",
+                "Scriptable",
+                "Orbital"
+            ]
+        }
+    }
+}

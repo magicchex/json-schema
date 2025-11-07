@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SortOrder",
+    "description": "SortOrder",
+    "type": "object",
+    "properties": {
+        "SortOrder": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Name",
+                "Custom",
+                "LayoutOrder"
+            ]
+        }
+    }
+}

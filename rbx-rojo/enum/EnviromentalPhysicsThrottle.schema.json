@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "EnviromentalPhysicsThrottle",
+    "description": "EnviromentalPhysicsThrottle",
+    "type": "object",
+    "properties": {
+        "EnviromentalPhysicsThrottle": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "DefaultAuto",
+                "Disabled",
+                "Always",
+                "Skip2",
+                "Skip4",
+                "Skip8",
+                "Skip16"
+            ]
+        }
+    }
+}

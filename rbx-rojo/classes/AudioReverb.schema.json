@@ -1,0 +1,117 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AudioReverb",
+    "description": "AudioReverb",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AudioReverb"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AudioReverb properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Bypass": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "DecayRatio": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "DecayTime": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Density": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Diffusion": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "DryLevel": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "EarlyDelayTime": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "HighCutFrequency": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LateDelayTime": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LowShelfFrequency": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LowShelfGain": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ReferenceFrequency": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "WetLevel": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AudioReverb"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AudioReverb",
+                    "description": "AudioReverb"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

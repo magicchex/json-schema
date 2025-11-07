@@ -1,0 +1,89 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "NetworkSettings",
+    "description": "NetworkSettings",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "NetworkSettings"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "NetworkSettings properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "HttpProxyEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "HttpProxyURL": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "IncomingReplicationLag": {
+                    "type": "number",
+                    "description": "double"
+                },
+                "PrintJoinSizeBreakdown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "PrintPhysicsErrors": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "PrintStreamInstanceQuota": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "RandomizeJoinInstanceOrder": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "RenderStreamedRegions": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ShowActiveAnimationAsset": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "NetworkSettings"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "NetworkSettings",
+                    "description": "NetworkSettings"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

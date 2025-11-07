@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SubscriptionPeriod",
+    "description": "SubscriptionPeriod",
+    "type": "object",
+    "properties": {
+        "SubscriptionPeriod": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Month"
+            ]
+        }
+    }
+}

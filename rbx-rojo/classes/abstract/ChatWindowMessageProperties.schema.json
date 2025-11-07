@@ -1,0 +1,70 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ChatWindowMessageProperties",
+    "description": "ChatWindowMessageProperties",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "ChatWindowMessageProperties"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "ChatWindowMessageProperties properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "FontFace": {
+                    "$ref": "../../datatypes/Font.schema.json"
+                },
+                "TextColor3": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "TextSize": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "TextStrokeColor3": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "TextStrokeTransparency": {
+                    "type": "number",
+                    "description": "double"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "ChatWindowMessageProperties"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "ChatWindowMessageProperties",
+                    "description": "ChatWindowMessageProperties"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

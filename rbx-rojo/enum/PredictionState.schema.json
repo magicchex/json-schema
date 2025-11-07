@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "PredictionState",
+    "description": "PredictionState",
+    "type": "object",
+    "properties": {
+        "PredictionState": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Idle",
+                "Simulating",
+                "RollingBack",
+                "Resimulating"
+            ]
+        }
+    }
+}

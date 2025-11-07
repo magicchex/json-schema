@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TrackerLodValueMode",
+    "description": "TrackerLodValueMode",
+    "type": "object",
+    "properties": {
+        "TrackerLodValueMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Force0",
+                "Force1",
+                "Auto"
+            ]
+        }
+    }
+}

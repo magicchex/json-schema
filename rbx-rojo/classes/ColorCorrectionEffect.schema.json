@@ -1,0 +1,84 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ColorCorrectionEffect",
+    "description": "ColorCorrectionEffect",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "ColorCorrectionEffect"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "ColorCorrectionEffect properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Brightness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Contrast": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Saturation": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "TintColor": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "ColorCorrectionEffect"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "ColorCorrectionEffect",
+                    "description": "ColorCorrectionEffect"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

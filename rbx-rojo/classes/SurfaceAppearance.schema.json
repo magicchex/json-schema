@@ -1,0 +1,97 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SurfaceAppearance",
+    "description": "SurfaceAppearance",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "SurfaceAppearance"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "SurfaceAppearance properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "AlphaMode": {
+                    "$ref": "../enum/AlphaMode.schema.json#/definitions/Enum",
+                    "description": "AlphaMode Enum"
+                },
+                "Color": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "ColorMap": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "EmissiveMaskContent": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "EmissiveStrength": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "EmissiveTint": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "MetalnessMap": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "NormalMap": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "RoughnessMap": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "TexturePack": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "SurfaceAppearance"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "SurfaceAppearance",
+                    "description": "SurfaceAppearance"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

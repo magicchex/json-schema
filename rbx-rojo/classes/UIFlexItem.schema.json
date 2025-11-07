@@ -1,0 +1,81 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "UIFlexItem",
+    "description": "UIFlexItem",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "UIFlexItem"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "UIFlexItem properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "FlexMode": {
+                    "$ref": "../enum/UIFlexMode.schema.json#/definitions/Enum",
+                    "description": "FlexMode Enum"
+                },
+                "GrowRatio": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ItemLineAlignment": {
+                    "$ref": "../enum/ItemLineAlignment.schema.json#/definitions/Enum",
+                    "description": "ItemLineAlignment Enum"
+                },
+                "ShrinkRatio": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "UIFlexItem"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "UIFlexItem",
+                    "description": "UIFlexItem"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

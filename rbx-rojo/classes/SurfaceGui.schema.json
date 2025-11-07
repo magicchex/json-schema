@@ -1,0 +1,148 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SurfaceGui",
+    "description": "SurfaceGui",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "SurfaceGui"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "SurfaceGui properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "AlwaysOnTop": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Brightness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "CanvasSize": {
+                    "$ref": "../datatypes/Vector2.schema.json"
+                },
+                "ClipsDescendants": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LightInfluence": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaxDistance": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "PixelsPerStud": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "SizingMode": {
+                    "$ref": "../enum/SurfaceGuiSizingMode.schema.json#/definitions/Enum",
+                    "description": "SizingMode Enum"
+                },
+                "ToolPunchThroughDistance": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ZOffset": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Active": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Face": {
+                    "$ref": "../enum/NormalId.schema.json#/definitions/Enum",
+                    "description": "Face Enum"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ResetOnSpawn": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ZIndexBehavior": {
+                    "$ref": "../enum/ZIndexBehavior.schema.json#/definitions/Enum",
+                    "description": "ZIndexBehavior Enum"
+                },
+                "AutoLocalize": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "SelectionBehaviorDown": {
+                    "$ref": "../enum/SelectionBehavior.schema.json#/definitions/Enum",
+                    "description": "SelectionBehaviorDown Enum"
+                },
+                "SelectionBehaviorLeft": {
+                    "$ref": "../enum/SelectionBehavior.schema.json#/definitions/Enum",
+                    "description": "SelectionBehaviorLeft Enum"
+                },
+                "SelectionBehaviorRight": {
+                    "$ref": "../enum/SelectionBehavior.schema.json#/definitions/Enum",
+                    "description": "SelectionBehaviorRight Enum"
+                },
+                "SelectionBehaviorUp": {
+                    "$ref": "../enum/SelectionBehavior.schema.json#/definitions/Enum",
+                    "description": "SelectionBehaviorUp Enum"
+                },
+                "SelectionGroup": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "SurfaceGui"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "SurfaceGui",
+                    "description": "SurfaceGui"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

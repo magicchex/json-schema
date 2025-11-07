@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TrackerExtrapolationFlagMode",
+    "description": "TrackerExtrapolationFlagMode",
+    "type": "object",
+    "properties": {
+        "TrackerExtrapolationFlagMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "ForceDisabled",
+                "ExtrapolateFacsAndPose",
+                "ExtrapolateFacsOnly",
+                "Auto"
+            ]
+        }
+    }
+}

@@ -1,0 +1,169 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DragDetector",
+    "description": "DragDetector",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "DragDetector"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "DragDetector properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "ActivatedCursorIcon": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "ActivatedCursorIconContent": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "ApplyAtCenterOfMass": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Axis": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "DragFrame": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "DragStyle": {
+                    "$ref": "../enum/DragDetectorDragStyle.schema.json#/definitions/Enum",
+                    "description": "DragStyle Enum"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "GamepadModeSwitchKeyCode": {
+                    "$ref": "../enum/KeyCode.schema.json#/definitions/Enum",
+                    "description": "GamepadModeSwitchKeyCode Enum"
+                },
+                "KeyboardModeSwitchKeyCode": {
+                    "$ref": "../enum/KeyCode.schema.json#/definitions/Enum",
+                    "description": "KeyboardModeSwitchKeyCode Enum"
+                },
+                "MaxDragAngle": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaxDragTranslation": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "MaxForce": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaxTorque": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MinDragAngle": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MinDragTranslation": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "Orientation": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "PermissionPolicy": {
+                    "$ref": "../enum/DragDetectorPermissionPolicy.schema.json#/definitions/Enum",
+                    "description": "PermissionPolicy Enum"
+                },
+                "ResponseStyle": {
+                    "$ref": "../enum/DragDetectorResponseStyle.schema.json#/definitions/Enum",
+                    "description": "ResponseStyle Enum"
+                },
+                "Responsiveness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RunLocally": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "SecondaryAxis": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "TrackballRadialPullFactor": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "TrackballRollFactor": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "VRSwitchKeyCode": {
+                    "$ref": "../enum/KeyCode.schema.json#/definitions/Enum",
+                    "description": "VRSwitchKeyCode Enum"
+                },
+                "WorldAxis": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "WorldSecondaryAxis": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "CursorIcon": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "CursorIconContent": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "MaxActivationDistance": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "DragDetector"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "DragDetector",
+                    "description": "DragDetector"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

@@ -1,0 +1,81 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "NumberPose",
+    "description": "NumberPose",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "NumberPose"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "NumberPose properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Value": {
+                    "type": "number",
+                    "description": "double"
+                },
+                "EasingDirection": {
+                    "$ref": "../enum/PoseEasingDirection.schema.json#/definitions/Enum",
+                    "description": "EasingDirection Enum"
+                },
+                "EasingStyle": {
+                    "$ref": "../enum/PoseEasingStyle.schema.json#/definitions/Enum",
+                    "description": "EasingStyle Enum"
+                },
+                "Weight": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "NumberPose"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "NumberPose",
+                    "description": "NumberPose"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

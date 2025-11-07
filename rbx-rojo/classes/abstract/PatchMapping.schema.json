@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "PatchMapping",
+    "description": "PatchMapping",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "PatchMapping"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "PatchMapping properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "FlattenTree": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "PatchId": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "TargetPath": {
+                    "type": "string",
+                    "description": "string"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "PatchMapping"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "PatchMapping",
+                    "description": "PatchMapping"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

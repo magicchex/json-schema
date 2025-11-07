@@ -1,0 +1,57 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AvatarAssetType",
+    "description": "AvatarAssetType",
+    "type": "object",
+    "properties": {
+        "AvatarAssetType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "TShirt",
+                "Hat",
+                "Shirt",
+                "Pants",
+                "Head",
+                "Face",
+                "Gear",
+                "Torso",
+                "RightArm",
+                "LeftArm",
+                "LeftLeg",
+                "RightLeg",
+                "HairAccessory",
+                "FaceAccessory",
+                "NeckAccessory",
+                "ShoulderAccessory",
+                "FrontAccessory",
+                "BackAccessory",
+                "WaistAccessory",
+                "ClimbAnimation",
+                "FallAnimation",
+                "IdleAnimation",
+                "JumpAnimation",
+                "RunAnimation",
+                "SwimAnimation",
+                "WalkAnimation",
+                "MoodAnimation",
+                "EmoteAnimation",
+                "TShirtAccessory",
+                "ShirtAccessory",
+                "PantsAccessory",
+                "JacketAccessory",
+                "SweaterAccessory",
+                "ShortsAccessory",
+                "LeftShoeAccessory",
+                "RightShoeAccessory",
+                "DressSkirtAccessory",
+                "EyebrowAccessory",
+                "EyelashAccessory",
+                "DynamicHead"
+            ]
+        }
+    }
+}

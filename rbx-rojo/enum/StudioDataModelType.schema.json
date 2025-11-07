@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "StudioDataModelType",
+    "description": "StudioDataModelType",
+    "type": "object",
+    "properties": {
+        "StudioDataModelType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Edit",
+                "PlayClient",
+                "PlayServer",
+                "Standalone",
+                "None"
+            ]
+        }
+    }
+}

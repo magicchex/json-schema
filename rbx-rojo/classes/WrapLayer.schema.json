@@ -1,0 +1,119 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "WrapLayer",
+    "description": "WrapLayer",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "WrapLayer"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "WrapLayer properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "AutoSkin": {
+                    "$ref": "../enum/WrapLayerAutoSkin.schema.json#/definitions/Enum",
+                    "description": "AutoSkin Enum"
+                },
+                "BindOffset": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "Color": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "DebugMode": {
+                    "$ref": "../enum/WrapLayerDebugMode.schema.json#/definitions/Enum",
+                    "description": "DebugMode Enum"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Order": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Puffiness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ReferenceMeshContent": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "ReferenceMeshId": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "ReferenceOrigin": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "ShrinkFactor": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "CageMeshContent": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "CageMeshId": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "CageOrigin": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "HSRAssetId": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "ImportOrigin": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "WrapLayer"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "WrapLayer",
+                    "description": "WrapLayer"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

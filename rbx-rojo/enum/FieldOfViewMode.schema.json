@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "FieldOfViewMode",
+    "description": "FieldOfViewMode",
+    "type": "object",
+    "properties": {
+        "FieldOfViewMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Vertical",
+                "Diagonal",
+                "MaxAxis"
+            ]
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "InterpolationThrottlingMode",
+    "description": "InterpolationThrottlingMode",
+    "type": "object",
+    "properties": {
+        "InterpolationThrottlingMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Default",
+                "Disabled",
+                "Enabled"
+            ]
+        }
+    }
+}

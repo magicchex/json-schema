@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AlphaMode",
+    "description": "AlphaMode",
+    "type": "object",
+    "properties": {
+        "AlphaMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Overlay",
+                "Transparency",
+                "TintMask"
+            ]
+        }
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "PoseBase",
+    "description": "PoseBase",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "PoseBase"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "PoseBase properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "EasingDirection": {
+                    "$ref": "../../enum/PoseEasingDirection.schema.json#/definitions/Enum",
+                    "description": "EasingDirection Enum"
+                },
+                "EasingStyle": {
+                    "$ref": "../../enum/PoseEasingStyle.schema.json#/definitions/Enum",
+                    "description": "EasingStyle Enum"
+                },
+                "Weight": {
+                    "type": "number",
+                    "description": "float"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "PoseBase"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "PoseBase",
+                    "description": "PoseBase"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AdUnitStatus",
+    "description": "AdUnitStatus",
+    "type": "object",
+    "properties": {
+        "AdUnitStatus": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Inactive",
+                "Active"
+            ]
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "NetworkOwnership",
+    "description": "NetworkOwnership",
+    "type": "object",
+    "properties": {
+        "NetworkOwnership": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Automatic",
+                "Manual",
+                "OnContact"
+            ]
+        }
+    }
+}

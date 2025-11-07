@@ -1,0 +1,93 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ReverbSoundEffect",
+    "description": "ReverbSoundEffect",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "ReverbSoundEffect"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "ReverbSoundEffect properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "DecayTime": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Density": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Diffusion": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "DryLevel": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "WetLevel": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Priority": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "ReverbSoundEffect"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "ReverbSoundEffect",
+                    "description": "ReverbSoundEffect"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

@@ -1,0 +1,88 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AudioEqualizer",
+    "description": "AudioEqualizer",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AudioEqualizer"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AudioEqualizer properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Bypass": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Editor": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "HighGain": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LowGain": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MidGain": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MidRange": {
+                    "$ref": "../datatypes/NumberRange.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AudioEqualizer"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AudioEqualizer",
+                    "description": "AudioEqualizer"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

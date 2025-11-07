@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "CellMaterial",
+    "description": "CellMaterial",
+    "type": "object",
+    "properties": {
+        "CellMaterial": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Empty",
+                "Grass",
+                "Sand",
+                "Brick",
+                "Granite",
+                "Asphalt",
+                "Iron",
+                "Aluminum",
+                "Gold",
+                "WoodPlank",
+                "WoodLog",
+                "Gravel",
+                "CinderBlock",
+                "MossyStone",
+                "Cement",
+                "RedPlastic",
+                "BluePlastic",
+                "Water"
+            ]
+        }
+    }
+}

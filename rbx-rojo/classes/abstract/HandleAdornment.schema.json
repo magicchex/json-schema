@@ -1,0 +1,71 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "HandleAdornment",
+    "description": "HandleAdornment",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "HandleAdornment"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "HandleAdornment properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "AdornCullingMode": {
+                    "$ref": "../../enum/AdornCullingMode.schema.json#/definitions/Enum",
+                    "description": "AdornCullingMode Enum"
+                },
+                "AlwaysOnTop": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CFrame": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "SizeRelativeOffset": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "ZIndex": {
+                    "type": "number",
+                    "description": "int"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "HandleAdornment"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "HandleAdornment",
+                    "description": "HandleAdornment"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "CharacterControlMode",
+    "description": "CharacterControlMode",
+    "type": "object",
+    "properties": {
+        "CharacterControlMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Default",
+                "Legacy",
+                "NoCharacterController",
+                "LuaCharacterController"
+            ]
+        }
+    }
+}

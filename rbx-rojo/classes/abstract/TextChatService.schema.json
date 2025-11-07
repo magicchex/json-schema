@@ -1,0 +1,69 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TextChatService",
+    "description": "TextChatService",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "TextChatService"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "TextChatService properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "ChatTranslationEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ChatVersion": {
+                    "$ref": "../../enum/ChatVersion.schema.json#/definitions/Enum",
+                    "description": "ChatVersion Enum"
+                },
+                "CreateDefaultCommands": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CreateDefaultTextChannels": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "TextChatService"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "TextChatService",
+                    "description": "TextChatService"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

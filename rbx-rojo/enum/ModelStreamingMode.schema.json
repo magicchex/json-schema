@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ModelStreamingMode",
+    "description": "ModelStreamingMode",
+    "type": "object",
+    "properties": {
+        "ModelStreamingMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Default",
+                "Atomic",
+                "Persistent",
+                "PersistentPerPlayer",
+                "Nonatomic"
+            ]
+        }
+    }
+}

@@ -1,0 +1,117 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "GroundController",
+    "description": "GroundController",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "GroundController"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "GroundController properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "AccelerationLean": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "AccelerationTime": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "BalanceMaxTorque": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "BalanceSpeed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "DecelerationTime": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Friction": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "FrictionWeight": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "GroundOffset": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "StandForce": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "StandSpeed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "TurnSpeedFactor": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "BalanceRigidityEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "MoveSpeedFactor": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "GroundController"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "GroundController",
+                    "description": "GroundController"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

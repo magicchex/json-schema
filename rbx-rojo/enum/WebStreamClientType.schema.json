@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "WebStreamClientType",
+    "description": "WebStreamClientType",
+    "type": "object",
+    "properties": {
+        "WebStreamClientType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "SSE",
+                "RawStream",
+                "WebSocket"
+            ]
+        }
+    }
+}

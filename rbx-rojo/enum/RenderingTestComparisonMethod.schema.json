@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "RenderingTestComparisonMethod",
+    "description": "RenderingTestComparisonMethod",
+    "type": "object",
+    "properties": {
+        "RenderingTestComparisonMethod": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "psnr",
+                "diff"
+            ]
+        }
+    }
+}

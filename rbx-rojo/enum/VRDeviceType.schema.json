@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "VRDeviceType",
+    "description": "VRDeviceType",
+    "type": "object",
+    "properties": {
+        "VRDeviceType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Unknown",
+                "OculusRift",
+                "HTCVive",
+                "ValveIndex",
+                "OculusQuest"
+            ]
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TextureMode",
+    "description": "TextureMode",
+    "type": "object",
+    "properties": {
+        "TextureMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Stretch",
+                "Wrap",
+                "Static"
+            ]
+        }
+    }
+}

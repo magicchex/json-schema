@@ -1,0 +1,128 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "HingeConstraint",
+    "description": "HingeConstraint",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "HingeConstraint"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "HingeConstraint properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "ActuatorType": {
+                    "$ref": "../enum/ActuatorType.schema.json#/definitions/Enum",
+                    "description": "ActuatorType Enum"
+                },
+                "AngularResponsiveness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "AngularSpeed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "AngularVelocity": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LimitsEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LowerAngle": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MotorMaxAcceleration": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MotorMaxTorque": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Radius": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Restitution": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ServoMaxTorque": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "TargetAngle": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "UpperAngle": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Color": {
+                    "$ref": "../datatypes/BrickColor.schema.json"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Visible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "HingeConstraint"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "HingeConstraint",
+                    "description": "HingeConstraint"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

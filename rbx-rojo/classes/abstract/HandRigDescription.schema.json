@@ -1,0 +1,137 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "HandRigDescription",
+    "description": "HandRigDescription",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "HandRigDescription"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "HandRigDescription properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "Index1TposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "Index2TposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "Index3TposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "IndexRange": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "IndexSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Middle1TposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "Middle2TposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "Middle3TposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "MiddleRange": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "MiddleSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Pinky1TposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "Pinky2TposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "Pinky3TposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "PinkyRange": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "PinkySize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Ring1TposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "Ring2TposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "Ring3TposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "RingRange": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "RingSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Side": {
+                    "$ref": "../../enum/HandRigDescriptionSide.schema.json#/definitions/Enum",
+                    "description": "Side Enum"
+                },
+                "Thumb1TposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "Thumb2TposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "Thumb3TposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "ThumbRange": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "ThumbSize": {
+                    "type": "number",
+                    "description": "float"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "HandRigDescription"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "HandRigDescription",
+                    "description": "HandRigDescription"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Status",
+    "description": "Status",
+    "type": "object",
+    "properties": {
+        "Status": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Poison",
+                "Confusion"
+            ]
+        }
+    }
+}

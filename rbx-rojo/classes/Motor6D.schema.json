@@ -1,0 +1,87 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Motor6D",
+    "description": "Motor6D",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Motor6D"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Motor6D properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "CurrentAngle": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "DesiredAngle": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaxVelocity": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "C0": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "C1": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Motor6D"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Motor6D",
+                    "description": "Motor6D"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

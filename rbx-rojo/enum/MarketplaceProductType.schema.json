@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "MarketplaceProductType",
+    "description": "MarketplaceProductType",
+    "type": "object",
+    "properties": {
+        "MarketplaceProductType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "AvatarAsset",
+                "AvatarBundle"
+            ]
+        }
+    }
+}

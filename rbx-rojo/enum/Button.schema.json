@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Button",
+    "description": "Button",
+    "type": "object",
+    "properties": {
+        "Button": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Jump",
+                "Dismount"
+            ]
+        }
+    }
+}

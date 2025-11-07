@@ -1,0 +1,83 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ControllerPartSensor",
+    "description": "ControllerPartSensor",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "ControllerPartSensor"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "ControllerPartSensor properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "HitFrame": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "HitNormal": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "SearchDistance": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "SensorMode": {
+                    "$ref": "../enum/SensorMode.schema.json#/definitions/Enum",
+                    "description": "SensorMode Enum"
+                },
+                "UpdateType": {
+                    "$ref": "../enum/SensorUpdateType.schema.json#/definitions/Enum",
+                    "description": "UpdateType Enum"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "ControllerPartSensor"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "ControllerPartSensor",
+                    "description": "ControllerPartSensor"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ListenerType",
+    "description": "ListenerType",
+    "type": "object",
+    "properties": {
+        "ListenerType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Camera",
+                "CFrame",
+                "ObjectPosition",
+                "ObjectCFrame"
+            ]
+        }
+    }
+}

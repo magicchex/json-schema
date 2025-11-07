@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "CommandPermission",
+    "description": "CommandPermission",
+    "type": "object",
+    "properties": {
+        "CommandPermission": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Plugin",
+                "LocalUser"
+            ]
+        }
+    }
+}

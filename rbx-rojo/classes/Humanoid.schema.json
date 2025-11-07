@@ -1,0 +1,170 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Humanoid",
+    "description": "Humanoid",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Humanoid"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Humanoid properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "AutoJumpEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AutoRotate": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AutomaticScalingEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "BreakJointsOnDeath": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CameraOffset": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "DisplayDistanceType": {
+                    "$ref": "../enum/HumanoidDisplayDistanceType.schema.json#/definitions/Enum",
+                    "description": "DisplayDistanceType Enum"
+                },
+                "DisplayName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "EvaluateStateMachine": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Health": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "HealthDisplayDistance": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "HealthDisplayType": {
+                    "$ref": "../enum/HumanoidHealthDisplayType.schema.json#/definitions/Enum",
+                    "description": "HealthDisplayType Enum"
+                },
+                "HipHeight": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Jump": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "JumpHeight": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "JumpPower": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaxHealth": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaxSlopeAngle": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "NameDisplayDistance": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "NameOcclusion": {
+                    "$ref": "../enum/NameOcclusion.schema.json#/definitions/Enum",
+                    "description": "NameOcclusion Enum"
+                },
+                "PlatformStand": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "RequiresNeck": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "RigType": {
+                    "$ref": "../enum/HumanoidRigType.schema.json#/definitions/Enum",
+                    "description": "RigType Enum"
+                },
+                "Sit": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "TargetPoint": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "UseJumpPower": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "WalkSpeed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "WalkToPoint": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Humanoid"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Humanoid",
+                    "description": "Humanoid"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

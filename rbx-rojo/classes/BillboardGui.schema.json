@@ -1,0 +1,147 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "BillboardGui",
+    "description": "BillboardGui",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "BillboardGui"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "BillboardGui properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Active": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AlwaysOnTop": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Brightness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ClipsDescendants": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "DistanceStep": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ExtentsOffset": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "ExtentsOffsetWorldSpace": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "LightInfluence": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaxDistance": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Size": {
+                    "$ref": "../datatypes/UDim2.schema.json"
+                },
+                "SizeOffset": {
+                    "$ref": "../datatypes/Vector2.schema.json"
+                },
+                "StudsOffset": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "StudsOffsetWorldSpace": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ResetOnSpawn": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ZIndexBehavior": {
+                    "$ref": "../enum/ZIndexBehavior.schema.json#/definitions/Enum",
+                    "description": "ZIndexBehavior Enum"
+                },
+                "AutoLocalize": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "SelectionBehaviorDown": {
+                    "$ref": "../enum/SelectionBehavior.schema.json#/definitions/Enum",
+                    "description": "SelectionBehaviorDown Enum"
+                },
+                "SelectionBehaviorLeft": {
+                    "$ref": "../enum/SelectionBehavior.schema.json#/definitions/Enum",
+                    "description": "SelectionBehaviorLeft Enum"
+                },
+                "SelectionBehaviorRight": {
+                    "$ref": "../enum/SelectionBehavior.schema.json#/definitions/Enum",
+                    "description": "SelectionBehaviorRight Enum"
+                },
+                "SelectionBehaviorUp": {
+                    "$ref": "../enum/SelectionBehavior.schema.json#/definitions/Enum",
+                    "description": "SelectionBehaviorUp Enum"
+                },
+                "SelectionGroup": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "BillboardGui"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "BillboardGui",
+                    "description": "BillboardGui"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

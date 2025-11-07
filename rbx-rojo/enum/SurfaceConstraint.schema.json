@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SurfaceConstraint",
+    "description": "SurfaceConstraint",
+    "type": "object",
+    "properties": {
+        "SurfaceConstraint": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "None",
+                "Hinge",
+                "SteppingMotor",
+                "Motor"
+            ]
+        }
+    }
+}

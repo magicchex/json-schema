@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "WrapLayerDebugMode",
+    "description": "WrapLayerDebugMode",
+    "type": "object",
+    "properties": {
+        "WrapLayerDebugMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "None",
+                "BoundCage",
+                "LayerCage",
+                "BoundCageAndLinks",
+                "Reference",
+                "Rbf",
+                "OuterCage",
+                "ReferenceMeshAfterMorph",
+                "HSROuterDetail",
+                "HSROuter",
+                "HSRInner",
+                "HSRInnerReverse",
+                "LayerCageFittedToBase",
+                "LayerCageFittedToPrev",
+                "PreWrapDeformerOuterCage"
+            ]
+        }
+    }
+}

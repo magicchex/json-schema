@@ -1,0 +1,118 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AlignPosition",
+    "description": "AlignPosition",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AlignPosition"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AlignPosition properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "ApplyAtCenterOfMass": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ForceLimitMode": {
+                    "$ref": "../enum/ForceLimitMode.schema.json#/definitions/Enum",
+                    "description": "ForceLimitMode Enum"
+                },
+                "ForceRelativeTo": {
+                    "$ref": "../enum/ActuatorRelativeTo.schema.json#/definitions/Enum",
+                    "description": "ForceRelativeTo Enum"
+                },
+                "MaxAxesForce": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "MaxForce": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaxVelocity": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Mode": {
+                    "$ref": "../enum/PositionAlignmentMode.schema.json#/definitions/Enum",
+                    "description": "Mode Enum"
+                },
+                "Position": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "ReactionForceEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Responsiveness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RigidityEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Color": {
+                    "$ref": "../datatypes/BrickColor.schema.json"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Visible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AlignPosition"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AlignPosition",
+                    "description": "AlignPosition"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

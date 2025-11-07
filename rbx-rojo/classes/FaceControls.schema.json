@@ -1,0 +1,265 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "FaceControls",
+    "description": "FaceControls",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "FaceControls"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "FaceControls properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "ChinRaiser": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ChinRaiserUpperLip": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Corrugator": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "EyesLookDown": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "EyesLookLeft": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "EyesLookRight": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "EyesLookUp": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "FlatPucker": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Funneler": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "JawDrop": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "JawLeft": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "JawRight": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftBrowLowerer": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftCheekPuff": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftCheekRaiser": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftDimpler": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftEyeClosed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftEyeUpperLidRaiser": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftInnerBrowRaiser": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftLipCornerDown": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftLipCornerPuller": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftLipStretcher": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftLowerLipDepressor": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftNoseWrinkler": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftOuterBrowRaiser": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftUpperLipRaiser": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LipPresser": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LipsTogether": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LowerLipSuck": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MouthLeft": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MouthRight": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Pucker": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightBrowLowerer": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightCheekPuff": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightCheekRaiser": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightDimpler": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightEyeClosed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightEyeUpperLidRaiser": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightInnerBrowRaiser": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightLipCornerDown": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightLipCornerPuller": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightLipStretcher": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightLowerLipDepressor": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightNoseWrinkler": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightOuterBrowRaiser": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightUpperLipRaiser": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "TongueDown": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "TongueOut": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "TongueUp": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "UpperLipSuck": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "FaceControls"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "FaceControls",
+                    "description": "FaceControls"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

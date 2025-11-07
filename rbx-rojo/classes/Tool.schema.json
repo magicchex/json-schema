@@ -1,0 +1,115 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Tool",
+    "description": "Tool",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Tool"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Tool properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "CanBeDropped": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Grip": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "ManualActivationOnly": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "RequiresHandle": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ToolTip": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "TextureContent": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "TextureId": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "LevelOfDetail": {
+                    "$ref": "../enum/ModelLevelOfDetail.schema.json#/definitions/Enum",
+                    "description": "LevelOfDetail Enum"
+                },
+                "ModelStreamingMode": {
+                    "$ref": "../enum/ModelStreamingMode.schema.json#/definitions/Enum",
+                    "description": "ModelStreamingMode Enum"
+                },
+                "Scale": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "WorldPivot": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "Origin": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "Pivot Offset": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Tool"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Tool",
+                    "description": "Tool"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

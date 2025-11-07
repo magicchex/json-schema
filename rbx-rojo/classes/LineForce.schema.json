@@ -1,0 +1,96 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "LineForce",
+    "description": "LineForce",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "LineForce"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "LineForce properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "ApplyAtCenterOfMass": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "InverseSquareLaw": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Magnitude": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaxForce": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ReactionForceEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Color": {
+                    "$ref": "../datatypes/BrickColor.schema.json"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Visible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "LineForce"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "LineForce",
+                    "description": "LineForce"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

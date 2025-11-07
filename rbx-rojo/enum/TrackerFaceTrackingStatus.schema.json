@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TrackerFaceTrackingStatus",
+    "description": "TrackerFaceTrackingStatus",
+    "type": "object",
+    "properties": {
+        "TrackerFaceTrackingStatus": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "FaceTrackingSuccess",
+                "FaceTrackingNoFaceFound",
+                "FaceTrackingUnknown",
+                "FaceTrackingLost",
+                "FaceTrackingHasTrackingError",
+                "FaceTrackingIsOccluded",
+                "FaceTrackingUninitialized"
+            ]
+        }
+    }
+}

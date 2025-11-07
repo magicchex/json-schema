@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DeveloperMemoryTag",
+    "description": "DeveloperMemoryTag",
+    "type": "object",
+    "properties": {
+        "DeveloperMemoryTag": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Internal",
+                "HttpCache",
+                "Instances",
+                "Signals",
+                "LuaHeap",
+                "Script",
+                "PhysicsCollision",
+                "BaseParts",
+                "GraphicsSolidModels",
+                "GraphicsMeshParts",
+                "GraphicsParticles",
+                "GraphicsParts",
+                "GraphicsSpatialHash",
+                "GraphicsTerrain",
+                "GraphicsTexture",
+                "GraphicsTextureCharacter",
+                "Sounds",
+                "StreamingSounds",
+                "TerrainVoxels",
+                "Gui",
+                "Animation",
+                "Navigation",
+                "GeometryCSG",
+                "GraphicsSlimModels"
+            ]
+        }
+    }
+}

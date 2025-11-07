@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ParticleEmitterShape",
+    "description": "ParticleEmitterShape",
+    "type": "object",
+    "properties": {
+        "ParticleEmitterShape": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Box",
+                "Sphere",
+                "Cylinder",
+                "Disc"
+            ]
+        }
+    }
+}

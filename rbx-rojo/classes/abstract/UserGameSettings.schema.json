@@ -1,0 +1,199 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "UserGameSettings",
+    "description": "UserGameSettings",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "UserGameSettings"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "UserGameSettings properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "AllTutorialsDisabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "BadgeVisible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CameraMode": {
+                    "$ref": "../../enum/CustomCameraMode.schema.json#/definitions/Enum",
+                    "description": "CameraMode Enum"
+                },
+                "ChatVisible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ComputerCameraMovementMode": {
+                    "$ref": "../../enum/ComputerCameraMovementMode.schema.json#/definitions/Enum",
+                    "description": "ComputerCameraMovementMode Enum"
+                },
+                "ComputerMovementMode": {
+                    "$ref": "../../enum/ComputerMovementMode.schema.json#/definitions/Enum",
+                    "description": "ComputerMovementMode Enum"
+                },
+                "ControlMode": {
+                    "$ref": "../../enum/ControlMode.schema.json#/definitions/Enum",
+                    "description": "ControlMode Enum"
+                },
+                "Fullscreen": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "GamepadCameraSensitivity": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "GraphicsOptimizationMode": {
+                    "$ref": "../../enum/GraphicsOptimizationMode.schema.json#/definitions/Enum",
+                    "description": "GraphicsOptimizationMode Enum"
+                },
+                "GraphicsQualityLevel": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "HasEverUsedVR": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "MasterVolume": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MasterVolumeStudio": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaxQualityEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "MouseSensitivity": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "OnboardingsCompleted": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "PartyVoiceVolume": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "PeoplePageLayout": {
+                    "$ref": "../../enum/PeoplePageLayout.schema.json#/definitions/Enum",
+                    "description": "PeoplePageLayout Enum"
+                },
+                "PlayerListVisible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "PlayerNamesEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "RCCProfilerRecordFrameRate": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "RCCProfilerRecordTimeFrame": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "RotationType": {
+                    "$ref": "../../enum/RotationType.schema.json#/definitions/Enum",
+                    "description": "RotationType Enum"
+                },
+                "SavedQualityLevel": {
+                    "$ref": "../../enum/SavedQualitySetting.schema.json#/definitions/Enum",
+                    "description": "SavedQualityLevel Enum"
+                },
+                "StartMaximized": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "StartScreenPosition": {
+                    "$ref": "../../datatypes/Vector2.schema.json"
+                },
+                "StartScreenSize": {
+                    "$ref": "../../datatypes/Vector2.schema.json"
+                },
+                "TouchCameraMovementMode": {
+                    "$ref": "../../enum/TouchCameraMovementMode.schema.json#/definitions/Enum",
+                    "description": "TouchCameraMovementMode Enum"
+                },
+                "TouchMovementMode": {
+                    "$ref": "../../enum/TouchMovementMode.schema.json#/definitions/Enum",
+                    "description": "TouchMovementMode Enum"
+                },
+                "UsedCoreGuiIsVisibleToggle": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "UsedCustomGuiIsVisibleToggle": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "UsedHideHudShortcut": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "VREnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "VRRotationIntensity": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "VRSmoothRotationEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "VignetteEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "UserGameSettings"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "UserGameSettings",
+                    "description": "UserGameSettings"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

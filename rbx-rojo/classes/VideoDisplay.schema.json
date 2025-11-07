@@ -1,0 +1,184 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "VideoDisplay",
+    "description": "VideoDisplay",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "VideoDisplay"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "VideoDisplay properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "ResampleMode": {
+                    "$ref": "../enum/ResamplerMode.schema.json#/definitions/Enum",
+                    "description": "ResampleMode Enum"
+                },
+                "ScaleType": {
+                    "$ref": "../enum/ScaleType.schema.json#/definitions/Enum",
+                    "description": "ScaleType Enum"
+                },
+                "TileSize": {
+                    "$ref": "../datatypes/UDim2.schema.json"
+                },
+                "VideoColor3": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "VideoRectOffset": {
+                    "$ref": "../datatypes/Vector2.schema.json"
+                },
+                "VideoRectSize": {
+                    "$ref": "../datatypes/Vector2.schema.json"
+                },
+                "VideoTransparency": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Active": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AnchorPoint": {
+                    "$ref": "../datatypes/Vector2.schema.json"
+                },
+                "AutomaticSize": {
+                    "$ref": "../enum/AutomaticSize.schema.json#/definitions/Enum",
+                    "description": "AutomaticSize Enum"
+                },
+                "BackgroundColor3": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "BackgroundTransparency": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "BorderColor3": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "BorderMode": {
+                    "$ref": "../enum/BorderMode.schema.json#/definitions/Enum",
+                    "description": "BorderMode Enum"
+                },
+                "BorderSizePixel": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "ClipsDescendants": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Interactable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LayoutOrder": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Position": {
+                    "$ref": "../datatypes/UDim2.schema.json"
+                },
+                "Rotation": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Selectable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "SelectionOrder": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Size": {
+                    "$ref": "../datatypes/UDim2.schema.json"
+                },
+                "SizeConstraint": {
+                    "$ref": "../enum/SizeConstraint.schema.json#/definitions/Enum",
+                    "description": "SizeConstraint Enum"
+                },
+                "Visible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ZIndex": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "AutoLocalize": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "SelectionBehaviorDown": {
+                    "$ref": "../enum/SelectionBehavior.schema.json#/definitions/Enum",
+                    "description": "SelectionBehaviorDown Enum"
+                },
+                "SelectionBehaviorLeft": {
+                    "$ref": "../enum/SelectionBehavior.schema.json#/definitions/Enum",
+                    "description": "SelectionBehaviorLeft Enum"
+                },
+                "SelectionBehaviorRight": {
+                    "$ref": "../enum/SelectionBehavior.schema.json#/definitions/Enum",
+                    "description": "SelectionBehaviorRight Enum"
+                },
+                "SelectionBehaviorUp": {
+                    "$ref": "../enum/SelectionBehavior.schema.json#/definitions/Enum",
+                    "description": "SelectionBehaviorUp Enum"
+                },
+                "SelectionGroup": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "VideoDisplay"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "VideoDisplay",
+                    "description": "VideoDisplay"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

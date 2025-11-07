@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "WaterDirection",
+    "description": "WaterDirection",
+    "type": "object",
+    "properties": {
+        "WaterDirection": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "NegX",
+                "X",
+                "NegY",
+                "Y",
+                "NegZ",
+                "Z"
+            ]
+        }
+    }
+}

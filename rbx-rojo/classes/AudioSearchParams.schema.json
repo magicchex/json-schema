@@ -1,0 +1,97 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AudioSearchParams",
+    "description": "AudioSearchParams",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AudioSearchParams"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AudioSearchParams properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Album": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Artist": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "AudioSubType": {
+                    "$ref": "../enum/AudioSubType.schema.json#/definitions/Enum",
+                    "description": "AudioSubType Enum"
+                },
+                "MaxDuration": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "MinDuration": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "SearchKeyword": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Tag": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Title": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AudioSearchParams"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AudioSearchParams",
+                    "description": "AudioSearchParams"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "GraphicsOptimizationMode",
+    "description": "GraphicsOptimizationMode",
+    "type": "object",
+    "properties": {
+        "GraphicsOptimizationMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Performance",
+                "Balanced",
+                "Quality"
+            ]
+        }
+    }
+}

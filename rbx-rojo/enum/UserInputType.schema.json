@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "UserInputType",
+    "description": "UserInputType",
+    "type": "object",
+    "properties": {
+        "UserInputType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "MouseButton1",
+                "MouseButton2",
+                "MouseButton3",
+                "MouseWheel",
+                "MouseMovement",
+                "Touch",
+                "Keyboard",
+                "Focus",
+                "Accelerometer",
+                "Gyro",
+                "Gamepad1",
+                "Gamepad2",
+                "Gamepad3",
+                "Gamepad4",
+                "Gamepad5",
+                "Gamepad6",
+                "Gamepad7",
+                "Gamepad8",
+                "TextInput",
+                "InputMethod",
+                "None"
+            ]
+        }
+    }
+}

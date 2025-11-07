@@ -1,0 +1,105 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AudioPlayer",
+    "description": "AudioPlayer",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AudioPlayer"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AudioPlayer properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Asset": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "AudioContent": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "AutoLoad": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "IsMutedForCapture": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "IsPlaying": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LoopRegion": {
+                    "$ref": "../datatypes/NumberRange.schema.json"
+                },
+                "Looping": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "PlaybackRegion": {
+                    "$ref": "../datatypes/NumberRange.schema.json"
+                },
+                "PlaybackSpeed": {
+                    "type": "number",
+                    "description": "double"
+                },
+                "TimePosition": {
+                    "type": "number",
+                    "description": "double"
+                },
+                "Volume": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AudioPlayer"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AudioPlayer",
+                    "description": "AudioPlayer"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

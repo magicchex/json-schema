@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AdTeleportMethod",
+    "description": "AdTeleportMethod",
+    "type": "object",
+    "properties": {
+        "AdTeleportMethod": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Undefined",
+                "PortalForward",
+                "InGameMenuBackButton",
+                "UIBackButton"
+            ]
+        }
+    }
+}

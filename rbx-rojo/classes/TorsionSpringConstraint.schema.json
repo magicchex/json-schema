@@ -1,0 +1,108 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TorsionSpringConstraint",
+    "description": "TorsionSpringConstraint",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "TorsionSpringConstraint"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "TorsionSpringConstraint properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Coils": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Damping": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LimitsEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "MaxAngle": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaxTorque": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Radius": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Restitution": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Stiffness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Color": {
+                    "$ref": "../datatypes/BrickColor.schema.json"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Visible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "TorsionSpringConstraint"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "TorsionSpringConstraint",
+                    "description": "TorsionSpringConstraint"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

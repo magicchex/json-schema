@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ThumbnailSize",
+    "description": "ThumbnailSize",
+    "type": "object",
+    "properties": {
+        "ThumbnailSize": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Size48x48",
+                "Size180x180",
+                "Size420x420",
+                "Size60x60",
+                "Size100x100",
+                "Size150x150",
+                "Size352x352"
+            ]
+        }
+    }
+}

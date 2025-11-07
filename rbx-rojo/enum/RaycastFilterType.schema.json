@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "RaycastFilterType",
+    "description": "RaycastFilterType",
+    "type": "object",
+    "properties": {
+        "RaycastFilterType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Exclude",
+                "Include"
+            ]
+        }
+    }
+}

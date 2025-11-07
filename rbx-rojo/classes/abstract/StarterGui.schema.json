@@ -1,0 +1,69 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "StarterGui",
+    "description": "StarterGui",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "StarterGui"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "StarterGui properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "RtlTextSupport": {
+                    "$ref": "../../enum/RtlTextSupport.schema.json#/definitions/Enum",
+                    "description": "RtlTextSupport Enum"
+                },
+                "ScreenOrientation": {
+                    "$ref": "../../enum/ScreenOrientation.schema.json#/definitions/Enum",
+                    "description": "ScreenOrientation Enum"
+                },
+                "ShowDevelopmentGui": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "VirtualCursorMode": {
+                    "$ref": "../../enum/VirtualCursorMode.schema.json#/definitions/Enum",
+                    "description": "VirtualCursorMode Enum"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "StarterGui"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "StarterGui",
+                    "description": "StarterGui"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

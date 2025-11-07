@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "FormFactor",
+    "description": "FormFactor",
+    "type": "object",
+    "properties": {
+        "FormFactor": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Symmetric",
+                "Brick",
+                "Plate",
+                "Custom"
+            ]
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "OutfitType",
+    "description": "OutfitType",
+    "type": "object",
+    "properties": {
+        "OutfitType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "All",
+                "Avatar",
+                "DynamicHead",
+                "Shoes"
+            ]
+        }
+    }
+}

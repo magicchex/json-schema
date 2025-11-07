@@ -1,0 +1,645 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Studio",
+    "description": "Studio",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Studio"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Studio properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "ActionOnAutoResumeSync": {
+                    "$ref": "../../enum/ActionOnAutoResumeSync.schema.json#/definitions/Enum",
+                    "description": "ActionOnAutoResumeSync Enum"
+                },
+                "ActionOnStopSync": {
+                    "$ref": "../../enum/ActionOnStopSync.schema.json#/definitions/Enum",
+                    "description": "ActionOnStopSync Enum"
+                },
+                "Active Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Active Hover Over Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Always Save Script Changes": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Animate Hover Over": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AutoResumeSyncOnPlaceOpen": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AutoUpdateEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Auto Clean Empty Line": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Auto Closing Brackets": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Auto Closing Quotes": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Auto Delete Closing Brackets and Quotes": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Auto Indent Rule": {
+                    "$ref": "../../enum/AutoIndentRule.schema.json#/definitions/Enum",
+                    "description": "Auto Indent Rule Enum"
+                },
+                "Auto-Recovery Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Auto-Recovery Interval (Minutes)": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "AutocompleteAcceptanceBehavior": {
+                    "$ref": "../../enum/CompletionAcceptanceBehavior.schema.json#/definitions/Enum",
+                    "description": "AutocompleteAcceptanceBehavior Enum"
+                },
+                "Automatically trigger AI Code Completion": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Background Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Basic Objects Display Mode": {
+                    "$ref": "../../enum/ListDisplayMode.schema.json#/definitions/Enum",
+                    "description": "Basic Objects Display Mode Enum"
+                },
+                "Bool Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Bracket Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Built-in Function Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "CameraAdaptiveSpeed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CameraOrbitSensitivity": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "CameraPanSensitivity": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "CameraShiftFactor": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "CameraSpeedLockDefault": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CameraTweenFocus": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CameraZoomSpeed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Camera Mouse Wheel Speed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Camera Pan Speed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Camera Shift Speed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Camera Speed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Camera Speed Adjust Binding": {
+                    "$ref": "../../enum/CameraSpeedAdjustBinding.schema.json#/definitions/Enum",
+                    "description": "Camera Speed Adjust Binding Enum"
+                },
+                "Camera Zoom to Mouse Position": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Clear Output On Start": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CommandBarLocalState": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Comment Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Current Line Highlight Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Debugger Current Line Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Debugger Error Line Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "DefaultScriptSyncFileType": {
+                    "$ref": "../../enum/DefaultScriptSyncFileType.schema.json#/definitions/Enum",
+                    "description": "DefaultScriptSyncFileType Enum"
+                },
+                "DeprecatedObjectsShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "DisplayLanguage": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "DraggerActiveColor": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "DraggerMajorGridIncrement": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "DraggerMaxSoftSnaps": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "DraggerPassiveColor": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "DraggerShowHoverRuler": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "DraggerShowMeasurement": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "DraggerShowTargetSnap": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "DraggerSoftSnapMarginFactor": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "DraggerSummonMarginFactor": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "DraggerTiltRotateDuration": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "EnableCodeAssist": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "EnableFindOnType": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "EnableIndentationRulers": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "EnableSelectionTooltips": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "EnableStudioStreaming": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Enable Autocomplete": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Enable Autocomplete Doc View": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Enable CoreScript Debugger": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Enable Http Sandboxing": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Enable Internal Beta Features": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Enable Internal Features": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Enable Script Analysis": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Enable Scrollbar Markers": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Enable Signature Help": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Enable Signature Help Doc View": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Enable Temporary Tabs": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Enable Temporary Tabs In Explorer": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Enable Type Hover": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Error Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Find Selection Background Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Format On Paste": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Format On Type": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Function Name Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Highlight Current Line": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Highlight Occurances": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "HintColor": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Hover Animate Speed": {
+                    "$ref": "../../enum/HoverAnimateSpeed.schema.json#/definitions/Enum",
+                    "description": "Hover Animate Speed Enum"
+                },
+                "Hover Box Thickness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Hover Line Thickness": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Hover Over Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Indent Using Spaces": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "IndentationRulerColor": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "InformationColor": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Keyword Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "LargeFileLineCountThreshold": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "LargeFileThreshold": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Line Thickness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LoadAllBuiltinPluginsInRunModes": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LoadInternalPlugins": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LoadUserPluginsInRunModes": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LuaDebuggerEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Luau Keyword Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Main Volume": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Matching Word Background Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "MaxFindReplaceAllResults": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Maximum Output Lines": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Menu Item Background Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Method Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Number Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Only Play Audio from Window in Focus": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Operator Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Output Layout Mode": {
+                    "$ref": "../../enum/OutputLayoutMode.schema.json#/definitions/Enum",
+                    "description": "Output Layout Mode Enum"
+                },
+                "PermissionLevelShown": {
+                    "$ref": "../../enum/PermissionLevelShown.schema.json#/definitions/Enum",
+                    "description": "PermissionLevelShown Enum"
+                },
+                "Physical Draggers Select Scope By Default": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Pivot Snap To Geometry Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "PluginDebuggingEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Primary Text Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Property Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "ReloadBuiltinPluginsOnChange": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ReloadLocalPluginsOnChange": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Respect Studio shortcuts when game has focus": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Ruler Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Rulers": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "RuntimeUndoBehavior": {
+                    "$ref": "../../enum/RuntimeUndoBehavior.schema.json#/definitions/Enum",
+                    "description": "RuntimeUndoBehavior Enum"
+                },
+                "ScriptTimeoutLength": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Script Editor Color Preset": {
+                    "$ref": "../../enum/StudioScriptEditorColorPresets.schema.json#/definitions/Enum",
+                    "description": "Script Editor Color Preset Enum"
+                },
+                "Script Editor Scrollbar Background Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Script Editor Scrollbar Handle Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Scroll Past Last Line": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Secondary Text Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Select Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Select/Hover Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Selected Menu Item Background Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Selected Text Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Selection Background Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Selection Box Thickness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Selection Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Selection Line Thickness": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Set Pivot of Imported Parts": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ShowCorePackagesInExplorer": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Show Core GUI in Explorer while Playing": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Show Diagnostics Bar": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Show FileSyncService": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Show Hidden Objects in Explorer": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Show Hover Over": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Show Light Guides": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Show Navigation Labels": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Show Navigation Mesh": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Show Pathfinding Links": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Show Plugin GUI Service in Explorer": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Show Singly Selected Attachment Parent Frame": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Show Whitespace": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Show plus button on hover in Explorer": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Skip Closing Brackets and Quotes": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "String Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "\"TODO\" Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Tab Width": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Text Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Text Wrapping": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Use Bounding Box Move Handles": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Warning Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Whitespace Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "\"function\" Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "\"local\" Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "\"nil\" Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "\"self\" Color": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Studio"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Studio",
+                    "description": "Studio"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AvatarSettingsHitAndTouchDetectionMode",
+    "description": "AvatarSettingsHitAndTouchDetectionMode",
+    "type": "object",
+    "properties": {
+        "AvatarSettingsHitAndTouchDetectionMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "UseParts",
+                "UseCollider"
+            ]
+        }
+    }
+}

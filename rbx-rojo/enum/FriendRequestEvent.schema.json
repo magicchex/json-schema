@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "FriendRequestEvent",
+    "description": "FriendRequestEvent",
+    "type": "object",
+    "properties": {
+        "FriendRequestEvent": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Issue",
+                "Revoke",
+                "Accept",
+                "Deny"
+            ]
+        }
+    }
+}

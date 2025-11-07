@@ -1,0 +1,80 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Script",
+    "description": "Script",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Script"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Script properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Source": {
+                    "$ref": "../datatypes/ProtectedString.schema.json"
+                },
+                "Disabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "RunContext": {
+                    "$ref": "../enum/RunContext.schema.json#/definitions/Enum",
+                    "description": "RunContext Enum"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Script"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Script",
+                    "description": "Script"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

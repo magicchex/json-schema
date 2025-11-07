@@ -1,0 +1,342 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "HumanoidRigDescription",
+    "description": "HumanoidRigDescription",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "HumanoidRigDescription"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "HumanoidRigDescription properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "ChestRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "ChestRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "ChestSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ChestTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "HeadBaseRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "HeadBaseRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "HeadBaseSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "HeadBaseTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "LeftAnkleRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "LeftAnkleRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "LeftAnkleSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftAnkleTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "LeftClavicleRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "LeftClavicleRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "LeftClavicleSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftClavicleTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "LeftElbowRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "LeftElbowRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "LeftElbowSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftElbowTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "LeftHipRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "LeftHipRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "LeftHipSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftHipTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "LeftKneeRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "LeftKneeRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "LeftKneeSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftKneeTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "LeftShoulderRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "LeftShoulderRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "LeftShoulderSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftShoulderTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "LeftToesRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "LeftToesRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "LeftToesSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftToesTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "LeftWristRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "LeftWristRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "LeftWristSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LeftWristTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "NeckRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "NeckRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "NeckSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "NeckTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "OriginOffset": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "PelvisRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "PelvisRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "PelvisSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "PelvisTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "RightAnkleRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "RightAnkleRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "RightAnkleSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightAnkleTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "RightClavicleRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "RightClavicleRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "RightClavicleSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightClavicleTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "RightElbowRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "RightElbowRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "RightElbowSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightElbowTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "RightHipRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "RightHipRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "RightHipSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightHipTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "RightKneeRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "RightKneeRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "RightKneeSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightKneeTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "RightShoulderRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "RightShoulderRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "RightShoulderSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightShoulderTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "RightToesRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "RightToesRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "RightToesSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightToesTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "RightWristRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "RightWristRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "RightWristSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightWristTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "RootRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "RootRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "RootSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RootTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                },
+                "WaistRangeMax": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "WaistRangeMin": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "WaistSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "WaistTposeAdjustment": {
+                    "$ref": "../../datatypes/CFrame.schema.json"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "HumanoidRigDescription"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "HumanoidRigDescription",
+                    "description": "HumanoidRigDescription"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

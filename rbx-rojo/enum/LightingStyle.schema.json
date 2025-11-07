@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "LightingStyle",
+    "description": "LightingStyle",
+    "type": "object",
+    "properties": {
+        "LightingStyle": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Realistic",
+                "Soft"
+            ]
+        }
+    }
+}

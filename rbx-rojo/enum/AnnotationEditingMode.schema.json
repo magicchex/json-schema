@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AnnotationEditingMode",
+    "description": "AnnotationEditingMode",
+    "type": "object",
+    "properties": {
+        "AnnotationEditingMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "None",
+                "PlacingNew",
+                "WritingNew"
+            ]
+        }
+    }
+}

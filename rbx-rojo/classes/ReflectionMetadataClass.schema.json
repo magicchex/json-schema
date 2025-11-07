@@ -1,0 +1,145 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ReflectionMetadataClass",
+    "description": "ReflectionMetadataClass",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "ReflectionMetadataClass"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "ReflectionMetadataClass properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "ExplorerImageIndex": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "ExplorerOrder": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Insertable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "PreferredParent": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Browsable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ClassCategory": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "ClientOnly": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Constraint": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Deprecated": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "EditingDisabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "EditorType": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "FFlag": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "IsBackend": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "PropertyOrder": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "ScriptContext": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "ServerOnly": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "SliderScaling": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "UIMaximum": {
+                    "type": "number",
+                    "description": "double"
+                },
+                "UIMinimum": {
+                    "type": "number",
+                    "description": "double"
+                },
+                "UINumTicks": {
+                    "type": "number",
+                    "description": "double"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "ReflectionMetadataClass"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "ReflectionMetadataClass",
+                    "description": "ReflectionMetadataClass"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

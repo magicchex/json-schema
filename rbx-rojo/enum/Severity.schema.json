@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Severity",
+    "description": "Severity",
+    "type": "object",
+    "properties": {
+        "Severity": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Error",
+                "Warning",
+                "Information",
+                "Hint"
+            ]
+        }
+    }
+}

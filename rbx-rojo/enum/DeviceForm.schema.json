@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DeviceForm",
+    "description": "DeviceForm",
+    "type": "object",
+    "properties": {
+        "DeviceForm": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Console",
+                "Phone",
+                "Tablet",
+                "Desktop",
+                "VR"
+            ]
+        }
+    }
+}

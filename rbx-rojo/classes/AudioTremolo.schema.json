@@ -1,0 +1,93 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AudioTremolo",
+    "description": "AudioTremolo",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AudioTremolo"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AudioTremolo properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Bypass": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Depth": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Duty": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Frequency": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Shape": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Skew": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Square": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AudioTremolo"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AudioTremolo",
+                    "description": "AudioTremolo"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

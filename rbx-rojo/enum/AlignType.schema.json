@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AlignType",
+    "description": "AlignType",
+    "type": "object",
+    "properties": {
+        "AlignType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Parallel",
+                "Perpendicular",
+                "PrimaryAxisParallel",
+                "PrimaryAxisPerpendicular",
+                "PrimaryAxisLookAt",
+                "AllAxes"
+            ]
+        }
+    }
+}

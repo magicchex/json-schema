@@ -1,0 +1,92 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Explosion",
+    "description": "Explosion",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Explosion"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Explosion properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "BlastPressure": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "BlastRadius": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "DestroyJointRadiusPercent": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ExplosionType": {
+                    "$ref": "../enum/ExplosionType.schema.json#/definitions/Enum",
+                    "description": "ExplosionType Enum"
+                },
+                "Position": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "TimeScale": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Visible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Explosion"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Explosion",
+                    "description": "Explosion"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

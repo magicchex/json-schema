@@ -1,0 +1,128 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Lighting",
+    "description": "Lighting",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Lighting"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Lighting properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "Ambient": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "Brightness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ClockTime": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ColorShift_Bottom": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "ColorShift_Top": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "EnvironmentDiffuseScale": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "EnvironmentSpecularScale": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ExposureCompensation": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ExtendLightRangeTo120": {
+                    "$ref": "../../enum/RolloutState.schema.json#/definitions/Enum",
+                    "description": "ExtendLightRangeTo120 Enum"
+                },
+                "FogColor": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "FogEnd": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "FogStart": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "GeographicLatitude": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "GlobalShadows": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LightingStyle": {
+                    "$ref": "../../enum/LightingStyle.schema.json#/definitions/Enum",
+                    "description": "LightingStyle Enum"
+                },
+                "OutdoorAmbient": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "PrioritizeLightingQuality": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ShadowSoftness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Technology": {
+                    "$ref": "../../enum/Technology.schema.json#/definitions/Enum",
+                    "description": "Technology Enum"
+                },
+                "TimeOfDay": {
+                    "type": "string",
+                    "description": "string"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Lighting"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Lighting",
+                    "description": "Lighting"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

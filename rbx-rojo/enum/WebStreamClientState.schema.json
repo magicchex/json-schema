@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "WebStreamClientState",
+    "description": "WebStreamClientState",
+    "type": "object",
+    "properties": {
+        "WebStreamClientState": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Connecting",
+                "Open",
+                "Error",
+                "Closed"
+            ]
+        }
+    }
+}

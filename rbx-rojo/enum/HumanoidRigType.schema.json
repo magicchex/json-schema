@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "HumanoidRigType",
+    "description": "HumanoidRigType",
+    "type": "object",
+    "properties": {
+        "HumanoidRigType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "R6",
+                "R15"
+            ]
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "FacialAnimationStreamingState",
+    "description": "FacialAnimationStreamingState",
+    "type": "object",
+    "properties": {
+        "FacialAnimationStreamingState": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "None",
+                "Audio",
+                "Video",
+                "Place",
+                "Server"
+            ]
+        }
+    }
+}

@@ -1,0 +1,89 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "EchoSoundEffect",
+    "description": "EchoSoundEffect",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "EchoSoundEffect"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "EchoSoundEffect properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Delay": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "DryLevel": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Feedback": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "WetLevel": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Priority": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "EchoSoundEffect"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "EchoSoundEffect",
+                    "description": "EchoSoundEffect"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

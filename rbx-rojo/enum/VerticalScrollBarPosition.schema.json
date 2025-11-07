@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "VerticalScrollBarPosition",
+    "description": "VerticalScrollBarPosition",
+    "type": "object",
+    "properties": {
+        "VerticalScrollBarPosition": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Right",
+                "Left"
+            ]
+        }
+    }
+}

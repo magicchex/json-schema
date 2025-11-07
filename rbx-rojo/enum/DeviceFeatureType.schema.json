@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DeviceFeatureType",
+    "description": "DeviceFeatureType",
+    "type": "object",
+    "properties": {
+        "DeviceFeatureType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "DeviceCapture",
+                "InExperienceFAE"
+            ]
+        }
+    }
+}

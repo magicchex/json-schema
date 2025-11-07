@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AppLifecycleManagerState",
+    "description": "AppLifecycleManagerState",
+    "type": "object",
+    "properties": {
+        "AppLifecycleManagerState": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Detached",
+                "Active",
+                "Inactive",
+                "Hidden"
+            ]
+        }
+    }
+}

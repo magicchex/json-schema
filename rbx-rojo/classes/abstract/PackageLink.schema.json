@@ -1,0 +1,68 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "PackageLink",
+    "description": "PackageLink",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "PackageLink"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "PackageLink properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "AutoUpdate": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "DefaultName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "SerializedDefaultAttributes": {
+                    "$ref": "../../datatypes/BinaryString.schema.json"
+                },
+                "VersionNumber": {
+                    "type": "number",
+                    "description": "int64"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "PackageLink"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "PackageLink",
+                    "description": "PackageLink"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

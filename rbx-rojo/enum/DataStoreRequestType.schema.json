@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DataStoreRequestType",
+    "description": "DataStoreRequestType",
+    "type": "object",
+    "properties": {
+        "DataStoreRequestType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "GetAsync",
+                "SetIncrementAsync",
+                "UpdateAsync",
+                "GetSortedAsync",
+                "SetIncrementSortedAsync",
+                "OnUpdate",
+                "ListAsync",
+                "GetVersionAsync",
+                "RemoveVersionAsync"
+            ]
+        }
+    }
+}

@@ -1,0 +1,87 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Atmosphere",
+    "description": "Atmosphere",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Atmosphere"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Atmosphere properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Color": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "Decay": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "Density": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Glare": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Haze": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Offset": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Atmosphere"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Atmosphere",
+                    "description": "Atmosphere"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

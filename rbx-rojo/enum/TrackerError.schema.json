@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TrackerError",
+    "description": "TrackerError",
+    "type": "object",
+    "properties": {
+        "TrackerError": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Ok",
+                "NoService",
+                "InitFailed",
+                "NoVideo",
+                "VideoError",
+                "VideoNoPermission",
+                "VideoUnsupported",
+                "NoAudio",
+                "AudioError",
+                "AudioNoPermission",
+                "UnsupportedDevice"
+            ]
+        }
+    }
+}

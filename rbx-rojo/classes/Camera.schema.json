@@ -1,0 +1,109 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Camera",
+    "description": "Camera",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Camera"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Camera properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "CFrame": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "CameraType": {
+                    "$ref": "../enum/CameraType.schema.json#/definitions/Enum",
+                    "description": "CameraType Enum"
+                },
+                "DiagonalFieldOfView": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "FieldOfView": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "FieldOfViewMode": {
+                    "$ref": "../enum/FieldOfViewMode.schema.json#/definitions/Enum",
+                    "description": "FieldOfViewMode Enum"
+                },
+                "Focus": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "HeadLocked": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "HeadScale": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaxAxisFieldOfView": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "VRTiltAndRollEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Origin": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "Pivot Offset": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Camera"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Camera",
+                    "description": "Camera"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

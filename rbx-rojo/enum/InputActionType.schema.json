@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "InputActionType",
+    "description": "InputActionType",
+    "type": "object",
+    "properties": {
+        "InputActionType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Bool",
+                "Direction1D",
+                "Direction2D",
+                "Direction3D",
+                "ViewportPosition"
+            ]
+        }
+    }
+}

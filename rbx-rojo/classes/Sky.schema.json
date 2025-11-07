@@ -1,0 +1,108 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Sky",
+    "description": "Sky",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Sky"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Sky properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "CelestialBodiesShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "MoonAngularSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MoonTextureId": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "SkyboxBk": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "SkyboxDn": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "SkyboxFt": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "SkyboxLf": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "SkyboxOrientation": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "SkyboxRt": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "SkyboxUp": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "StarCount": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "SunAngularSize": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "SunTextureId": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Sky"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Sky",
+                    "description": "Sky"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "HttpCachePolicy",
+    "description": "HttpCachePolicy",
+    "type": "object",
+    "properties": {
+        "HttpCachePolicy": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "None",
+                "Full",
+                "DataOnly",
+                "Default",
+                "InternalRedirectRefresh"
+            ]
+        }
+    }
+}

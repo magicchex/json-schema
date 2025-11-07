@@ -1,0 +1,89 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AudioFilter",
+    "description": "AudioFilter",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AudioFilter"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AudioFilter properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Bypass": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Editor": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "FilterType": {
+                    "$ref": "../enum/AudioFilterType.schema.json#/definitions/Enum",
+                    "description": "FilterType Enum"
+                },
+                "Frequency": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Gain": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Q": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AudioFilter"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AudioFilter",
+                    "description": "AudioFilter"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

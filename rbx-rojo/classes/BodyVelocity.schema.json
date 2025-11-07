@@ -1,0 +1,75 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "BodyVelocity",
+    "description": "BodyVelocity",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "BodyVelocity"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "BodyVelocity properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "MaxForce": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "P": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Velocity": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "BodyVelocity"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "BodyVelocity",
+                    "description": "BodyVelocity"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

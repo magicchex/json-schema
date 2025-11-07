@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AnalyticsLogLevel",
+    "description": "AnalyticsLogLevel",
+    "type": "object",
+    "properties": {
+        "AnalyticsLogLevel": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Trace",
+                "Debug",
+                "Information",
+                "Warning",
+                "Error",
+                "Fatal"
+            ]
+        }
+    }
+}

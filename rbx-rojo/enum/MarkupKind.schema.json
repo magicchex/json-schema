@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "MarkupKind",
+    "description": "MarkupKind",
+    "type": "object",
+    "properties": {
+        "MarkupKind": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "PlainText",
+                "Markdown"
+            ]
+        }
+    }
+}

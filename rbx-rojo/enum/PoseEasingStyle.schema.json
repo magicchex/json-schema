@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "PoseEasingStyle",
+    "description": "PoseEasingStyle",
+    "type": "object",
+    "properties": {
+        "PoseEasingStyle": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Linear",
+                "Constant",
+                "Elastic",
+                "Cubic",
+                "Bounce",
+                "CubicV2"
+            ]
+        }
+    }
+}

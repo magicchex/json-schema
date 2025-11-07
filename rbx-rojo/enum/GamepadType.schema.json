@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "GamepadType",
+    "description": "GamepadType",
+    "type": "object",
+    "properties": {
+        "GamepadType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Unknown",
+                "PS4",
+                "PS5",
+                "XboxOne"
+            ]
+        }
+    }
+}

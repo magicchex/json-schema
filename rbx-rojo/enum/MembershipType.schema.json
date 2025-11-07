@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "MembershipType",
+    "description": "MembershipType",
+    "type": "object",
+    "properties": {
+        "MembershipType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "None",
+                "BuildersClub",
+                "TurboBuildersClub",
+                "OutrageousBuildersClub",
+                "Premium"
+            ]
+        }
+    }
+}

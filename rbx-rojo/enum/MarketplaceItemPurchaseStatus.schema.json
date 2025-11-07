@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "MarketplaceItemPurchaseStatus",
+    "description": "MarketplaceItemPurchaseStatus",
+    "type": "object",
+    "properties": {
+        "MarketplaceItemPurchaseStatus": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Success",
+                "SystemError",
+                "AlreadyOwned",
+                "InsufficientRobux",
+                "QuantityLimitExceeded",
+                "QuotaExceeded",
+                "NotForSale",
+                "NotAvailableForPurchaser",
+                "PriceMismatch",
+                "SoldOut",
+                "PurchaserIsSeller",
+                "InsufficientMembership",
+                "PlaceInvalid"
+            ]
+        }
+    }
+}

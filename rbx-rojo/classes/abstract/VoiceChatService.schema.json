@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "VoiceChatService",
+    "description": "VoiceChatService",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "VoiceChatService"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "VoiceChatService properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "DefaultDistanceAttenuation": {
+                    "$ref": "../../enum/VoiceChatDistanceAttenuationType.schema.json#/definitions/Enum",
+                    "description": "DefaultDistanceAttenuation Enum"
+                },
+                "EnableDefaultVoice": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "UseAudioApi": {
+                    "$ref": "../../enum/AudioApiRollout.schema.json#/definitions/Enum",
+                    "description": "UseAudioApi Enum"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "VoiceChatService"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "VoiceChatService",
+                    "description": "VoiceChatService"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

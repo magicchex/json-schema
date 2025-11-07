@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "HandlesStyle",
+    "description": "HandlesStyle",
+    "type": "object",
+    "properties": {
+        "HandlesStyle": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Resize",
+                "Movement"
+            ]
+        }
+    }
+}

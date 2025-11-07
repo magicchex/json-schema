@@ -1,0 +1,69 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AuroraService",
+    "description": "AuroraService",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AuroraService"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AuroraService properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "HashRoundingPoint": {
+                    "type": "number",
+                    "description": "double"
+                },
+                "IgnoreRotation": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LockStepIdOffset": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "RollbackOffset": {
+                    "type": "number",
+                    "description": "int"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AuroraService"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AuroraService",
+                    "description": "AuroraService"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

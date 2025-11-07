@@ -1,0 +1,89 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TestService",
+    "description": "TestService",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "TestService"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "TestService properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "AutoRuns": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Description": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "ExecuteWithStudioRun": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "IsPhysicsEnvironmentalThrottled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "IsSleepAllowed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "NumberOfPlayers": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "SimulateSecondsLag": {
+                    "type": "number",
+                    "description": "double"
+                },
+                "ThrottlePhysicsToRealtime": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Timeout": {
+                    "type": "number",
+                    "description": "double"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "TestService"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "TestService",
+                    "description": "TestService"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

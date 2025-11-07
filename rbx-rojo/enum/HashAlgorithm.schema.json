@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "HashAlgorithm",
+    "description": "HashAlgorithm",
+    "type": "object",
+    "properties": {
+        "HashAlgorithm": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Blake2b",
+                "Blake3",
+                "Md5",
+                "Sha1",
+                "Sha256"
+            ]
+        }
+    }
+}

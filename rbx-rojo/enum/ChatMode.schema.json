@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ChatMode",
+    "description": "ChatMode",
+    "type": "object",
+    "properties": {
+        "ChatMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Menu",
+                "TextAndMenu"
+            ]
+        }
+    }
+}

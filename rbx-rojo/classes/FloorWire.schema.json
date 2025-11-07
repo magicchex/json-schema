@@ -1,0 +1,98 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "FloorWire",
+    "description": "FloorWire",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "FloorWire"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "FloorWire properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "CycleOffset": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "StudsBetweenTextures": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Texture": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "TextureSize": {
+                    "$ref": "../datatypes/Vector2.schema.json"
+                },
+                "Velocity": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "WireRadius": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Color3": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "Transparency": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Visible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "FloorWire"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "FloorWire",
+                    "description": "FloorWire"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

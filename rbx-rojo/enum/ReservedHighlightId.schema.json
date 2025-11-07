@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ReservedHighlightId",
+    "description": "ReservedHighlightId",
+    "type": "object",
+    "properties": {
+        "ReservedHighlightId": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Standard",
+                "Selection",
+                "Hover",
+                "Active"
+            ]
+        }
+    }
+}

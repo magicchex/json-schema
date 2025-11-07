@@ -1,0 +1,130 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Beam",
+    "description": "Beam",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Beam"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Beam properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Brightness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Color": {
+                    "$ref": "../datatypes/ColorSequence.schema.json"
+                },
+                "CurveSize0": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "CurveSize1": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "FaceCamera": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LightEmission": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LightInfluence": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Segments": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Texture": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "TextureLength": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "TextureMode": {
+                    "$ref": "../enum/TextureMode.schema.json#/definitions/Enum",
+                    "description": "TextureMode Enum"
+                },
+                "TextureSpeed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Transparency": {
+                    "$ref": "../datatypes/NumberSequence.schema.json"
+                },
+                "Width0": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Width1": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ZOffset": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Beam"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Beam",
+                    "description": "Beam"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

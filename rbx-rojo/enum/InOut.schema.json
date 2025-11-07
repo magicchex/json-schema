@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "InOut",
+    "description": "InOut",
+    "type": "object",
+    "properties": {
+        "InOut": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Edge",
+                "Inset",
+                "Center"
+            ]
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AnalyticsCustomFieldKeys",
+    "description": "AnalyticsCustomFieldKeys",
+    "type": "object",
+    "properties": {
+        "AnalyticsCustomFieldKeys": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "CustomField01",
+                "CustomField02",
+                "CustomField03"
+            ]
+        }
+    }
+}

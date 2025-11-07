@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "UITheme",
+    "description": "UITheme",
+    "type": "object",
+    "properties": {
+        "UITheme": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Light",
+                "Dark"
+            ]
+        }
+    }
+}

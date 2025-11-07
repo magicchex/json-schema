@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AnimationTrack",
+    "description": "AnimationTrack",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AnimationTrack"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AnimationTrack properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "Looped": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Priority": {
+                    "$ref": "../../enum/AnimationPriority.schema.json#/definitions/Enum",
+                    "description": "Priority Enum"
+                },
+                "TimePosition": {
+                    "type": "number",
+                    "description": "float"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AnimationTrack"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AnimationTrack",
+                    "description": "AnimationTrack"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

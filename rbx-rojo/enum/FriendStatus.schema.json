@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "FriendStatus",
+    "description": "FriendStatus",
+    "type": "object",
+    "properties": {
+        "FriendStatus": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Unknown",
+                "NotFriend",
+                "Friend",
+                "FriendRequestSent",
+                "FriendRequestReceived"
+            ]
+        }
+    }
+}

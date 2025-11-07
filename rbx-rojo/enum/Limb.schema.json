@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Limb",
+    "description": "Limb",
+    "type": "object",
+    "properties": {
+        "Limb": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Head",
+                "Torso",
+                "LeftArm",
+                "RightArm",
+                "LeftLeg",
+                "RightLeg",
+                "Unknown"
+            ]
+        }
+    }
+}

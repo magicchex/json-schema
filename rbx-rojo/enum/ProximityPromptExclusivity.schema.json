@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ProximityPromptExclusivity",
+    "description": "ProximityPromptExclusivity",
+    "type": "object",
+    "properties": {
+        "ProximityPromptExclusivity": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "OnePerButton",
+                "OneGlobally",
+                "AlwaysShow"
+            ]
+        }
+    }
+}

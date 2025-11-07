@@ -1,0 +1,193 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ParticleEmitter",
+    "description": "ParticleEmitter",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "ParticleEmitter"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "ParticleEmitter properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Acceleration": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "Brightness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Color": {
+                    "$ref": "../datatypes/ColorSequence.schema.json"
+                },
+                "Drag": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "EmissionDirection": {
+                    "$ref": "../enum/NormalId.schema.json#/definitions/Enum",
+                    "description": "EmissionDirection Enum"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "FlipbookFramerate": {
+                    "$ref": "../datatypes/NumberRange.schema.json"
+                },
+                "FlipbookIncompatible": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "FlipbookLayout": {
+                    "$ref": "../enum/ParticleFlipbookLayout.schema.json#/definitions/Enum",
+                    "description": "FlipbookLayout Enum"
+                },
+                "FlipbookMode": {
+                    "$ref": "../enum/ParticleFlipbookMode.schema.json#/definitions/Enum",
+                    "description": "FlipbookMode Enum"
+                },
+                "FlipbookSizeX": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "FlipbookSizeY": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "FlipbookStartRandom": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Lifetime": {
+                    "$ref": "../datatypes/NumberRange.schema.json"
+                },
+                "LightEmission": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LightInfluence": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LockedToPart": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Orientation": {
+                    "$ref": "../enum/ParticleOrientation.schema.json#/definitions/Enum",
+                    "description": "Orientation Enum"
+                },
+                "Rate": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RotSpeed": {
+                    "$ref": "../datatypes/NumberRange.schema.json"
+                },
+                "Rotation": {
+                    "$ref": "../datatypes/NumberRange.schema.json"
+                },
+                "Shape": {
+                    "$ref": "../enum/ParticleEmitterShape.schema.json#/definitions/Enum",
+                    "description": "Shape Enum"
+                },
+                "ShapeInOut": {
+                    "$ref": "../enum/ParticleEmitterShapeInOut.schema.json#/definitions/Enum",
+                    "description": "ShapeInOut Enum"
+                },
+                "ShapePartial": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ShapeStyle": {
+                    "$ref": "../enum/ParticleEmitterShapeStyle.schema.json#/definitions/Enum",
+                    "description": "ShapeStyle Enum"
+                },
+                "Size": {
+                    "$ref": "../datatypes/NumberSequence.schema.json"
+                },
+                "Speed": {
+                    "$ref": "../datatypes/NumberRange.schema.json"
+                },
+                "SpreadAngle": {
+                    "$ref": "../datatypes/Vector2.schema.json"
+                },
+                "Squash": {
+                    "$ref": "../datatypes/NumberSequence.schema.json"
+                },
+                "Texture": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "TimeScale": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Transparency": {
+                    "$ref": "../datatypes/NumberSequence.schema.json"
+                },
+                "VelocityInheritance": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "WindAffectsDrag": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ZOffset": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "ParticleEmitter"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "ParticleEmitter",
+                    "description": "ParticleEmitter"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

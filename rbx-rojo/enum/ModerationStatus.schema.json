@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ModerationStatus",
+    "description": "ModerationStatus",
+    "type": "object",
+    "properties": {
+        "ModerationStatus": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "ReviewedApproved",
+                "ReviewedRejected",
+                "NotReviewed",
+                "NotApplicable",
+                "Invalid"
+            ]
+        }
+    }
+}

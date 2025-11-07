@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "JointCreationMode",
+    "description": "JointCreationMode",
+    "type": "object",
+    "properties": {
+        "JointCreationMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "All",
+                "Surface",
+                "None"
+            ]
+        }
+    }
+}

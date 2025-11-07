@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ParticleFlipbookLayout",
+    "description": "ParticleFlipbookLayout",
+    "type": "object",
+    "properties": {
+        "ParticleFlipbookLayout": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "None",
+                "Grid2x2",
+                "Grid4x4",
+                "Grid8x8",
+                "Custom"
+            ]
+        }
+    }
+}

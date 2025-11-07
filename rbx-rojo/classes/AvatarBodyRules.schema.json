@@ -1,0 +1,187 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AvatarBodyRules",
+    "description": "AvatarBodyRules",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AvatarBodyRules"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AvatarBodyRules properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "AppearanceMode": {
+                    "$ref": "../enum/AvatarSettingsAppearanceMode.schema.json#/definitions/Enum",
+                    "description": "AppearanceMode Enum"
+                },
+                "BuildMode": {
+                    "$ref": "../enum/AvatarSettingsBuildMode.schema.json#/definitions/Enum",
+                    "description": "BuildMode Enum"
+                },
+                "CustomBodyBundleId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomBodyType": {
+                    "$ref": "../enum/AvatarSettingsCustomBodyType.schema.json#/definitions/Enum",
+                    "description": "CustomBodyType Enum"
+                },
+                "CustomBodyTypeScale": {
+                    "$ref": "../datatypes/NumberRange.schema.json"
+                },
+                "CustomEyebrowEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomEyebrowId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomEyelashEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomEyelashId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomFaceEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomFaceId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomHeadEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomHeadId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomHeadScale": {
+                    "$ref": "../datatypes/NumberRange.schema.json"
+                },
+                "CustomHeight": {
+                    "$ref": "../datatypes/NumberRange.schema.json"
+                },
+                "CustomHeightScale": {
+                    "$ref": "../datatypes/NumberRange.schema.json"
+                },
+                "CustomLeftArmEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomLeftArmId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomLeftLegEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomLeftLegId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomMoodEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomMoodId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomProportionsScale": {
+                    "$ref": "../datatypes/NumberRange.schema.json"
+                },
+                "CustomRightArmEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomRightArmId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomRightLegEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomRightLegId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomTorsoEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomTorsoId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomWidthScale": {
+                    "$ref": "../datatypes/NumberRange.schema.json"
+                },
+                "KeepPlayerHead": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ScaleMode": {
+                    "$ref": "../enum/AvatarSettingsScaleMode.schema.json#/definitions/Enum",
+                    "description": "ScaleMode Enum"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AvatarBodyRules"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AvatarBodyRules",
+                    "description": "AvatarBodyRules"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

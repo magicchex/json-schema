@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "PackagePermission",
+    "description": "PackagePermission",
+    "type": "object",
+    "properties": {
+        "PackagePermission": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "None",
+                "NoAccess",
+                "Revoked",
+                "UseView",
+                "Edit",
+                "Own"
+            ]
+        }
+    }
+}

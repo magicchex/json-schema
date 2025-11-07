@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "FilterErrorType",
+    "description": "FilterErrorType",
+    "type": "object",
+    "properties": {
+        "FilterErrorType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "BackslashNotEscapingAnything",
+                "BadBespokeFilter",
+                "BadName",
+                "IncompleteOr",
+                "IncompleteParenthesis",
+                "InvalidDoubleStar",
+                "InvalidTilde",
+                "PropertyBadOperator",
+                "PropertyDoesNotExist",
+                "PropertyInvalidField",
+                "PropertyInvalidValue",
+                "PropertyUnsupportedFields",
+                "PropertyUnsupportedProperty",
+                "UnexpectedNameIndex",
+                "UnexpectedToken",
+                "UnfinishedBinaryOperator",
+                "UnfinishedQuote",
+                "UnknownBespokeFilter",
+                "WildcardInProperty"
+            ]
+        }
+    }
+}

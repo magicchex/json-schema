@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ButtonStyle",
+    "description": "ButtonStyle",
+    "type": "object",
+    "properties": {
+        "ButtonStyle": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Custom",
+                "RobloxButtonDefault",
+                "RobloxButton",
+                "RobloxRoundButton",
+                "RobloxRoundDefaultButton",
+                "RobloxRoundDropdownButton"
+            ]
+        }
+    }
+}

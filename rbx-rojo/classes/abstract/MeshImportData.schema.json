@@ -1,0 +1,97 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "MeshImportData",
+    "description": "MeshImportData",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "MeshImportData"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "MeshImportData properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "Anchored": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CageMeshIntersectedPreview": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CageNonManifoldPreview": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CageOverlappingVerticesPreview": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CageUVMisMatchedPreview": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "DoubleSided": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "IgnoreVertexColors": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "IrrelevantCageModifiedPreview": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "MeshHoleDetectedPreview": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "OuterCageFarExtendedFromMeshPreview": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "UseImportedPivot": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "MeshImportData"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "MeshImportData",
+                    "description": "MeshImportData"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

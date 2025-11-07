@@ -1,0 +1,103 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "RocketPropulsion",
+    "description": "RocketPropulsion",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "RocketPropulsion"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "RocketPropulsion properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "CartoonFactor": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaxSpeed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaxThrust": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaxTorque": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "TargetOffset": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "TargetRadius": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ThrustD": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ThrustP": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "TurnD": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "TurnP": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "RocketPropulsion"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "RocketPropulsion",
+                    "description": "RocketPropulsion"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

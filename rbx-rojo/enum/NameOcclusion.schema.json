@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "NameOcclusion",
+    "description": "NameOcclusion",
+    "type": "object",
+    "properties": {
+        "NameOcclusion": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "NoOcclusion",
+                "EnemyOcclusion",
+                "OccludeAll"
+            ]
+        }
+    }
+}

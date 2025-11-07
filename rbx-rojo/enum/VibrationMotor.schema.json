@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "VibrationMotor",
+    "description": "VibrationMotor",
+    "type": "object",
+    "properties": {
+        "VibrationMotor": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Large",
+                "Small",
+                "LeftTrigger",
+                "RightTrigger",
+                "LeftHand",
+                "RightHand"
+            ]
+        }
+    }
+}

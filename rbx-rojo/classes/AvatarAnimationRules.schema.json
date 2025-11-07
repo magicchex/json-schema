@@ -1,0 +1,153 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AvatarAnimationRules",
+    "description": "AvatarAnimationRules",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AvatarAnimationRules"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AvatarAnimationRules properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "AnimationClipsMode": {
+                    "$ref": "../enum/AvatarSettingsAnimationClipsMode.schema.json#/definitions/Enum",
+                    "description": "AnimationClipsMode Enum"
+                },
+                "AnimationPacksMode": {
+                    "$ref": "../enum/AvatarSettingsAnimationPacksMode.schema.json#/definitions/Enum",
+                    "description": "AnimationPacksMode Enum"
+                },
+                "CustomClimbAnimationEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomClimbAnimationId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomFallAnimationEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomFallAnimationId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomIdleAlt1AnimationEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomIdleAlt1AnimationId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomIdleAlt2AnimationEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomIdleAlt2AnimationId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomIdleAnimationEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomIdleAnimationId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomJumpAnimationEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomJumpAnimationId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomRunAnimationEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomRunAnimationId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomSwimAnimationEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomSwimAnimationId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomSwimIdleAnimationEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomSwimIdleAnimationId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomWalkAnimationEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomWalkAnimationId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AvatarAnimationRules"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AvatarAnimationRules",
+                    "description": "AvatarAnimationRules"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

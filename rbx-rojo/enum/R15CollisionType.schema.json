@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "R15CollisionType",
+    "description": "R15CollisionType",
+    "type": "object",
+    "properties": {
+        "R15CollisionType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "OuterBox",
+                "InnerBox"
+            ]
+        }
+    }
+}

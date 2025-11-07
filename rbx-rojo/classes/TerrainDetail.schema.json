@@ -1,0 +1,111 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TerrainDetail",
+    "description": "TerrainDetail",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "TerrainDetail"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "TerrainDetail properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "ColorMap": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "ColorMapContent": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "EmissiveMaskContent": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "EmissiveStrength": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "EmissiveTint": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "Face": {
+                    "$ref": "../enum/TerrainFace.schema.json#/definitions/Enum",
+                    "description": "Face Enum"
+                },
+                "MaterialPattern": {
+                    "$ref": "../enum/MaterialPattern.schema.json#/definitions/Enum",
+                    "description": "MaterialPattern Enum"
+                },
+                "MetalnessMap": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "MetalnessMapContent": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "NormalMap": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "NormalMapContent": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "RoughnessMap": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "RoughnessMapContent": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "StudsPerTile": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "TerrainDetail"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "TerrainDetail",
+                    "description": "TerrainDetail"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

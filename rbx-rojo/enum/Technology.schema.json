@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Technology",
+    "description": "Technology",
+    "type": "object",
+    "properties": {
+        "Technology": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Legacy",
+                "Voxel",
+                "Compatibility",
+                "ShadowMap",
+                "Future",
+                "Unified"
+            ]
+        }
+    }
+}

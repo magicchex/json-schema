@@ -1,0 +1,109 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "RenderSettings",
+    "description": "RenderSettings",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "RenderSettings"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "RenderSettings properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "AutoFRMLevel": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "EagerBulkExecution": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "EditQualityLevel": {
+                    "$ref": "../../enum/QualityLevel.schema.json#/definitions/Enum",
+                    "description": "EditQualityLevel Enum"
+                },
+                "Enable VR Mode": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ExportMergeByMaterial": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "FrameRateManager": {
+                    "$ref": "../../enum/FramerateManagerMode.schema.json#/definitions/Enum",
+                    "description": "FrameRateManager Enum"
+                },
+                "GraphicsMode": {
+                    "$ref": "../../enum/GraphicsMode.schema.json#/definitions/Enum",
+                    "description": "GraphicsMode Enum"
+                },
+                "MeshCacheSize": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "MeshPartDetailLevel": {
+                    "$ref": "../../enum/MeshPartDetailLevel.schema.json#/definitions/Enum",
+                    "description": "MeshPartDetailLevel Enum"
+                },
+                "QualityLevel": {
+                    "$ref": "../../enum/QualityLevel.schema.json#/definitions/Enum",
+                    "description": "QualityLevel Enum"
+                },
+                "ReloadAssets": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "RenderCSGTrianglesDebug": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ShowBoundingBoxes": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ViewMode": {
+                    "$ref": "../../enum/ViewMode.schema.json#/definitions/Enum",
+                    "description": "ViewMode Enum"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "RenderSettings"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "RenderSettings",
+                    "description": "RenderSettings"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

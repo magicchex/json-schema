@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DebugSettings",
+    "description": "DebugSettings",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "DebugSettings"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "DebugSettings properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "IsScriptStackTracingEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ReportSoundWarnings": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "TickCountPreciseOverride": {
+                    "$ref": "../../enum/TickCountSampleMethod.schema.json#/definitions/Enum",
+                    "description": "TickCountPreciseOverride Enum"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "DebugSettings"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "DebugSettings",
+                    "description": "DebugSettings"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

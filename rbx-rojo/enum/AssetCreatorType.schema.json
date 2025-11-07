@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AssetCreatorType",
+    "description": "AssetCreatorType",
+    "type": "object",
+    "properties": {
+        "AssetCreatorType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "User",
+                "Group"
+            ]
+        }
+    }
+}

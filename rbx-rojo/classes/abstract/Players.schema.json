@@ -1,0 +1,69 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Players",
+    "description": "Players",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Players"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Players properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "BanningEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CharacterAutoLoads": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "RespawnTime": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "UseStrafingAnimations": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Players"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Players",
+                    "description": "Players"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ElasticBehavior",
+    "description": "ElasticBehavior",
+    "type": "object",
+    "properties": {
+        "ElasticBehavior": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "WhenScrollable",
+                "Always",
+                "Never"
+            ]
+        }
+    }
+}

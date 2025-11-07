@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AuroraScriptObject",
+    "description": "AuroraScriptObject",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AuroraScriptObject"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AuroraScriptObject properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "FrameId": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "LODLevel": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "PriorFrameInvoked": {
+                    "type": "number",
+                    "description": "int"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AuroraScriptObject"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AuroraScriptObject",
+                    "description": "AuroraScriptObject"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

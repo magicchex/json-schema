@@ -1,0 +1,84 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SpecialMesh",
+    "description": "SpecialMesh",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "SpecialMesh"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "SpecialMesh properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "MeshType": {
+                    "$ref": "../enum/MeshType.schema.json#/definitions/Enum",
+                    "description": "MeshType Enum"
+                },
+                "MeshId": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "TextureId": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "Offset": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "Scale": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "VertexColor": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "SpecialMesh"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "SpecialMesh",
+                    "description": "SpecialMesh"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

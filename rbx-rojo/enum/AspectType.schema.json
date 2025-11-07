@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AspectType",
+    "description": "AspectType",
+    "type": "object",
+    "properties": {
+        "AspectType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "FitWithinMaxSize",
+                "ScaleWithParentSize"
+            ]
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AvatarChatServiceFeature",
+    "description": "AvatarChatServiceFeature",
+    "type": "object",
+    "properties": {
+        "AvatarChatServiceFeature": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "None",
+                "UniverseAudio",
+                "UniverseVideo",
+                "PlaceAudio",
+                "PlaceVideo",
+                "UserAudioEligible",
+                "UserAudio",
+                "UserVideoEligible",
+                "UserVideo",
+                "UserBanned",
+                "UserVerifiedForVoice"
+            ]
+        }
+    }
+}

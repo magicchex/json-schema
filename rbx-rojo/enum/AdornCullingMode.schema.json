@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AdornCullingMode",
+    "description": "AdornCullingMode",
+    "type": "object",
+    "properties": {
+        "AdornCullingMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Automatic",
+                "Never"
+            ]
+        }
+    }
+}

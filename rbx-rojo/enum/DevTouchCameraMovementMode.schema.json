@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DevTouchCameraMovementMode",
+    "description": "DevTouchCameraMovementMode",
+    "type": "object",
+    "properties": {
+        "DevTouchCameraMovementMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "UserChoice",
+                "Classic",
+                "Follow",
+                "Orbital"
+            ]
+        }
+    }
+}

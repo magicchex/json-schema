@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "PrimitiveType",
+    "description": "PrimitiveType",
+    "type": "object",
+    "properties": {
+        "PrimitiveType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Null",
+                "Ball",
+                "Cylinder",
+                "Block",
+                "Wedge",
+                "CornerWedge"
+            ]
+        }
+    }
+}

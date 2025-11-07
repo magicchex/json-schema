@@ -1,0 +1,61 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TriangleMeshPart",
+    "description": "TriangleMeshPart",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "TriangleMeshPart"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "TriangleMeshPart properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "CollisionFidelity": {
+                    "$ref": "../../enum/CollisionFidelity.schema.json#/definitions/Enum",
+                    "description": "CollisionFidelity Enum"
+                },
+                "FluidFidelity": {
+                    "$ref": "../../enum/FluidFidelity.schema.json#/definitions/Enum",
+                    "description": "FluidFidelity Enum"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "TriangleMeshPart"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "TriangleMeshPart",
+                    "description": "TriangleMeshPart"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

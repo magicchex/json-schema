@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ProximityPromptInputType",
+    "description": "ProximityPromptInputType",
+    "type": "object",
+    "properties": {
+        "ProximityPromptInputType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Keyboard",
+                "Gamepad",
+                "Touch"
+            ]
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TeleportState",
+    "description": "TeleportState",
+    "type": "object",
+    "properties": {
+        "TeleportState": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "RequestedFromServer",
+                "Started",
+                "WaitingForServer",
+                "Failed",
+                "InProgress"
+            ]
+        }
+    }
+}

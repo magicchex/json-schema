@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DevCameraOcclusionMode",
+    "description": "DevCameraOcclusionMode",
+    "type": "object",
+    "properties": {
+        "DevCameraOcclusionMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Zoom",
+                "Invisicam"
+            ]
+        }
+    }
+}

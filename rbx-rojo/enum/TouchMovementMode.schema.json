@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TouchMovementMode",
+    "description": "TouchMovementMode",
+    "type": "object",
+    "properties": {
+        "TouchMovementMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Default",
+                "Thumbstick",
+                "DPad",
+                "Thumbpad",
+                "ClickToMove",
+                "DynamicThumbstick"
+            ]
+        }
+    }
+}

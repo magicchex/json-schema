@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "VRSessionState",
+    "description": "VRSessionState",
+    "type": "object",
+    "properties": {
+        "VRSessionState": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Undefined",
+                "Idle",
+                "Visible",
+                "Focused",
+                "Stopping"
+            ]
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AvatarSettingsAccessoryLimitMethod",
+    "description": "AvatarSettingsAccessoryLimitMethod",
+    "type": "object",
+    "properties": {
+        "AvatarSettingsAccessoryLimitMethod": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Scale",
+                "Remove",
+                "PreviewScale",
+                "PreviewRemove"
+            ]
+        }
+    }
+}

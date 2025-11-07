@@ -1,0 +1,82 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ControllerManager",
+    "description": "ControllerManager",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "ControllerManager"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "ControllerManager properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "BaseMoveSpeed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "BaseTurnSpeed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "FacingDirection": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "MovingDirection": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "UpDirection": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "ControllerManager"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "ControllerManager",
+                    "description": "ControllerManager"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

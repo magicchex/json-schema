@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AdUIEventType",
+    "description": "AdUIEventType",
+    "type": "object",
+    "properties": {
+        "AdUIEventType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "AdLabelClicked",
+                "VolumeButtonClicked",
+                "FullscreenButtonClicked",
+                "PlayButtonClicked",
+                "PauseButtonClicked",
+                "CloseButtonClicked",
+                "WhyThisAdClicked",
+                "PlayEventTriggered",
+                "PauseEventTriggered"
+            ]
+        }
+    }
+}

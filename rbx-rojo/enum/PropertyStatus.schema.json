@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "PropertyStatus",
+    "description": "PropertyStatus",
+    "type": "object",
+    "properties": {
+        "PropertyStatus": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Ok",
+                "Warning",
+                "Error"
+            ]
+        }
+    }
+}

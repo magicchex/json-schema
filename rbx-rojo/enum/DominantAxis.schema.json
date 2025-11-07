@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DominantAxis",
+    "description": "DominantAxis",
+    "type": "object",
+    "properties": {
+        "DominantAxis": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Width",
+                "Height"
+            ]
+        }
+    }
+}

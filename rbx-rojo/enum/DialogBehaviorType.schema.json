@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DialogBehaviorType",
+    "description": "DialogBehaviorType",
+    "type": "object",
+    "properties": {
+        "DialogBehaviorType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "SinglePlayer",
+                "MultiplePlayers"
+            ]
+        }
+    }
+}

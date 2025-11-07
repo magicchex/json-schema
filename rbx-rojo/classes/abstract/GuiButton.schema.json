@@ -1,0 +1,69 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "GuiButton",
+    "description": "GuiButton",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "GuiButton"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "GuiButton properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "AutoButtonColor": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Modal": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Selected": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Style": {
+                    "$ref": "../../enum/ButtonStyle.schema.json#/definitions/Enum",
+                    "description": "Style Enum"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "GuiButton"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "GuiButton",
+                    "description": "GuiButton"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

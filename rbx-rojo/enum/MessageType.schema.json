@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "MessageType",
+    "description": "MessageType",
+    "type": "object",
+    "properties": {
+        "MessageType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "MessageOutput",
+                "MessageInfo",
+                "MessageWarning",
+                "MessageError"
+            ]
+        }
+    }
+}

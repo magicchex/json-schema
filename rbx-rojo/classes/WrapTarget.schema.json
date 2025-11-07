@@ -1,0 +1,91 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "WrapTarget",
+    "description": "WrapTarget",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "WrapTarget"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "WrapTarget properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Color": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "DebugMode": {
+                    "$ref": "../enum/WrapTargetDebugMode.schema.json#/definitions/Enum",
+                    "description": "DebugMode Enum"
+                },
+                "Stiffness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "CageMeshContent": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "CageMeshId": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "CageOrigin": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "HSRAssetId": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "ImportOrigin": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "WrapTarget"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "WrapTarget",
+                    "description": "WrapTarget"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ScrollingDirection",
+    "description": "ScrollingDirection",
+    "type": "object",
+    "properties": {
+        "ScrollingDirection": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "X",
+                "Y",
+                "XY"
+            ]
+        }
+    }
+}

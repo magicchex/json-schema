@@ -1,0 +1,120 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ProximityPrompt",
+    "description": "ProximityPrompt",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "ProximityPrompt"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "ProximityPrompt properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "ActionText": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "AutoLocalize": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ClickablePrompt": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Exclusivity": {
+                    "$ref": "../enum/ProximityPromptExclusivity.schema.json#/definitions/Enum",
+                    "description": "Exclusivity Enum"
+                },
+                "GamepadKeyCode": {
+                    "$ref": "../enum/KeyCode.schema.json#/definitions/Enum",
+                    "description": "GamepadKeyCode Enum"
+                },
+                "HoldDuration": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "KeyboardKeyCode": {
+                    "$ref": "../enum/KeyCode.schema.json#/definitions/Enum",
+                    "description": "KeyboardKeyCode Enum"
+                },
+                "MaxActivationDistance": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaxIndicatorDistance": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ObjectText": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "RequiresLineOfSight": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Style": {
+                    "$ref": "../enum/ProximityPromptStyle.schema.json#/definitions/Enum",
+                    "description": "Style Enum"
+                },
+                "UIOffset": {
+                    "$ref": "../datatypes/Vector2.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "ProximityPrompt"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "ProximityPrompt",
+                    "description": "ProximityPrompt"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

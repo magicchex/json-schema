@@ -1,0 +1,69 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TrackerLodController",
+    "description": "TrackerLodController",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "TrackerLodController"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "TrackerLodController properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "AudioMode": {
+                    "$ref": "../../enum/TrackerLodFlagMode.schema.json#/definitions/Enum",
+                    "description": "AudioMode Enum"
+                },
+                "VideoExtrapolationMode": {
+                    "$ref": "../../enum/TrackerExtrapolationFlagMode.schema.json#/definitions/Enum",
+                    "description": "VideoExtrapolationMode Enum"
+                },
+                "VideoLodMode": {
+                    "$ref": "../../enum/TrackerLodValueMode.schema.json#/definitions/Enum",
+                    "description": "VideoLodMode Enum"
+                },
+                "VideoMode": {
+                    "$ref": "../../enum/TrackerLodFlagMode.schema.json#/definitions/Enum",
+                    "description": "VideoMode Enum"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "TrackerLodController"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "TrackerLodController",
+                    "description": "TrackerLodController"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

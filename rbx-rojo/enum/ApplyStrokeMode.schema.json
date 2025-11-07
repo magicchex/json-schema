@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ApplyStrokeMode",
+    "description": "ApplyStrokeMode",
+    "type": "object",
+    "properties": {
+        "ApplyStrokeMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Contextual",
+                "Border"
+            ]
+        }
+    }
+}

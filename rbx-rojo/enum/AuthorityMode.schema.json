@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AuthorityMode",
+    "description": "AuthorityMode",
+    "type": "object",
+    "properties": {
+        "AuthorityMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Server",
+                "Automatic"
+            ]
+        }
+    }
+}

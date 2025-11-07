@@ -1,0 +1,120 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DraggerService",
+    "description": "DraggerService",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "DraggerService"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "DraggerService properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "AlignDraggedObjects": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AngleSnapEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AngleSnapIncrement": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "AnimateHover": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CollisionsEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "DraggerCoordinateSpace": {
+                    "$ref": "../../enum/DraggerCoordinateSpace.schema.json#/definitions/Enum",
+                    "description": "DraggerCoordinateSpace Enum"
+                },
+                "DraggerMovementMode": {
+                    "$ref": "../../enum/DraggerMovementMode.schema.json#/definitions/Enum",
+                    "description": "DraggerMovementMode Enum"
+                },
+                "GeometrySnapColor": {
+                    "$ref": "../../datatypes/Color3.schema.json"
+                },
+                "HoverAnimateFrequency": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "HoverThickness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "JointsEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LinearSnapEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LinearSnapIncrement": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "PartSnapEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "PivotSnapToGeometry": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ShowHover": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ShowPivotIndicator": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "DraggerService"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "DraggerService",
+                    "description": "DraggerService"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

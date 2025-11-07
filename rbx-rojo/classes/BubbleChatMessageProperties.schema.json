@@ -1,0 +1,98 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "BubbleChatMessageProperties",
+    "description": "BubbleChatMessageProperties",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "BubbleChatMessageProperties"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "BubbleChatMessageProperties properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "BackgroundColor3": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "BackgroundTransparency": {
+                    "type": "number",
+                    "description": "double"
+                },
+                "FontFace": {
+                    "$ref": "../datatypes/Font.schema.json"
+                },
+                "TailVisible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "TextColor3": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "TextSize": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "PrefixText": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Text": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Translation": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "BubbleChatMessageProperties"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "BubbleChatMessageProperties",
+                    "description": "BubbleChatMessageProperties"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ScreenOrientation",
+    "description": "ScreenOrientation",
+    "type": "object",
+    "properties": {
+        "ScreenOrientation": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "LandscapeLeft",
+                "LandscapeRight",
+                "LandscapeSensor",
+                "Portrait",
+                "Sensor"
+            ]
+        }
+    }
+}

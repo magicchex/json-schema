@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "MeshScaleUnit",
+    "description": "MeshScaleUnit",
+    "type": "object",
+    "properties": {
+        "MeshScaleUnit": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Stud",
+                "Meter",
+                "CM",
+                "MM",
+                "Foot",
+                "Inch"
+            ]
+        }
+    }
+}

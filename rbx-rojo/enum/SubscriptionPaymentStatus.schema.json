@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SubscriptionPaymentStatus",
+    "description": "SubscriptionPaymentStatus",
+    "type": "object",
+    "properties": {
+        "SubscriptionPaymentStatus": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Paid",
+                "Refunded"
+            ]
+        }
+    }
+}

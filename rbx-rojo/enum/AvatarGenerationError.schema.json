@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AvatarGenerationError",
+    "description": "AvatarGenerationError",
+    "type": "object",
+    "properties": {
+        "AvatarGenerationError": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "None",
+                "Unknown",
+                "DownloadFailed",
+                "Canceled",
+                "Offensive",
+                "Timeout",
+                "JobNotFound"
+            ]
+        }
+    }
+}

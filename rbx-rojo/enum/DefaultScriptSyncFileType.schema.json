@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DefaultScriptSyncFileType",
+    "description": "DefaultScriptSyncFileType",
+    "type": "object",
+    "properties": {
+        "DefaultScriptSyncFileType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Lua",
+                "Luau"
+            ]
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "BinType",
+    "description": "BinType",
+    "type": "object",
+    "properties": {
+        "BinType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Script",
+                "GameTool",
+                "Grab",
+                "Clone",
+                "Hammer"
+            ]
+        }
+    }
+}

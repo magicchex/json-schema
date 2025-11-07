@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "RecommendationActionType",
+    "description": "RecommendationActionType",
+    "type": "object",
+    "properties": {
+        "RecommendationActionType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "AddReaction",
+                "RemoveReaction",
+                "Share",
+                "Report",
+                "Comment",
+                "Play",
+                "Purchase"
+            ]
+        }
+    }
+}

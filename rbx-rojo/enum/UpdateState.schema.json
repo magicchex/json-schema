@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "UpdateState",
+    "description": "UpdateState",
+    "type": "object",
+    "properties": {
+        "UpdateState": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "UpdateNotAvailable",
+                "UpdateAvailable",
+                "UpdateInProgress",
+                "UpdateReady",
+                "UpdateFailed"
+            ]
+        }
+    }
+}

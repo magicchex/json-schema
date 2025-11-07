@@ -1,0 +1,61 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AnimationClip",
+    "description": "AnimationClip",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AnimationClip"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AnimationClip properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "Loop": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Priority": {
+                    "$ref": "../../enum/AnimationPriority.schema.json#/definitions/Enum",
+                    "description": "Priority Enum"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AnimationClip"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AnimationClip",
+                    "description": "AnimationClip"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

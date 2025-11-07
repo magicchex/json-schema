@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "RibbonTool",
+    "description": "RibbonTool",
+    "type": "object",
+    "properties": {
+        "RibbonTool": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Select",
+                "Scale",
+                "Rotate",
+                "Move",
+                "Transform",
+                "ColorPicker",
+                "MaterialPicker",
+                "Group",
+                "Ungroup",
+                "None",
+                "PivotEditor"
+            ]
+        }
+    }
+}

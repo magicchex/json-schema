@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "FluidForces",
+    "description": "FluidForces",
+    "type": "object",
+    "properties": {
+        "FluidForces": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Default",
+                "Experimental"
+            ]
+        }
+    }
+}

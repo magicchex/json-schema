@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TextTruncate",
+    "description": "TextTruncate",
+    "type": "object",
+    "properties": {
+        "TextTruncate": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "None",
+                "AtEnd",
+                "SplitWord"
+            ]
+        }
+    }
+}

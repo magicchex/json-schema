@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AdEventType",
+    "description": "AdEventType",
+    "type": "object",
+    "properties": {
+        "AdEventType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "VideoLoaded",
+                "VideoRemoved",
+                "UserCompletedVideo",
+                "RewardedAdLoaded",
+                "RewardedAdGrant",
+                "RewardedAdUnloaded"
+            ]
+        }
+    }
+}

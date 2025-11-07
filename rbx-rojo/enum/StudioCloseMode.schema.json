@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "StudioCloseMode",
+    "description": "StudioCloseMode",
+    "type": "object",
+    "properties": {
+        "StudioCloseMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "None",
+                "CloseStudio",
+                "CloseDoc",
+                "LogOut"
+            ]
+        }
+    }
+}

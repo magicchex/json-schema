@@ -1,0 +1,117 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Trail",
+    "description": "Trail",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Trail"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Trail properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Brightness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Color": {
+                    "$ref": "../datatypes/ColorSequence.schema.json"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "FaceCamera": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Lifetime": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LightEmission": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "LightInfluence": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaxLength": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MinLength": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Texture": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "TextureLength": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "TextureMode": {
+                    "$ref": "../enum/TextureMode.schema.json#/definitions/Enum",
+                    "description": "TextureMode Enum"
+                },
+                "Transparency": {
+                    "$ref": "../datatypes/NumberSequence.schema.json"
+                },
+                "WidthScale": {
+                    "$ref": "../datatypes/NumberSequence.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Trail"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Trail",
+                    "description": "Trail"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

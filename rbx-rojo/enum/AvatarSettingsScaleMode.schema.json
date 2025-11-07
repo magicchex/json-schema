@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AvatarSettingsScaleMode",
+    "description": "AvatarSettingsScaleMode",
+    "type": "object",
+    "properties": {
+        "AvatarSettingsScaleMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "PlayerChoice",
+                "CustomScale"
+            ]
+        }
+    }
+}

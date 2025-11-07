@@ -1,0 +1,217 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "MaterialService",
+    "description": "MaterialService",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "MaterialService"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "MaterialService properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "AsphaltName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "BasaltName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "BrickName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "CardboardName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "CarpetName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "CeramicTilesName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "ClayRoofTilesName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "CobblestoneName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "ConcreteName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "CorrodedMetalName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "CrackedLavaName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "DiamondPlateName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "FabricName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "FoilName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "GlacierName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "GraniteName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "GrassName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "GroundName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "IceName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "LeafyGrassName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "LeatherName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "LimestoneName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "MarbleName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "MetalName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "MudName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "PavementName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "PebbleName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "PlasterName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "PlasticName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "RockName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "RoofShinglesName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "RubberName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "SaltName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "SandName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "SandstoneName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "SlateName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "SmoothPlasticName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "SnowName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Use2022Materials": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "WoodName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "WoodPlanksName": {
+                    "type": "string",
+                    "description": "string"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "MaterialService"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "MaterialService",
+                    "description": "MaterialService"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

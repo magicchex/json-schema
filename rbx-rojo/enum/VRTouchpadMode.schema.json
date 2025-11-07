@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "VRTouchpadMode",
+    "description": "VRTouchpadMode",
+    "type": "object",
+    "properties": {
+        "VRTouchpadMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Touch",
+                "VirtualThumbstick",
+                "ABXY"
+            ]
+        }
+    }
+}

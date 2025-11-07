@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ProductPurchaseChannel",
+    "description": "ProductPurchaseChannel",
+    "type": "object",
+    "properties": {
+        "ProductPurchaseChannel": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "InExperience",
+                "ExperienceDetailsPage",
+                "AdReward",
+                "CommerceProduct"
+            ]
+        }
+    }
+}

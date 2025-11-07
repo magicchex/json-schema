@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SecurityCapability",
+    "description": "SecurityCapability",
+    "type": "object",
+    "properties": {
+        "SecurityCapability": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "RunClientScript",
+                "RunServerScript",
+                "AccessOutsideWrite",
+                "AssetRequire",
+                "LoadString",
+                "ScriptGlobals",
+                "CreateInstances",
+                "Basic",
+                "Audio",
+                "DataStore",
+                "Network",
+                "Physics",
+                "UI",
+                "CSG",
+                "Chat",
+                "Animation",
+                "Avatar",
+                "Input",
+                "Environment",
+                "RemoteEvent",
+                "LegacySound",
+                "Players",
+                "CapabilityControl",
+                "Plugin",
+                "LocalUser",
+                "WritePlayer",
+                "RobloxScript",
+                "RobloxEngine",
+                "Unassigned",
+                "InternalTest",
+                "PluginOrOpenCloud",
+                "Assistant",
+                "RemoteCommand"
+            ]
+        }
+    }
+}

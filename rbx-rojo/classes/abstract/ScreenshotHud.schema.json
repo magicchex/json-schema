@@ -1,0 +1,78 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ScreenshotHud",
+    "description": "ScreenshotHud",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "ScreenshotHud"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "ScreenshotHud properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "CameraButtonIcon": {
+                    "$ref": "../../datatypes/Content.schema.json"
+                },
+                "CameraButtonPosition": {
+                    "$ref": "../../datatypes/UDim2.schema.json"
+                },
+                "CloseButtonPosition": {
+                    "$ref": "../../datatypes/UDim2.schema.json"
+                },
+                "CloseWhenScreenshotTaken": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "HideCoreGuiForCaptures": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "HidePlayerGuiForCaptures": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Visible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "ScreenshotHud"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "ScreenshotHud",
+                    "description": "ScreenshotHud"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

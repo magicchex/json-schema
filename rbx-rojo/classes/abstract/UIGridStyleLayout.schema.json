@@ -1,0 +1,69 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "UIGridStyleLayout",
+    "description": "UIGridStyleLayout",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "UIGridStyleLayout"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "UIGridStyleLayout properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "FillDirection": {
+                    "$ref": "../../enum/FillDirection.schema.json#/definitions/Enum",
+                    "description": "FillDirection Enum"
+                },
+                "HorizontalAlignment": {
+                    "$ref": "../../enum/HorizontalAlignment.schema.json#/definitions/Enum",
+                    "description": "HorizontalAlignment Enum"
+                },
+                "SortOrder": {
+                    "$ref": "../../enum/SortOrder.schema.json#/definitions/Enum",
+                    "description": "SortOrder Enum"
+                },
+                "VerticalAlignment": {
+                    "$ref": "../../enum/VerticalAlignment.schema.json#/definitions/Enum",
+                    "description": "VerticalAlignment Enum"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "UIGridStyleLayout"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "UIGridStyleLayout",
+                    "description": "UIGridStyleLayout"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

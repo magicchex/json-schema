@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SubscriptionExpirationReason",
+    "description": "SubscriptionExpirationReason",
+    "type": "object",
+    "properties": {
+        "SubscriptionExpirationReason": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "ProductInactive",
+                "ProductDeleted",
+                "SubscriberCancelled",
+                "SubscriberRefunded",
+                "Lapsed"
+            ]
+        }
+    }
+}

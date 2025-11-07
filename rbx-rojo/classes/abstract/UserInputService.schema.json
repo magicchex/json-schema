@@ -1,0 +1,71 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "UserInputService",
+    "description": "UserInputService",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "UserInputService"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "UserInputService properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "MouseBehavior": {
+                    "$ref": "../../enum/MouseBehavior.schema.json#/definitions/Enum",
+                    "description": "MouseBehavior Enum"
+                },
+                "MouseDeltaSensitivity": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MouseIcon": {
+                    "$ref": "../../datatypes/Content.schema.json"
+                },
+                "MouseIconContent": {
+                    "$ref": "../../datatypes/Content.schema.json"
+                },
+                "MouseIconEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "UserInputService"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "UserInputService",
+                    "description": "UserInputService"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

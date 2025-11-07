@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "CollaboratorStatus",
+    "description": "CollaboratorStatus",
+    "type": "object",
+    "properties": {
+        "CollaboratorStatus": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "None",
+                "Editing3D",
+                "Scripting",
+                "PrivateScripting"
+            ]
+        }
+    }
+}

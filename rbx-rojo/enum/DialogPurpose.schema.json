@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DialogPurpose",
+    "description": "DialogPurpose",
+    "type": "object",
+    "properties": {
+        "DialogPurpose": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Quest",
+                "Help",
+                "Shop"
+            ]
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ModelStreamingBehavior",
+    "description": "ModelStreamingBehavior",
+    "type": "object",
+    "properties": {
+        "ModelStreamingBehavior": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Default",
+                "Legacy",
+                "Improved"
+            ]
+        }
+    }
+}

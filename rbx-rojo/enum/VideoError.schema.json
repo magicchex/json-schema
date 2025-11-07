@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "VideoError",
+    "description": "VideoError",
+    "type": "object",
+    "properties": {
+        "VideoError": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Ok",
+                "Eof",
+                "EAgain",
+                "BadParameter",
+                "AllocFailed",
+                "CodecInitFailed",
+                "CodecCloseFailed",
+                "DecodeFailed",
+                "ParsingFailed",
+                "Unsupported",
+                "Generic",
+                "DownloadFailed",
+                "StreamNotFound",
+                "EncodeFailed",
+                "CreateFailed",
+                "NoPermission",
+                "NoService",
+                "ReleaseFailed",
+                "Unknown"
+            ]
+        }
+    }
+}

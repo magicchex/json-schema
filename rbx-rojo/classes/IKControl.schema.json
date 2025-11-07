@@ -1,0 +1,91 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "IKControl",
+    "description": "IKControl",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "IKControl"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "IKControl properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "EndEffectorOffset": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "Offset": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "Priority": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "SmoothTime": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Type": {
+                    "$ref": "../enum/IKControlType.schema.json#/definitions/Enum",
+                    "description": "Type Enum"
+                },
+                "Weight": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "IKControl"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "IKControl",
+                    "description": "IKControl"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

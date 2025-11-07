@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "MeshPartDetailLevel",
+    "description": "MeshPartDetailLevel",
+    "type": "object",
+    "properties": {
+        "MeshPartDetailLevel": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "DistanceBased",
+                "Level00",
+                "Level01",
+                "Level02",
+                "Level03",
+                "Level04"
+            ]
+        }
+    }
+}

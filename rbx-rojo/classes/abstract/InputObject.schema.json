@@ -1,0 +1,71 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "InputObject",
+    "description": "InputObject",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "InputObject"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "InputObject properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "Delta": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "KeyCode": {
+                    "$ref": "../../enum/KeyCode.schema.json#/definitions/Enum",
+                    "description": "KeyCode Enum"
+                },
+                "Position": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "UserInputState": {
+                    "$ref": "../../enum/UserInputState.schema.json#/definitions/Enum",
+                    "description": "UserInputState Enum"
+                },
+                "UserInputType": {
+                    "$ref": "../../enum/UserInputType.schema.json#/definitions/Enum",
+                    "description": "UserInputType Enum"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "InputObject"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "InputObject",
+                    "description": "InputObject"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

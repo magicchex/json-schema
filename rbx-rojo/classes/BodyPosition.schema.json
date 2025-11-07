@@ -1,0 +1,79 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "BodyPosition",
+    "description": "BodyPosition",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "BodyPosition"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "BodyPosition properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "D": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MaxForce": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "P": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Position": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "BodyPosition"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "BodyPosition",
+                    "description": "BodyPosition"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

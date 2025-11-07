@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "CatalogSortType",
+    "description": "CatalogSortType",
+    "type": "object",
+    "properties": {
+        "CatalogSortType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Relevance",
+                "PriceHighToLow",
+                "PriceLowToHigh",
+                "MostFavorited",
+                "RecentlyCreated",
+                "Bestselling"
+            ]
+        }
+    }
+}

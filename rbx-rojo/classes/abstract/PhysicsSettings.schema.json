@@ -1,0 +1,241 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "PhysicsSettings",
+    "description": "PhysicsSettings",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "PhysicsSettings"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "PhysicsSettings properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "AllowSleep": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreAnchorsShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreAssembliesShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreAssemblyCentersOfMassShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreAwakePartsHighlighted": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreBodyTypesShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreCollisionCostsShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreConstraintForcesShownForSelectedOrHoveredInstances": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreConstraintTorquesShownForSelectedOrHoveredInstances": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreContactForcesShownForSelectedOrHoveredAssemblies": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreContactIslandsShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreContactPointsShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreGravityForcesShownForSelectedOrHoveredAssemblies": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreJointCoordinatesShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreMagnitudesShownForDrawnForcesAndTorques": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreMechanismsShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreModelCoordsShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreNonAnchorsShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreOwnersShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ArePartCoordsShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreRegionsShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreSolverIslandsShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreTerrainReplicationRegionsShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreTimestepsShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreUnalignedPartsShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AreWorldCoordsShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "DisableCSGv2": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "DisableCSGv3ForPlugins": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "DrawConstraintsNetForce": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "DrawContactsNetForce": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "DrawTotalNetForce": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "EnableForceVisualizationSmoothing": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "FluidForceDrawScale": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ForceDrawScale": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ForceVisualizationSmoothingSteps": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "IsInterpolationThrottleShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "IsReceiveAgeShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "IsTreeShown": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "PhysicsEnvironmentalThrottle": {
+                    "$ref": "../../enum/EnviromentalPhysicsThrottle.schema.json#/definitions/Enum",
+                    "description": "PhysicsEnvironmentalThrottle Enum"
+                },
+                "ShowDecompositionGeometry": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ShowFluidForcesForSelectedOrHoveredMechanisms": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "ShowInstanceNamesForDrawnForcesAndTorques": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "SolverConvergenceMetricType": {
+                    "$ref": "../../enum/SolverConvergenceMetricType.schema.json#/definitions/Enum",
+                    "description": "SolverConvergenceMetricType Enum"
+                },
+                "SolverConvergenceVisualizationMode": {
+                    "$ref": "../../enum/SolverConvergenceVisualizationMode.schema.json#/definitions/Enum",
+                    "description": "SolverConvergenceVisualizationMode Enum"
+                },
+                "ThrottleAdjustTime": {
+                    "type": "number",
+                    "description": "double"
+                },
+                "TorqueDrawScale": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "UseCSGv2": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "PhysicsSettings"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "PhysicsSettings",
+                    "description": "PhysicsSettings"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

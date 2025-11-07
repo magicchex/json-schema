@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ShowAdResult",
+    "description": "ShowAdResult",
+    "type": "object",
+    "properties": {
+        "ShowAdResult": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "ShowCompleted",
+                "AdNotReady",
+                "AdAlreadyShowing",
+                "InternalError",
+                "ShowInterrupted",
+                "InsufficientMemory"
+            ]
+        }
+    }
+}

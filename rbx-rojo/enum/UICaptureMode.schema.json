@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "UICaptureMode",
+    "description": "UICaptureMode",
+    "type": "object",
+    "properties": {
+        "UICaptureMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "All",
+                "None"
+            ]
+        }
+    }
+}

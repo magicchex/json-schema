@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "UIDragDetectorDragStyle",
+    "description": "UIDragDetectorDragStyle",
+    "type": "object",
+    "properties": {
+        "UIDragDetectorDragStyle": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "TranslatePlane",
+                "TranslateLine",
+                "Rotate",
+                "Scriptable"
+            ]
+        }
+    }
+}

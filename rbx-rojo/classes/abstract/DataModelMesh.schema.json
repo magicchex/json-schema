@@ -1,0 +1,62 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DataModelMesh",
+    "description": "DataModelMesh",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "DataModelMesh"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "DataModelMesh properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "Offset": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "Scale": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                },
+                "VertexColor": {
+                    "$ref": "../../datatypes/Vector3.schema.json"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "DataModelMesh"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "DataModelMesh",
+                    "description": "DataModelMesh"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

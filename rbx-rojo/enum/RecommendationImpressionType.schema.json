@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "RecommendationImpressionType",
+    "description": "RecommendationImpressionType",
+    "type": "object",
+    "properties": {
+        "RecommendationImpressionType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "View",
+                "NotViewable"
+            ]
+        }
+    }
+}

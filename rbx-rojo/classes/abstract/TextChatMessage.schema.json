@@ -1,0 +1,77 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TextChatMessage",
+    "description": "TextChatMessage",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "TextChatMessage"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "TextChatMessage properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "MessageId": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Metadata": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "PrefixText": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Status": {
+                    "$ref": "../../enum/TextChatMessageStatus.schema.json#/definitions/Enum",
+                    "description": "Status Enum"
+                },
+                "Text": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Translation": {
+                    "type": "string",
+                    "description": "string"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "TextChatMessage"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "TextChatMessage",
+                    "description": "TextChatMessage"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

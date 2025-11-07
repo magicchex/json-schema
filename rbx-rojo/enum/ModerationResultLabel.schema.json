@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ModerationResultLabel",
+    "description": "ModerationResultLabel",
+    "type": "object",
+    "properties": {
+        "ModerationResultLabel": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "ChildExploitation",
+                "SuicideSelfInjuryAndHarmfulBehavior",
+                "ThreatsBullyingAndHarassment",
+                "TerrorismAndViolentExtremism",
+                "DiscriminationSlursAndHateSpeech",
+                "RealWorldSensitiveEvents",
+                "ViolentContentAndGore",
+                "RomanticAndSexualContent",
+                "IllegalAndRegulatedGoodsAndActivities",
+                "Profanity",
+                "Other"
+            ]
+        }
+    }
+}

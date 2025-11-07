@@ -1,0 +1,81 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "CharacterMesh",
+    "description": "CharacterMesh",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "CharacterMesh"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "CharacterMesh properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "BaseTextureId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "BodyPart": {
+                    "$ref": "../enum/BodyPart.schema.json#/definitions/Enum",
+                    "description": "BodyPart Enum"
+                },
+                "MeshId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "OverlayTextureId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "CharacterMesh"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "CharacterMesh",
+                    "description": "CharacterMesh"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

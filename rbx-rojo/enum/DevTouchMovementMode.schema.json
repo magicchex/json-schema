@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DevTouchMovementMode",
+    "description": "DevTouchMovementMode",
+    "type": "object",
+    "properties": {
+        "DevTouchMovementMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "UserChoice",
+                "Thumbstick",
+                "DPad",
+                "Thumbpad",
+                "ClickToMove",
+                "Scriptable",
+                "DynamicThumbstick"
+            ]
+        }
+    }
+}

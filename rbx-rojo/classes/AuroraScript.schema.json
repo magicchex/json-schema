@@ -1,0 +1,84 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AuroraScript",
+    "description": "AuroraScript",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AuroraScript"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AuroraScript properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "EnableCulling": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "EnableLOD": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "LODCriticality": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Priority": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "Source": {
+                    "$ref": "../datatypes/ProtectedString.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AuroraScript"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AuroraScript",
+                    "description": "AuroraScript"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

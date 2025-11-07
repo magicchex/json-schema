@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "PathStatus",
+    "description": "PathStatus",
+    "type": "object",
+    "properties": {
+        "PathStatus": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Success",
+                "ClosestNoPath",
+                "ClosestOutOfRange",
+                "FailStartNotEmpty",
+                "FailFinishNotEmpty",
+                "NoPath"
+            ]
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "BreakReason",
+    "description": "BreakReason",
+    "type": "object",
+    "properties": {
+        "BreakReason": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Other",
+                "Error",
+                "SpecialBreakpoint",
+                "UserBreakpoint"
+            ]
+        }
+    }
+}

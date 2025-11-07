@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AvatarSettingsCustomBodyType",
+    "description": "AvatarSettingsCustomBodyType",
+    "type": "object",
+    "properties": {
+        "AvatarSettingsCustomBodyType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "AvatarReference",
+                "BundleId"
+            ]
+        }
+    }
+}

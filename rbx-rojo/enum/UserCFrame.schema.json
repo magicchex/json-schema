@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "UserCFrame",
+    "description": "UserCFrame",
+    "type": "object",
+    "properties": {
+        "UserCFrame": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Head",
+                "LeftHand",
+                "RightHand",
+                "Floor"
+            ]
+        }
+    }
+}

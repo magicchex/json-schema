@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SavedQualitySetting",
+    "description": "SavedQualitySetting",
+    "type": "object",
+    "properties": {
+        "SavedQualitySetting": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Automatic",
+                "QualityLevel1",
+                "QualityLevel2",
+                "QualityLevel3",
+                "QualityLevel4",
+                "QualityLevel5",
+                "QualityLevel6",
+                "QualityLevel7",
+                "QualityLevel8",
+                "QualityLevel9",
+                "QualityLevel10"
+            ]
+        }
+    }
+}

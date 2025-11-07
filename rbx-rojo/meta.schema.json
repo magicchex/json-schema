@@ -1,0 +1,830 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "ignoreUnknownInstances": {
+            "type": "boolean"
+        }
+    },
+    "anyOf": [
+        {
+            "$ref": "./classes/AccessoryDescription.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Accoutrement.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Accessory.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AdPortal.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Animation.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/KeyframeSequence.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AnimationNodeDefinition.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AnimationRigData.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Animator.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Annotation.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/WorkspaceAnnotation.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Atmosphere.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Attachment.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Bone.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioAnalyzer.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioChannelMixer.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioChannelSplitter.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioChorus.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioCompressor.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioDeviceInput.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioDeviceOutput.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioDistortion.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioEcho.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioEmitter.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioEqualizer.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioFader.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioFilter.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioFlanger.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioGate.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioLimiter.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioListener.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioPitchShifter.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioPlayer.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioReverb.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioSearchParams.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioSpeechToText.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioTextToSpeech.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AudioTremolo.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AvatarAccessoryRules.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AvatarAnimationRules.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AvatarBodyRules.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AvatarClothingRules.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AvatarCollisionRules.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AvatarRules.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/WrapLayer.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/WrapTarget.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Beam.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/BodyAngularVelocity.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/BodyForce.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/BodyGyro.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/BodyPosition.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/BodyThrust.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/BodyVelocity.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/RocketPropulsion.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/BodyPartDescription.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Breakpoint.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/BodyColors.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/CharacterMesh.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Pants.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Shirt.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ShirtGraphic.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Skin.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ClickDetector.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/DragDetector.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Clouds.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AlignOrientation.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AlignPosition.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AngularVelocity.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AnimationConstraint.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/BallSocketConstraint.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/HingeConstraint.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/LineForce.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/LinearVelocity.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/RodConstraint.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/RopeConstraint.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/CylindricalConstraint.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/SpringConstraint.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Torque.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/TorsionSpringConstraint.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/UniversalConstraint.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/VectorForce.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/SkateboardController.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AirController.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ClimbController.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/GroundController.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/SwimController.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ControllerManager.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/CustomEvent.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/CustomEventReceiver.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/FileMesh.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/SpecialMesh.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/DataStoreGetOptions.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/DataStoreOptions.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/DebuggerWatch.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Dialog.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/DialogChoice.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/EulerRotationCurve.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ExperienceInviteOptions.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Explosion.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/FaceControls.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Decal.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Texture.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Fire.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/FloatCurve.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Folder.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ForceField.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/FunctionalTest.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/GetTextBoundsParams.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/CanvasGroup.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Frame.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ImageButton.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/TextButton.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ImageLabel.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/TextLabel.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ScrollingFrame.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/TextBox.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/VideoDisplay.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/VideoFrame.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ViewportFrame.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/BillboardGui.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ScreenGui.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AdGui.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/SurfaceGui.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/FloorWire.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/SelectionBox.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/BoxHandleAdornment.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ConeHandleAdornment.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/CylinderHandleAdornment.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ImageHandleAdornment.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/LineHandleAdornment.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/SphereHandleAdornment.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/WireframeHandleAdornment.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ParabolaAdornment.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/SelectionSphere.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ArcHandles.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Handles.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/SurfaceSelection.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/SelectionPartLasso.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/SelectionPointLasso.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Path2D.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/HapticEffect.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/HiddenSurfaceRemovalAsset.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Highlight.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Humanoid.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/HumanoidDescription.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/IKControl.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/InputAction.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/InputBinding.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/InputContext.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/InternalSyncItem.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Glue.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Motor.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Motor6D.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/VelocityMotor.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Keyframe.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/KeyframeMarker.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/PointLight.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/SpotLight.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/SurfaceLight.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/LocalizationTable.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AuroraScript.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Script.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ModuleScript.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/MarkerCurve.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/MaterialVariant.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Message.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/NoCollisionConstraint.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Noise.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Part.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/FlagStand.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Seat.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/SkateboardPlatform.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/SpawnLocation.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/MeshPart.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/PartOperation.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/NegateOperation.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/TrussPart.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/VehicleSeat.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Camera.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Model.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/HopperBin.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Tool.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Flag.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/PartOperationAsset.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ParticleEmitter.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/PathfindingLink.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/PathfindingModifier.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Player.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/PluginAction.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/PluginCapabilities.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/NumberPose.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Pose.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/BloomEffect.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/BlurEffect.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ColorCorrectionEffect.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ColorGradingEffect.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/DepthOfFieldEffect.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/SunRaysEffect.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ProximityPrompt.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/RTAnimationTracker.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ReflectionMetadataClass.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/RenderingTest.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/RotationCurve.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/AtmosphereSensor.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/BuoyancySensor.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ControllerPartSensor.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/FluidForceSensor.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Sky.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Smoke.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Sound.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ChorusSoundEffect.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/CompressorSoundEffect.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/DistortionSoundEffect.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/EchoSoundEffect.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/EqualizerSoundEffect.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/FlangeSoundEffect.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/PitchShiftSoundEffect.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ReverbSoundEffect.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/TremoloSoundEffect.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/SoundGroup.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Sparkles.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/StudioAttachment.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/StudioCallout.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/StyleRule.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/StyleDerive.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/StyleLink.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/SurfaceAppearance.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Team.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/TeleportOptions.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/TerrainDetail.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/TerrainRegion.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/TextChannel.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/TextChatCommand.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/TextChatMessageProperties.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/BubbleChatMessageProperties.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/TextGenerator.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Trail.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Tween.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/UIAspectRatioConstraint.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/UISizeConstraint.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/UITextSizeConstraint.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/UICorner.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/UIDragDetector.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/UIFlexItem.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/UIGradient.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/UIGridLayout.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/UIListLayout.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/UIPageLayout.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/UITableLayout.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/UIPadding.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/UIScale.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/UIStroke.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/BinaryStringValue.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/BoolValue.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/BrickColorValue.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/CFrameValue.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Color3Value.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/DoubleConstrainedValue.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/IntConstrainedValue.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/IntValue.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/NumberValue.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ObjectValue.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/RayValue.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/StringValue.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Vector3Value.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/ValueCurve.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/VideoDeviceInput.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/VideoPlayer.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/VisualizationMode.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/VisualizationModeCategory.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/WeldConstraint.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/Wire.schema.json#/definitions/Meta"
+        },
+        {
+            "$ref": "./classes/WrapTextureTransfer.schema.json#/definitions/Meta"
+        }
+    ]
+}

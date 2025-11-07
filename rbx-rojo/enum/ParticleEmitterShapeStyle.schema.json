@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ParticleEmitterShapeStyle",
+    "description": "ParticleEmitterShapeStyle",
+    "type": "object",
+    "properties": {
+        "ParticleEmitterShapeStyle": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Volume",
+                "Surface"
+            ]
+        }
+    }
+}

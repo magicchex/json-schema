@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "GearGenreSetting",
+    "description": "GearGenreSetting",
+    "type": "object",
+    "properties": {
+        "GearGenreSetting": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "AllGenres",
+                "MatchingGenreOnly"
+            ]
+        }
+    }
+}

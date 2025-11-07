@@ -1,0 +1,87 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SelectionBox",
+    "description": "SelectionBox",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "SelectionBox"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "SelectionBox properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "LineThickness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "SurfaceColor3": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "SurfaceTransparency": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Color3": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "Transparency": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Visible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "SelectionBox"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "SelectionBox",
+                    "description": "SelectionBox"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

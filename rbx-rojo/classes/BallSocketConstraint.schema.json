@@ -1,0 +1,108 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "BallSocketConstraint",
+    "description": "BallSocketConstraint",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "BallSocketConstraint"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "BallSocketConstraint properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "LimitsEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "MaxFrictionTorque": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Radius": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Restitution": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "TwistLimitsEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "TwistLowerAngle": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "TwistUpperAngle": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "UpperAngle": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Color": {
+                    "$ref": "../datatypes/BrickColor.schema.json"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Visible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "BallSocketConstraint"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "BallSocketConstraint",
+                    "description": "BallSocketConstraint"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

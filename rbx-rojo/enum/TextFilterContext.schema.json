@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TextFilterContext",
+    "description": "TextFilterContext",
+    "type": "object",
+    "properties": {
+        "TextFilterContext": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "PublicChat",
+                "PrivateChat"
+            ]
+        }
+    }
+}

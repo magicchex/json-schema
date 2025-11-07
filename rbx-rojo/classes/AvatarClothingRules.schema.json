@@ -1,0 +1,172 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AvatarClothingRules",
+    "description": "AvatarClothingRules",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "AvatarClothingRules"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "AvatarClothingRules properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "ClothingMode": {
+                    "$ref": "../enum/AvatarSettingsClothingMode.schema.json#/definitions/Enum",
+                    "description": "ClothingMode Enum"
+                },
+                "CustomClassicPantsAccessoryEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomClassicPantsAccessoryId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomClassicShirtsAccessoryEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomClassicShirtsAccessoryId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomClassicTShirtsAccessoryEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomClassicTShirtsAccessoryId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomClothingMode": {
+                    "$ref": "../enum/AvatarSettingsCustomClothingMode.schema.json#/definitions/Enum",
+                    "description": "CustomClothingMode Enum"
+                },
+                "CustomDressSkirtAccessoryEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomDressSkirtAccessoryId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomJacketAccessoryEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomJacketAccessoryId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomLeftShoesAccessoryEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomLeftShoesAccessoryId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomPantsAccessoryEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomPantsAccessoryId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomRightShoesAccessoryEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomRightShoesAccessoryId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomShirtAccessoryEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomShirtAccessoryId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomShortsAccessoryEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomShortsAccessoryId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomSweaterAccessoryEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomSweaterAccessoryId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "CustomTShirtAccessoryEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CustomTShirtAccessoryId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "LimitBounds": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "AvatarClothingRules"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "AvatarClothingRules",
+                    "description": "AvatarClothingRules"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

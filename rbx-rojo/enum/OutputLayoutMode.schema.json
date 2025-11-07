@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "OutputLayoutMode",
+    "description": "OutputLayoutMode",
+    "type": "object",
+    "properties": {
+        "OutputLayoutMode": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Horizontal",
+                "Vertical"
+            ]
+        }
+    }
+}

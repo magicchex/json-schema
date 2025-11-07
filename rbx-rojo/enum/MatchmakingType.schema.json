@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "MatchmakingType",
+    "description": "MatchmakingType",
+    "type": "object",
+    "properties": {
+        "MatchmakingType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Default",
+                "XboxOnly",
+                "PlayStationOnly"
+            ]
+        }
+    }
+}

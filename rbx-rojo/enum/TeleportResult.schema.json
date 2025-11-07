@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TeleportResult",
+    "description": "TeleportResult",
+    "type": "object",
+    "properties": {
+        "TeleportResult": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Success",
+                "Failure",
+                "GameNotFound",
+                "GameEnded",
+                "GameFull",
+                "Unauthorized",
+                "Flooded",
+                "IsTeleporting"
+            ]
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "StudioScriptEditorColorPresets",
+    "description": "StudioScriptEditorColorPresets",
+    "type": "object",
+    "properties": {
+        "StudioScriptEditorColorPresets": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "RobloxDefault",
+                "Extra1",
+                "Extra2",
+                "Custom"
+            ]
+        }
+    }
+}

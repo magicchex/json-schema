@@ -1,0 +1,89 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ClimbController",
+    "description": "ClimbController",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "ClimbController"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "ClimbController properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "AccelerationTime": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "BalanceMaxTorque": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "BalanceSpeed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "MoveMaxForce": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "BalanceRigidityEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "MoveSpeedFactor": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "ClimbController"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "ClimbController",
+                    "description": "ClimbController"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

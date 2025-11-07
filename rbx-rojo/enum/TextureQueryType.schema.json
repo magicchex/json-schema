@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TextureQueryType",
+    "description": "TextureQueryType",
+    "type": "object",
+    "properties": {
+        "TextureQueryType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "NonHumanoid",
+                "NonHumanoidOrphaned",
+                "Humanoid",
+                "HumanoidOrphaned"
+            ]
+        }
+    }
+}

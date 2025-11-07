@@ -1,0 +1,100 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "UIListLayout",
+    "description": "UIListLayout",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "UIListLayout"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "UIListLayout properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "HorizontalFlex": {
+                    "$ref": "../enum/UIFlexAlignment.schema.json#/definitions/Enum",
+                    "description": "HorizontalFlex Enum"
+                },
+                "ItemLineAlignment": {
+                    "$ref": "../enum/ItemLineAlignment.schema.json#/definitions/Enum",
+                    "description": "ItemLineAlignment Enum"
+                },
+                "Padding": {
+                    "$ref": "../datatypes/UDim.schema.json"
+                },
+                "VerticalFlex": {
+                    "$ref": "../enum/UIFlexAlignment.schema.json#/definitions/Enum",
+                    "description": "VerticalFlex Enum"
+                },
+                "Wraps": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "FillDirection": {
+                    "$ref": "../enum/FillDirection.schema.json#/definitions/Enum",
+                    "description": "FillDirection Enum"
+                },
+                "HorizontalAlignment": {
+                    "$ref": "../enum/HorizontalAlignment.schema.json#/definitions/Enum",
+                    "description": "HorizontalAlignment Enum"
+                },
+                "SortOrder": {
+                    "$ref": "../enum/SortOrder.schema.json#/definitions/Enum",
+                    "description": "SortOrder Enum"
+                },
+                "VerticalAlignment": {
+                    "$ref": "../enum/VerticalAlignment.schema.json#/definitions/Enum",
+                    "description": "VerticalAlignment Enum"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "UIListLayout"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "UIListLayout",
+                    "description": "UIListLayout"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

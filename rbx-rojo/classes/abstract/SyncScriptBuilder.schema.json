@@ -1,0 +1,69 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SyncScriptBuilder",
+    "description": "SyncScriptBuilder",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "SyncScriptBuilder"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "SyncScriptBuilder properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "CompileTarget": {
+                    "$ref": "../../enum/CompileTarget.schema.json#/definitions/Enum",
+                    "description": "CompileTarget Enum"
+                },
+                "CoverageInfo": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "DebugInfo": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "PackAsSource": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "SyncScriptBuilder"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "SyncScriptBuilder",
+                    "description": "SyncScriptBuilder"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

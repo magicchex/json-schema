@@ -1,0 +1,215 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "HumanoidDescription",
+    "description": "HumanoidDescription",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "HumanoidDescription"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "HumanoidDescription properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "AccessoryBlob": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "BackAccessory": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "BodyTypeScale": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "ClimbAnimation": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "DepthScale": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Face": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "FaceAccessory": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "FallAnimation": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "FrontAccessory": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "GraphicTShirt": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "HairAccessory": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "HatAccessory": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Head": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "HeadColor": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "HeadScale": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "HeightScale": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "IdleAnimation": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "JumpAnimation": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "LeftArm": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "LeftArmColor": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "LeftLeg": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "LeftLegColor": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "MoodAnimation": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "NeckAccessory": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Pants": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "ProportionScale": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RightArm": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "RightArmColor": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "RightLeg": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "RightLegColor": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "RunAnimation": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "Shirt": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "ShouldersAccessory": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "SwimAnimation": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "Torso": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "TorsoColor": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "WaistAccessory": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "WalkAnimation": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "WidthScale": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "HumanoidDescription"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "HumanoidDescription",
+                    "description": "HumanoidDescription"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "IntermediateMeshGenerationResult",
+    "description": "IntermediateMeshGenerationResult",
+    "type": "object",
+    "properties": {
+        "IntermediateMeshGenerationResult": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "HighQualityMesh"
+            ]
+        }
+    }
+}

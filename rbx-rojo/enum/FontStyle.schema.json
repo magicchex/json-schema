@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "FontStyle",
+    "description": "FontStyle",
+    "type": "object",
+    "properties": {
+        "FontStyle": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Normal",
+                "Italic"
+            ]
+        }
+    }
+}

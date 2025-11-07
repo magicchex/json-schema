@@ -1,0 +1,144 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Player",
+    "description": "Player",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Player"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Player properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "AutoJumpEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CameraMaxZoomDistance": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "CameraMinZoomDistance": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "CameraMode": {
+                    "$ref": "../enum/CameraMode.schema.json#/definitions/Enum",
+                    "description": "CameraMode Enum"
+                },
+                "CanLoadCharacterAppearance": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "CharacterAppearanceId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "DevCameraOcclusionMode": {
+                    "$ref": "../enum/DevCameraOcclusionMode.schema.json#/definitions/Enum",
+                    "description": "DevCameraOcclusionMode Enum"
+                },
+                "DevComputerCameraMode": {
+                    "$ref": "../enum/DevComputerCameraMovementMode.schema.json#/definitions/Enum",
+                    "description": "DevComputerCameraMode Enum"
+                },
+                "DevComputerMovementMode": {
+                    "$ref": "../enum/DevComputerMovementMode.schema.json#/definitions/Enum",
+                    "description": "DevComputerMovementMode Enum"
+                },
+                "DevEnableMouseLock": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "DevTouchCameraMode": {
+                    "$ref": "../enum/DevTouchCameraMovementMode.schema.json#/definitions/Enum",
+                    "description": "DevTouchCameraMode Enum"
+                },
+                "DevTouchMovementMode": {
+                    "$ref": "../enum/DevTouchMovementMode.schema.json#/definitions/Enum",
+                    "description": "DevTouchMovementMode Enum"
+                },
+                "DisplayName": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "HasVerifiedBadge": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "HealthDisplayDistance": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "NameDisplayDistance": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Neutral": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "StepIdOffset": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "TeamColor": {
+                    "$ref": "../datatypes/BrickColor.schema.json"
+                },
+                "UserId": {
+                    "type": "number",
+                    "description": "int64"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Player"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Player",
+                    "description": "Player"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

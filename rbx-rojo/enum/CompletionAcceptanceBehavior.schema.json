@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "CompletionAcceptanceBehavior",
+    "description": "CompletionAcceptanceBehavior",
+    "type": "object",
+    "properties": {
+        "CompletionAcceptanceBehavior": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Insert",
+                "Replace",
+                "ReplaceOnEnterInsertOnTab",
+                "InsertOnEnterReplaceOnTab"
+            ]
+        }
+    }
+}

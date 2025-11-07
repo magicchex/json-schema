@@ -1,0 +1,95 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "UIGridLayout",
+    "description": "UIGridLayout",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "UIGridLayout"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "UIGridLayout properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "CellPadding": {
+                    "$ref": "../datatypes/UDim2.schema.json"
+                },
+                "CellSize": {
+                    "$ref": "../datatypes/UDim2.schema.json"
+                },
+                "FillDirectionMaxCells": {
+                    "type": "number",
+                    "description": "int"
+                },
+                "StartCorner": {
+                    "$ref": "../enum/StartCorner.schema.json#/definitions/Enum",
+                    "description": "StartCorner Enum"
+                },
+                "FillDirection": {
+                    "$ref": "../enum/FillDirection.schema.json#/definitions/Enum",
+                    "description": "FillDirection Enum"
+                },
+                "HorizontalAlignment": {
+                    "$ref": "../enum/HorizontalAlignment.schema.json#/definitions/Enum",
+                    "description": "HorizontalAlignment Enum"
+                },
+                "SortOrder": {
+                    "$ref": "../enum/SortOrder.schema.json#/definitions/Enum",
+                    "description": "SortOrder Enum"
+                },
+                "VerticalAlignment": {
+                    "$ref": "../enum/VerticalAlignment.schema.json#/definitions/Enum",
+                    "description": "VerticalAlignment Enum"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "UIGridLayout"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "UIGridLayout",
+                    "description": "UIGridLayout"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

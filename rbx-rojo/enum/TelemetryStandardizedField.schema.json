@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TelemetryStandardizedField",
+    "description": "TelemetryStandardizedField",
+    "type": "object",
+    "properties": {
+        "TelemetryStandardizedField": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "AddDatacenterId",
+                "AddPlaceId",
+                "AddUniverseId",
+                "AddPlaceInstanceId",
+                "AddPlaySessionId",
+                "AddCurrentContextName",
+                "AddOsInfo",
+                "AddArchitectureInfo",
+                "AddCpuInfo",
+                "AddMemoryInfo",
+                "AddSessionInfo"
+            ]
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DebuggerStatus",
+    "description": "DebuggerStatus",
+    "type": "object",
+    "properties": {
+        "DebuggerStatus": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Success",
+                "Timeout",
+                "ConnectionLost",
+                "InvalidResponse",
+                "InternalError",
+                "InvalidState",
+                "RpcError",
+                "InvalidArgument",
+                "ConnectionClosed"
+            ]
+        }
+    }
+}

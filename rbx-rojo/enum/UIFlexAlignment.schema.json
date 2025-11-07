@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "UIFlexAlignment",
+    "description": "UIFlexAlignment",
+    "type": "object",
+    "properties": {
+        "UIFlexAlignment": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "None",
+                "Fill",
+                "SpaceAround",
+                "SpaceBetween",
+                "SpaceEvenly"
+            ]
+        }
+    }
+}

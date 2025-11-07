@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ReturnKeyType",
+    "description": "ReturnKeyType",
+    "type": "object",
+    "properties": {
+        "ReturnKeyType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Default",
+                "Done",
+                "Go",
+                "Next",
+                "Search",
+                "Send"
+            ]
+        }
+    }
+}

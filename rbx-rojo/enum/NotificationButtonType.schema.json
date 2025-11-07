@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "NotificationButtonType",
+    "description": "NotificationButtonType",
+    "type": "object",
+    "properties": {
+        "NotificationButtonType": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Primary",
+                "Secondary"
+            ]
+        }
+    }
+}

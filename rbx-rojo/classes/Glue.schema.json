@@ -1,0 +1,87 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Glue",
+    "description": "Glue",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "Glue"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "Glue properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "F0": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "F1": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "F2": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "F3": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "C0": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "C1": {
+                    "$ref": "../datatypes/CFrame.schema.json"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "Glue"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "Glue",
+                    "description": "Glue"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

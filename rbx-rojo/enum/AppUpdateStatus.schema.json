@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AppUpdateStatus",
+    "description": "AppUpdateStatus",
+    "type": "object",
+    "properties": {
+        "AppUpdateStatus": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Unknown",
+                "NotSupported",
+                "Failed",
+                "NotAvailable",
+                "Available",
+                "AvailableBoundChannel",
+                "AvailableBetaProgram"
+            ]
+        }
+    }
+}

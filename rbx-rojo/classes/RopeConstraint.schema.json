@@ -1,0 +1,108 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "RopeConstraint",
+    "description": "RopeConstraint",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "RopeConstraint"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "RopeConstraint properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "Length": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Restitution": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Thickness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "WinchEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "WinchForce": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "WinchResponsiveness": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "WinchSpeed": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "WinchTarget": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "Color": {
+                    "$ref": "../datatypes/BrickColor.schema.json"
+                },
+                "Enabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Visible": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "RopeConstraint"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "RopeConstraint",
+                    "description": "RopeConstraint"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

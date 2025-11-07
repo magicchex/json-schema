@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SurfaceGuiShape",
+    "description": "SurfaceGuiShape",
+    "type": "object",
+    "properties": {
+        "SurfaceGuiShape": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Flat",
+                "CurvedHorizontally"
+            ]
+        }
+    }
+}

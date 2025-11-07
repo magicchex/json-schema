@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "FillDirection",
+    "description": "FillDirection",
+    "type": "object",
+    "properties": {
+        "FillDirection": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Horizontal",
+                "Vertical"
+            ]
+        }
+    }
+}

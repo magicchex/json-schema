@@ -1,0 +1,80 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "FileMesh",
+    "description": "FileMesh",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "FileMesh"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "FileMesh properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "MeshId": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "TextureId": {
+                    "$ref": "../datatypes/Content.schema.json"
+                },
+                "Offset": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "Scale": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "VertexColor": {
+                    "$ref": "../datatypes/Vector3.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "FileMesh"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "FileMesh",
+                    "description": "FileMesh"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

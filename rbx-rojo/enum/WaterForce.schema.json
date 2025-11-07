@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "WaterForce",
+    "description": "WaterForce",
+    "type": "object",
+    "properties": {
+        "WaterForce": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "None",
+                "Small",
+                "Medium",
+                "Strong",
+                "Max"
+            ]
+        }
+    }
+}

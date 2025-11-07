@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "RecommendationItemVisibility",
+    "description": "RecommendationItemVisibility",
+    "type": "object",
+    "properties": {
+        "RecommendationItemVisibility": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Private",
+                "Public"
+            ]
+        }
+    }
+}

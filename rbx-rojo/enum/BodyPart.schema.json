@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "BodyPart",
+    "description": "BodyPart",
+    "type": "object",
+    "properties": {
+        "BodyPart": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Head",
+                "Torso",
+                "LeftArm",
+                "RightArm",
+                "LeftLeg",
+                "RightLeg"
+            ]
+        }
+    }
+}

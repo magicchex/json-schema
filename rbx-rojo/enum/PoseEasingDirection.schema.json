@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "PoseEasingDirection",
+    "description": "PoseEasingDirection",
+    "type": "object",
+    "properties": {
+        "PoseEasingDirection": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "In",
+                "Out",
+                "InOut"
+            ]
+        }
+    }
+}

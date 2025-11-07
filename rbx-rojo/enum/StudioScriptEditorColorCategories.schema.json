@@ -1,0 +1,64 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "StudioScriptEditorColorCategories",
+    "description": "StudioScriptEditorColorCategories",
+    "type": "object",
+    "properties": {
+        "StudioScriptEditorColorCategories": {
+            "$ref": "#/definitions/Enum"
+        }
+    },
+    "definitions": {
+        "Enum": {
+            "enum": [
+                "Default",
+                "Operator",
+                "Number",
+                "String",
+                "Comment",
+                "Keyword",
+                "Builtin",
+                "Method",
+                "Property",
+                "Nil",
+                "Bool",
+                "Function",
+                "Local",
+                "Self",
+                "LuauKeyword",
+                "FunctionName",
+                "TODO",
+                "Background",
+                "SelectionText",
+                "SelectionBackground",
+                "FindSelectionBackground",
+                "MatchingWordBackground",
+                "Warning",
+                "Error",
+                "Info",
+                "Hint",
+                "Whitespace",
+                "ActiveLine",
+                "DebuggerCurrentLine",
+                "DebuggerErrorLine",
+                "Ruler",
+                "Bracket",
+                "Type",
+                "MenuPrimaryText",
+                "MenuSecondaryText",
+                "MenuSelectedText",
+                "MenuBackground",
+                "MenuSelectedBackground",
+                "MenuScrollbarBackground",
+                "MenuScrollbarHandle",
+                "MenuBorder",
+                "DocViewCodeBackground",
+                "AICOOverlayText",
+                "AICOOverlayButtonBackground",
+                "AICOOverlayButtonBackgroundHover",
+                "AICOOverlayButtonBackgroundPressed",
+                "IndentationRuler"
+            ]
+        }
+    }
+}

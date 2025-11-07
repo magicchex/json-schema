@@ -1,0 +1,93 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SoundService",
+    "description": "SoundService",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "SoundService"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "SoundService properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../../datatypes/Attribute.schema.json"
+                },
+                "AcousticSimulationEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "AmbientReverb": {
+                    "$ref": "../../enum/ReverbType.schema.json#/definitions/Enum",
+                    "description": "AmbientReverb Enum"
+                },
+                "AudioPlayerVolumeFix": {
+                    "$ref": "../../enum/RolloutState.schema.json#/definitions/Enum",
+                    "description": "AudioPlayerVolumeFix Enum"
+                },
+                "CharacterSoundsUseNewApi": {
+                    "$ref": "../../enum/RolloutState.schema.json#/definitions/Enum",
+                    "description": "CharacterSoundsUseNewApi Enum"
+                },
+                "DefaultListenerLocation": {
+                    "$ref": "../../enum/ListenerLocation.schema.json#/definitions/Enum",
+                    "description": "DefaultListenerLocation Enum"
+                },
+                "DistanceFactor": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "DopplerScale": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "RespectFilteringEnabled": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "RolloffScale": {
+                    "type": "number",
+                    "description": "float"
+                },
+                "VolumetricAudio": {
+                    "$ref": "../../enum/VolumetricAudio.schema.json#/definitions/Enum",
+                    "description": "VolumetricAudio Enum"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "SoundService"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "SoundService",
+                    "description": "SoundService"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}

@@ -1,0 +1,101 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "BodyColors",
+    "description": "BodyColors",
+    "type": "object",
+    "properties": {
+        "ClassName": {
+            "const": "BodyColors"
+        },
+        "Properties": {
+            "$ref": "#/definitions/Properties"
+        }
+    },
+    "required": [
+        "ClassName"
+    ],
+    "definitions": {
+        "Properties": {
+            "type": "object",
+            "description": "BodyColors properties",
+            "properties": {
+                "Attributes": {
+                    "$ref": "../datatypes/Attribute.schema.json"
+                },
+                "HeadColor": {
+                    "$ref": "../datatypes/BrickColor.schema.json"
+                },
+                "HeadColor3": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "LeftArmColor": {
+                    "$ref": "../datatypes/BrickColor.schema.json"
+                },
+                "LeftArmColor3": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "LeftLegColor": {
+                    "$ref": "../datatypes/BrickColor.schema.json"
+                },
+                "LeftLegColor3": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "RightArmColor": {
+                    "$ref": "../datatypes/BrickColor.schema.json"
+                },
+                "RightArmColor3": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "RightLegColor": {
+                    "$ref": "../datatypes/BrickColor.schema.json"
+                },
+                "RightLegColor3": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "TorsoColor": {
+                    "$ref": "../datatypes/BrickColor.schema.json"
+                },
+                "TorsoColor3": {
+                    "$ref": "../datatypes/Color3.schema.json"
+                },
+                "Archivable": {
+                    "type": "boolean",
+                    "description": "boolean"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "string"
+                },
+                "Sandboxed": {
+                    "type": "boolean",
+                    "description": "boolean"
+                }
+            }
+        },
+        "Meta": {
+            "type": "object",
+            "properties": {
+                "className": {
+                    "const": "BodyColors"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            }
+        },
+        "Project": {
+            "properties": {
+                "$className": {
+                    "const": "BodyColors",
+                    "description": "BodyColors"
+                },
+                "$properties": {
+                    "$ref": "#/definitions/Properties"
+                }
+            },
+            "required": [
+                "$className"
+            ]
+        }
+    }
+}
